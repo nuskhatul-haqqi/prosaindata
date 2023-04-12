@@ -60,10 +60,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'uts2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'uts2_lama';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Tugas 2" href="tugas2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,10 +153,10 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="tugas1.html">Tugas 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2.html">Tugas 2</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>UTS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="uts2.html"><strong>UTS</strong></a></li>
 </ul>
 
     </div>
@@ -212,7 +211,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/nuskhatul-haqqi/prosaindata/blob/gh-pages/_sources/uts2.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/nuskhatul-haqqi/prosaindata/blob/gh-pages/_sources/uts2_lama.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -260,7 +259,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/nuskhatul-haqqi/prosaindata/issues/new?title=Issue%20on%20page%20%2Futs2.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/nuskhatul-haqqi/prosaindata/issues/new?title=Issue%20on%20page%20%2Futs2_lama.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -290,7 +289,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/uts2.ipynb" target="_blank"
+      <li><a href="_sources/uts2_lama.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -395,6 +394,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pca">PCA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-klastering">K-Means Klastering</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-untuk-k-mean">load data untuk k-mean</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means">k-means</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-data">Split Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes">Naive bayes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn">KNN</a><ul class="nav section-nav flex-column">
@@ -402,11 +406,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pencarian-nilai-pca-terbaik">Pencarian nilai PCA terbaik</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-klastering">K-Means Klastering</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-untuk-k-mean">load data untuk k-mean</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means">k-means</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
 </ul>
             </nav>
@@ -436,7 +435,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-844a1566-8528-4606-9f52-9e2d04d064c8">
+  <div id="df-d747d10b-ac5d-4bd3-9275-0da666a164c3">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -495,7 +494,7 @@ document.write(`
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-844a1566-8528-4606-9f52-9e2d04d064c8')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d747d10b-ac5d-4bd3-9275-0da666a164c3')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -546,12 +545,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-844a1566-8528-4606-9f52-9e2d04d064c8 button.colab-df-convert');
+          document.querySelector('#df-d747d10b-ac5d-4bd3-9275-0da666a164c3 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-844a1566-8528-4606-9f52-9e2d04d064c8');
+          const element = document.querySelector('#df-d747d10b-ac5d-4bd3-9275-0da666a164c3');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -799,75 +798,75 @@ Requirement already satisfied: Sastrawi in /usr/local/lib/python3.9/dist-package
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: swifter in /usr/local/lib/python3.9/dist-packages (1.3.4)
-Requirement already satisfied: tqdm&gt;=4.33.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (4.65.0)
-Requirement already satisfied: parso&gt;0.4.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (0.8.3)
-Requirement already satisfied: bleach&gt;=3.1.1 in /usr/local/lib/python3.9/dist-packages (from swifter) (6.0.0)
-Requirement already satisfied: cloudpickle&gt;=0.2.2 in /usr/local/lib/python3.9/dist-packages (from swifter) (2.2.1)
 Requirement already satisfied: pandas&gt;=1.0.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (1.5.3)
-Requirement already satisfied: dask[dataframe]&gt;=2.10.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (2022.12.1)
-Requirement already satisfied: psutil&gt;=5.6.6 in /usr/local/lib/python3.9/dist-packages (from swifter) (5.9.4)
+Requirement already satisfied: bleach&gt;=3.1.1 in /usr/local/lib/python3.9/dist-packages (from swifter) (6.0.0)
 Requirement already satisfied: ipywidgets&gt;=7.0.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (7.7.1)
-Requirement already satisfied: webencodings in /usr/local/lib/python3.9/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (0.5.1)
+Requirement already satisfied: cloudpickle&gt;=0.2.2 in /usr/local/lib/python3.9/dist-packages (from swifter) (2.2.1)
+Requirement already satisfied: dask[dataframe]&gt;=2.10.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (2022.12.1)
+Requirement already satisfied: parso&gt;0.4.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (0.8.3)
+Requirement already satisfied: tqdm&gt;=4.33.0 in /usr/local/lib/python3.9/dist-packages (from swifter) (4.65.0)
+Requirement already satisfied: psutil&gt;=5.6.6 in /usr/local/lib/python3.9/dist-packages (from swifter) (5.9.4)
 Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.9/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (1.16.0)
-Requirement already satisfied: pyyaml&gt;=5.3.1 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (6.0)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.9/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (0.5.1)
 Requirement already satisfied: toolz&gt;=0.8.2 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (0.12.0)
-Requirement already satisfied: click&gt;=7.0 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (8.1.3)
-Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (23.0)
-Requirement already satisfied: fsspec&gt;=0.6.0 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (2023.3.0)
+Requirement already satisfied: pyyaml&gt;=5.3.1 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (6.0)
 Requirement already satisfied: partd&gt;=0.3.10 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.3.0)
+Requirement already satisfied: fsspec&gt;=0.6.0 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (2023.3.0)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (23.0)
+Requirement already satisfied: click&gt;=7.0 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (8.1.3)
 Requirement already satisfied: numpy&gt;=1.18 in /usr/local/lib/python3.9/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.22.4)
 Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.7.1)
+Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.6.4)
+Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (7.34.0)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.5.6)
 Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
 Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.7)
-Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.6.4)
-Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.5.6)
-Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.9/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (7.34.0)
 Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.9/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2.8.2)
 Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.9/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2022.7.1)
-Requirement already satisfied: jupyter-client in /usr/local/lib/python3.9/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.1.12)
 Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.9/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.38)
-Requirement already satisfied: pickleshare in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.5)
+Requirement already satisfied: jupyter-client in /usr/local/lib/python3.9/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.1.12)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.38)
+Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.1.6)
+Requirement already satisfied: pygments in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.14.0)
 Requirement already satisfied: jedi&gt;=0.16 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.18.2)
 Requirement already satisfied: backcall in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
-Requirement already satisfied: pygments in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.14.0)
-Requirement already satisfied: decorator in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.4.2)
-Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (67.6.1)
 Requirement already satisfied: pexpect&gt;4.3 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.8.0)
-Requirement already satisfied: matplotlib-inline in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.1.6)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.5)
+Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (67.6.1)
+Requirement already satisfied: decorator in /usr/local/lib/python3.9/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.4.2)
 Requirement already satisfied: locket in /usr/local/lib/python3.9/dist-packages (from partd&gt;=0.3.10-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.0.0)
 Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.9/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.4.8)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jinja2 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.1.2)
+Requirement already satisfied: pyzmq&gt;=17 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (23.2.1)
+Requirement already satisfied: Send2Trash&gt;=1.8.0 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.8.0)
 Requirement already satisfied: nest-asyncio&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.6)
 Requirement already satisfied: prometheus-client in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.16.0)
-Requirement already satisfied: nbconvert in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.5.4)
 Requirement already satisfied: nbformat in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.8.0)
 Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.3.0)
 Requirement already satisfied: terminado&gt;=0.8.3 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.17.1)
-Requirement already satisfied: pyzmq&gt;=17 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (23.2.1)
+Requirement already satisfied: nbconvert in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.5.4)
 Requirement already satisfied: jupyter-core&gt;=4.6.1 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.0)
-Requirement already satisfied: jinja2 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.1.2)
-Requirement already satisfied: Send2Trash&gt;=1.8.0 in /usr/local/lib/python3.9/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.8.0)
 Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.9/dist-packages (from pexpect&gt;4.3-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.0)
 Requirement already satisfied: wcwidth in /usr/local/lib/python3.9/dist-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.6)
 Requirement already satisfied: platformdirs&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from jupyter-core&gt;=4.6.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.2.0)
 Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.9/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.2.0)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.9/dist-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.1.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tinycss2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.2.1)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.11.2)
 Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.9.2)
-Requirement already satisfied: defusedxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.1)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.0)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.11.2)
 Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.8.4)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.5.13)
 Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.2)
 Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.4)
-Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.5.13)
-Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.0)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.1)
+Requirement already satisfied: tinycss2 in /usr/local/lib/python3.9/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.2.1)
 Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.9/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.3.3)
 Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.9/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.16.3)
-Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.9/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (22.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.9/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (22.2.0)
 Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /usr/local/lib/python3.9/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.19.3)
 Requirement already satisfied: cffi&gt;=1.0.1 in /usr/local/lib/python3.9/dist-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.15.1)
 Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.4)
@@ -964,7 +963,9 @@ kelambatan : lambat
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pemrosesan : pemrosesan
-respon : respon
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>respon : respon
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>query : query
@@ -976,7 +977,9 @@ kompleks : kompleks
 kelemahan : lemah
 ketersediaan : sedia
 pengembangan : kembang
-databases : databases
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>databases : databases
 terdistribusi : distribusi
 </pre></div>
 </div>
@@ -984,29 +987,35 @@ terdistribusi : distribusi
 dijadikan : jadi
 solusi : solusi
 permasalahan : masalah
-basisdata : basisdata
-keuntungan : untung
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dimiliki : milik
-pengawasan : awas
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>basisdata : basisdata
+keuntungan : untung
+dimiliki : milik
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pengawasan : awas
 distribusi : distribusi
-reability : reability
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reability : reability
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>availability : availability
 kecepatan : cepat
 otonomi : otonomi
-local : local
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>berjalannya : jalan
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>local : local
+berjalannya : jalan
 koneksi : koneksi
 komputer : komputer
 lancar : lancar
 gangguan : ganggu
 harapan : harap
-penggunanya : guna
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>penggunanya : guna
 bertanggung : tanggung
 bidang : bidang
 administrator : administrator
@@ -1047,22 +1056,22 @@ membantu : bantu
 tugas : tugas
 mengontrol : kontrol
 memantau : pantau
+mengambil : ambil
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mengambil : ambil
-kebijakan : bijak
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kebijakan : bijak
+node : node
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>node : node
-terkoneksi : koneksi
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>terkoneksi : koneksi
 memanajemen : manajemen
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>port : port
+bandwidth : bandwidth
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bandwidth : bandwidth
-pembenahan : benah
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pembenahan : benah
 pemakai : pakai
 klien : klien
 pengaduan : adu
@@ -1075,15 +1084,11 @@ perangkat : perangkat
 lunak : lunak
 menerima : terima
 permintaan : minta
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>http : http
+http : http
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https : https
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>client : client
+client : client
 mengirimkan : kirim
 bentuk : bentuk
 </pre></div>
@@ -1091,9 +1096,7 @@ bentuk : bentuk
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>halamanhalaman : halamanhalaman
 berbentuk : bentuk
 dokumen : dokumen
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>html : html
+html : html
 dikirim : kirim
 dibentuk : bentuk
 bahasa : bahasa
@@ -1101,15 +1104,12 @@ bahasa : bahasa
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>markup : markup
 plaintext : plaintext
+berisi : isi
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>berisi : isi
-kodekode : kodekode
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kodekode : kodekode
 murni : murni
-enkripsi
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> : enkripsi
+enkripsi : enkripsi
 tujuan : tuju
 </pre></div>
 </div>
@@ -1420,13 +1420,17 @@ prim : prim
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>depth : depth
-first : first
-search : search
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pembuatannya : buat
-lintasan : lintas
-maze : maze
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>first : first
+search : search
+pembuatannya : buat
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lintasan : lintas
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>maze : maze
 pencarian : cari
 solusinya : solusi
 pengujian : uji
@@ -1435,11 +1439,15 @@ resolusi : resolusi
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>screen : screen
-pixels : pixels
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pixels : pixels
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pembentukan : bentuk
-android : android
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>android : android
 kantor : kantor
 badan : badan
 kepegawaian : pegawai
@@ -1454,7 +1462,9 @@ kinerja : kerja
 dinas : dinas
 dibahas : bahas
 menerapkan : terap
-architecture : architecture
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>architecture : architecture
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>enterprise : enterprise
@@ -1466,10 +1476,7 @@ bkd : bkd
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>togaf : togaf
 adm : adm
-mengimplementa :
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> mengimplementa
+mengimplementa : mengimplementa
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sikannya : sikannya
@@ -1495,17 +1502,15 @@ administrasi : administrasi
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>blue : blue
+print : print
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>print : print
-memperbaiki : baik
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>memperbaiki : baik
 efisiensi : efisiensi
 kenyamanan : nyaman
 aksesibilitas : aksesibilitas
 publik : publik
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>interprise : interprise
+interprise : interprise
 perindustrian : industri
 perdagangan : dagang
 </pre></div>
@@ -1521,9 +1526,7 @@ fungsi : fungsi
 dijalankan : jalan
 menciptakan : cipta
 keselarasan : selaras
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>terlepas : lepas
+terlepas : lepas
 merencanakan : rencana
 merancang : rancang
 metodologi : metodologi
@@ -1558,9 +1561,7 @@ daya : daya
 ditetapkan : tetap
 pt : pt
 surya : surya
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>madistrindo : madistrindo
+madistrindo : madistrindo
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pamekasan : pamekasan
@@ -1572,17 +1573,15 @@ sikap : sikap
 kerja : kerja
 sub : sub
 kriteria : kriteria
+tersendiri : sendiri
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tersendiri : sendiri
-analytic : analytic
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>analytic : analytic
+network : network
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>network : network
-process : process
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fanp : fanp
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>process : process
+fanp : fanp
 mencari : cari
 bobot : bobot
 prioritas : prioritas
@@ -1751,6 +1750,8 @@ nave : nave
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bayes : bayes
+classifier : classifier
+nbc : nbc
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
@@ -1804,11 +1805,11 @@ nave : nave
 <span class="g g-Whitespace">     </span><span class="mi">39</span>         <span class="c1">#step 6</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">start_stemming_process</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">78</span> 
-<span class="g g-Whitespace">     </span><span class="mi">79</span>         <span class="c1">#step 4, 5</span>
-<span class="ne">---&gt; </span><span class="mi">80</span>         <span class="bp">self</span><span class="o">.</span><span class="n">remove_prefixes</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">81</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span>             <span class="k">return</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span>         <span class="k">if</span> <span class="n">csPrecedenceAdjustmentSpecification</span><span class="o">.</span><span class="n">is_satisfied_by</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">original_word</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span>             <span class="c1">#step 4, 5</span>
+<span class="ne">---&gt; </span><span class="mi">60</span>             <span class="bp">self</span><span class="o">.</span><span class="n">remove_prefixes</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span>                 <span class="k">return</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">remove_prefixes</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">     </span><span class="mi">87</span>     <span class="k">def</span> <span class="nf">remove_prefixes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1818,25 +1819,11 @@ nave : nave
 <span class="g g-Whitespace">     </span><span class="mi">91</span>                 <span class="k">return</span>
 
 <span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">accept_prefix_visitors</span><span class="nt">(self, visitors)</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span>         <span class="n">removalCount</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">removals</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">109</span>         <span class="k">for</span> <span class="n">visitor</span> <span class="ow">in</span> <span class="n">visitors</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">110</span>             <span class="bp">self</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">visitor</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span>             <span class="bp">self</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">visitor</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">111</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_word</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">112</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_word</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Context.py</span> in <span class="ni">accept</span><span class="nt">(self, visitor)</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span> 
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">def</span> <span class="nf">accept</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visitor</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">97</span>         <span class="n">visitor</span><span class="o">.</span><span class="n">visit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span> 
-<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="k">def</span> <span class="nf">accept_visitors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visitors</span><span class="p">):</span>
-
-<span class="nn">/usr/local/lib/python3.9/dist-packages/Sastrawi/Stemmer/Context/Visitor/AbstractDisambiguatePrefixRule.py</span> in <span class="ni">visit</span><span class="nt">(self, context)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="k">for</span> <span class="n">disambiguator</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">disambiguators</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">disambiguator</span><span class="o">.</span><span class="n">disambiguate</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">current_word</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">15</span>             <span class="k">if</span> <span class="n">context</span><span class="o">.</span><span class="n">dictionary</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>                 <span class="k">break</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> 
+<span class="g g-Whitespace">    </span><span class="mi">113</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_is_stopped</span><span class="p">:</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -1864,15 +1851,14 @@ nave : nave
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">data_pre</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Text_Preprocessing.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_pre</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Text_Preprocessing.csv&quot;</span><span class="p">)</span>
 <span class="n">data_pre</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c2b9f4a0-e2ab-4845-86fe-92b7e76f8cbf">
+  <div id="df-d07a3def-ad14-42d8-b133-b8e75282a4cd">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1955,7 +1941,7 @@ nave : nave
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c2b9f4a0-e2ab-4845-86fe-92b7e76f8cbf')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d07a3def-ad14-42d8-b133-b8e75282a4cd')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2006,12 +1992,12 @@ nave : nave
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c2b9f4a0-e2ab-4845-86fe-92b7e76f8cbf button.colab-df-convert');
+          document.querySelector('#df-d07a3def-ad14-42d8-b133-b8e75282a4cd button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c2b9f4a0-e2ab-4845-86fe-92b7e76f8cbf');
+          const element = document.querySelector('#df-d07a3def-ad14-42d8-b133-b8e75282a4cd');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2032,19 +2018,6 @@ nave : nave
   </div>
   </div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
-<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mounted at /content/drive
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="tf-idf">
@@ -2062,7 +2035,7 @@ nave : nave
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-cbb10719-ba62-48c4-853e-76af291717fd">
+  <div id="df-4c523a1b-0cd9-46c3-8b29-b62a392463d3">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2146,7 +2119,7 @@ nave : nave
 </table>
 <p>805 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-cbb10719-ba62-48c4-853e-76af291717fd')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-4c523a1b-0cd9-46c3-8b29-b62a392463d3')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2197,12 +2170,12 @@ nave : nave
 
       <script>
         const buttonEl =
-          document.querySelector('#df-cbb10719-ba62-48c4-853e-76af291717fd button.colab-df-convert');
+          document.querySelector('#df-4c523a1b-0cd9-46c3-8b29-b62a392463d3 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-cbb10719-ba62-48c4-853e-76af291717fd');
+          const element = document.querySelector('#df-4c523a1b-0cd9-46c3-8b29-b62a392463d3');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2305,7 +2278,7 @@ TF-IDF  &lt;class &#39;numpy.ndarray&#39;&gt; (805, 6511)
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-344d65e3-fffa-4449-b300-f934235d8a6f">
+  <div id="df-ebf76a2a-6ea3-49ff-a339-e8c19452ed06">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2389,7 +2362,7 @@ TF-IDF  &lt;class &#39;numpy.ndarray&#39;&gt; (805, 6511)
 </table>
 <p>6511 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-344d65e3-fffa-4449-b300-f934235d8a6f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ebf76a2a-6ea3-49ff-a339-e8c19452ed06')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2440,12 +2413,12 @@ TF-IDF  &lt;class &#39;numpy.ndarray&#39;&gt; (805, 6511)
 
       <script>
         const buttonEl =
-          document.querySelector('#df-344d65e3-fffa-4449-b300-f934235d8a6f button.colab-df-convert');
+          document.querySelector('#df-ebf76a2a-6ea3-49ff-a339-e8c19452ed06 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-344d65e3-fffa-4449-b300-f934235d8a6f');
+          const element = document.querySelector('#df-ebf76a2a-6ea3-49ff-a339-e8c19452ed06');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2501,7 +2474,7 @@ TF-IDF  &lt;class &#39;numpy.ndarray&#39;&gt; (805, 6511)
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-469e57cf-5f8b-4174-b5e1-629f7f8a8109">
+  <div id="df-8c8d7346-5dba-4c97-971b-4900cb87ed38">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2813,7 +2786,7 @@ TF-IDF  &lt;class &#39;numpy.ndarray&#39;&gt; (805, 6511)
 </table>
 <p>805 rows × 6511 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-469e57cf-5f8b-4174-b5e1-629f7f8a8109')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8c8d7346-5dba-4c97-971b-4900cb87ed38')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -2864,12 +2837,12 @@ TF-IDF  &lt;class &#39;numpy.ndarray&#39;&gt; (805, 6511)
 
       <script>
         const buttonEl =
-          document.querySelector('#df-469e57cf-5f8b-4174-b5e1-629f7f8a8109 button.colab-df-convert');
+          document.querySelector('#df-8c8d7346-5dba-4c97-971b-4900cb87ed38 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-469e57cf-5f8b-4174-b5e1-629f7f8a8109');
+          const element = document.querySelector('#df-8c8d7346-5dba-4c97-971b-4900cb87ed38');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2914,7 +2887,7 @@ TF-IDF  &lt;class &#39;numpy.ndarray&#39;&gt; (805, 6511)
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-3a1d7289-a9b5-4cd7-91ec-ff1fb5dd8ee7">
+  <div id="df-a25380a8-0985-48c2-9905-410e32b0b60b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2961,122 +2934,122 @@ TF-IDF  &lt;class &#39;numpy.ndarray&#39;&gt; (805, 6511)
     <tr>
       <th>0</th>
       <td>-0.010808</td>
-      <td>-0.067904</td>
-      <td>-0.014036</td>
-      <td>-0.029803</td>
-      <td>-0.036444</td>
-      <td>0.039661</td>
-      <td>-0.044333</td>
-      <td>-0.046113</td>
-      <td>-0.002914</td>
-      <td>-0.011037</td>
+      <td>-0.067899</td>
+      <td>-0.014034</td>
+      <td>-0.029784</td>
+      <td>-0.036387</td>
+      <td>0.039715</td>
+      <td>-0.044326</td>
+      <td>-0.046291</td>
+      <td>-0.002809</td>
+      <td>-0.011085</td>
       <td>...</td>
-      <td>-0.016253</td>
-      <td>-0.007504</td>
-      <td>-0.029628</td>
-      <td>-0.017451</td>
-      <td>-0.036423</td>
-      <td>0.022319</td>
-      <td>-0.008597</td>
-      <td>-0.039684</td>
-      <td>0.024854</td>
-      <td>0.026181</td>
+      <td>-0.005356</td>
+      <td>0.000859</td>
+      <td>-0.002074</td>
+      <td>-0.024702</td>
+      <td>0.000462</td>
+      <td>-0.040468</td>
+      <td>0.002253</td>
+      <td>0.002936</td>
+      <td>0.013543</td>
+      <td>0.029866</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.010503</td>
-      <td>-0.041953</td>
-      <td>-0.026741</td>
-      <td>-0.070771</td>
-      <td>-0.025654</td>
-      <td>0.085280</td>
-      <td>-0.037575</td>
-      <td>0.047470</td>
-      <td>0.009116</td>
-      <td>-0.009080</td>
+      <td>0.010502</td>
+      <td>-0.041960</td>
+      <td>-0.026762</td>
+      <td>-0.070759</td>
+      <td>-0.025625</td>
+      <td>0.085329</td>
+      <td>-0.037548</td>
+      <td>0.047423</td>
+      <td>0.009128</td>
+      <td>-0.008947</td>
       <td>...</td>
-      <td>-0.104103</td>
-      <td>0.053275</td>
-      <td>0.065580</td>
-      <td>-0.094895</td>
-      <td>0.011266</td>
-      <td>-0.028816</td>
-      <td>-0.054226</td>
-      <td>-0.066271</td>
-      <td>0.016192</td>
-      <td>0.015842</td>
+      <td>0.047990</td>
+      <td>-0.055259</td>
+      <td>0.008311</td>
+      <td>0.018768</td>
+      <td>-0.005259</td>
+      <td>0.000252</td>
+      <td>0.038986</td>
+      <td>0.028226</td>
+      <td>-0.012809</td>
+      <td>0.026924</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.016416</td>
-      <td>-0.037043</td>
-      <td>-0.063958</td>
-      <td>-0.057673</td>
-      <td>-0.089271</td>
-      <td>0.116594</td>
-      <td>0.140040</td>
-      <td>-0.154758</td>
-      <td>0.152148</td>
-      <td>0.029939</td>
+      <td>0.016413</td>
+      <td>-0.037037</td>
+      <td>-0.063983</td>
+      <td>-0.057710</td>
+      <td>-0.089282</td>
+      <td>0.116663</td>
+      <td>0.140061</td>
+      <td>-0.154689</td>
+      <td>0.152286</td>
+      <td>0.029989</td>
       <td>...</td>
-      <td>0.011183</td>
-      <td>0.006278</td>
-      <td>0.023158</td>
-      <td>-0.012212</td>
-      <td>-0.011344</td>
-      <td>0.063351</td>
-      <td>-0.077055</td>
-      <td>-0.016620</td>
-      <td>-0.057812</td>
-      <td>-0.032101</td>
+      <td>-0.008662</td>
+      <td>0.082289</td>
+      <td>-0.028698</td>
+      <td>0.019607</td>
+      <td>-0.072676</td>
+      <td>-0.004055</td>
+      <td>0.005739</td>
+      <td>0.042623</td>
+      <td>-0.026856</td>
+      <td>-0.067672</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.016487</td>
-      <td>-0.045991</td>
-      <td>-0.058214</td>
-      <td>0.045270</td>
-      <td>-0.003292</td>
-      <td>0.030291</td>
-      <td>-0.002747</td>
-      <td>-0.035263</td>
-      <td>0.043570</td>
-      <td>0.381691</td>
+      <td>0.016486</td>
+      <td>-0.045992</td>
+      <td>-0.058209</td>
+      <td>0.045279</td>
+      <td>-0.003267</td>
+      <td>0.030211</td>
+      <td>-0.002822</td>
+      <td>-0.035328</td>
+      <td>0.043682</td>
+      <td>0.381652</td>
       <td>...</td>
-      <td>-0.004484</td>
-      <td>0.001454</td>
-      <td>-0.007375</td>
-      <td>0.000177</td>
-      <td>-0.000462</td>
-      <td>-0.005586</td>
-      <td>-0.002491</td>
-      <td>-0.040177</td>
-      <td>-0.025554</td>
-      <td>0.035817</td>
+      <td>0.011951</td>
+      <td>0.005709</td>
+      <td>0.020923</td>
+      <td>0.019216</td>
+      <td>0.007908</td>
+      <td>-0.011901</td>
+      <td>-0.008620</td>
+      <td>0.004989</td>
+      <td>-0.015758</td>
+      <td>-0.004801</td>
     </tr>
     <tr>
       <th>4</th>
       <td>0.061963</td>
-      <td>0.024016</td>
-      <td>0.019395</td>
-      <td>0.002946</td>
-      <td>-0.010607</td>
-      <td>0.154490</td>
-      <td>-0.044997</td>
-      <td>0.090692</td>
-      <td>0.015502</td>
-      <td>-0.003621</td>
+      <td>0.024017</td>
+      <td>0.019393</td>
+      <td>0.002947</td>
+      <td>-0.010608</td>
+      <td>0.154468</td>
+      <td>-0.045029</td>
+      <td>0.090598</td>
+      <td>0.015552</td>
+      <td>-0.003648</td>
       <td>...</td>
-      <td>-0.006519</td>
-      <td>-0.034213</td>
-      <td>0.041180</td>
-      <td>0.018746</td>
-      <td>-0.019433</td>
-      <td>0.042393</td>
-      <td>-0.042099</td>
-      <td>0.023175</td>
-      <td>-0.006283</td>
-      <td>-0.020257</td>
+      <td>-0.047200</td>
+      <td>0.004534</td>
+      <td>-0.008780</td>
+      <td>-0.000003</td>
+      <td>-0.040695</td>
+      <td>0.017995</td>
+      <td>-0.007353</td>
+      <td>-0.013800</td>
+      <td>0.004237</td>
+      <td>-0.021722</td>
     </tr>
     <tr>
       <th>...</th>
@@ -3105,128 +3078,128 @@ TF-IDF  &lt;class &#39;numpy.ndarray&#39;&gt; (805, 6511)
     <tr>
       <th>800</th>
       <td>-0.014961</td>
-      <td>-0.018905</td>
-      <td>0.015660</td>
-      <td>-0.025596</td>
-      <td>-0.022302</td>
-      <td>-0.027336</td>
-      <td>0.030271</td>
-      <td>0.029194</td>
-      <td>-0.014180</td>
-      <td>0.014783</td>
+      <td>-0.018902</td>
+      <td>0.015665</td>
+      <td>-0.025586</td>
+      <td>-0.022297</td>
+      <td>-0.027372</td>
+      <td>0.030287</td>
+      <td>0.029218</td>
+      <td>-0.014036</td>
+      <td>0.014695</td>
       <td>...</td>
-      <td>0.027213</td>
-      <td>0.037739</td>
-      <td>-0.047601</td>
-      <td>0.060647</td>
-      <td>-0.064880</td>
-      <td>0.043643</td>
-      <td>-0.014430</td>
-      <td>0.015139</td>
-      <td>0.014582</td>
-      <td>0.025331</td>
+      <td>0.049642</td>
+      <td>-0.023168</td>
+      <td>-0.016749</td>
+      <td>0.013719</td>
+      <td>-0.060887</td>
+      <td>0.019171</td>
+      <td>0.010036</td>
+      <td>-0.002541</td>
+      <td>0.007412</td>
+      <td>-0.031808</td>
     </tr>
     <tr>
       <th>801</th>
-      <td>-0.013178</td>
-      <td>-0.013911</td>
-      <td>-0.026695</td>
-      <td>-0.018085</td>
-      <td>-0.046293</td>
-      <td>0.030089</td>
-      <td>0.116159</td>
-      <td>-0.076798</td>
-      <td>0.084320</td>
-      <td>0.026691</td>
+      <td>-0.013177</td>
+      <td>-0.013910</td>
+      <td>-0.026701</td>
+      <td>-0.018092</td>
+      <td>-0.046242</td>
+      <td>0.030107</td>
+      <td>0.116204</td>
+      <td>-0.076768</td>
+      <td>0.084281</td>
+      <td>0.026636</td>
       <td>...</td>
-      <td>-0.014092</td>
-      <td>-0.006907</td>
-      <td>-0.038955</td>
-      <td>-0.021608</td>
-      <td>0.015326</td>
-      <td>0.013338</td>
-      <td>-0.017843</td>
-      <td>0.006830</td>
-      <td>-0.024733</td>
-      <td>0.019732</td>
+      <td>0.029809</td>
+      <td>-0.003685</td>
+      <td>-0.047909</td>
+      <td>0.007943</td>
+      <td>0.039162</td>
+      <td>0.006894</td>
+      <td>0.010927</td>
+      <td>-0.017134</td>
+      <td>-0.036060</td>
+      <td>-0.026771</td>
     </tr>
     <tr>
       <th>802</th>
       <td>-0.107662</td>
-      <td>0.060592</td>
+      <td>0.060588</td>
       <td>-0.008562</td>
-      <td>0.018374</td>
-      <td>-0.027181</td>
-      <td>-0.014238</td>
-      <td>0.034426</td>
-      <td>0.011091</td>
-      <td>-0.018092</td>
-      <td>0.004942</td>
+      <td>0.018385</td>
+      <td>-0.027156</td>
+      <td>-0.014222</td>
+      <td>0.034395</td>
+      <td>0.011097</td>
+      <td>-0.018046</td>
+      <td>0.004948</td>
       <td>...</td>
-      <td>-0.018051</td>
-      <td>0.006352</td>
-      <td>0.027910</td>
-      <td>0.011733</td>
-      <td>0.002568</td>
-      <td>0.025251</td>
-      <td>-0.006775</td>
-      <td>-0.010289</td>
-      <td>-0.010577</td>
-      <td>-0.004039</td>
+      <td>-0.002310</td>
+      <td>0.005243</td>
+      <td>-0.016403</td>
+      <td>-0.015683</td>
+      <td>0.006999</td>
+      <td>0.023783</td>
+      <td>-0.000222</td>
+      <td>-0.016987</td>
+      <td>-0.009536</td>
+      <td>-0.005239</td>
     </tr>
     <tr>
       <th>803</th>
-      <td>-0.072871</td>
-      <td>0.034535</td>
-      <td>0.002880</td>
-      <td>-0.001269</td>
-      <td>-0.009662</td>
-      <td>-0.010868</td>
-      <td>0.040086</td>
-      <td>0.039815</td>
-      <td>-0.010446</td>
-      <td>-0.027255</td>
+      <td>-0.072872</td>
+      <td>0.034534</td>
+      <td>0.002887</td>
+      <td>-0.001238</td>
+      <td>-0.009683</td>
+      <td>-0.010894</td>
+      <td>0.040040</td>
+      <td>0.039769</td>
+      <td>-0.010467</td>
+      <td>-0.027353</td>
       <td>...</td>
-      <td>0.020087</td>
-      <td>0.024953</td>
-      <td>0.047743</td>
-      <td>-0.015287</td>
-      <td>0.003059</td>
-      <td>-0.029064</td>
-      <td>-0.033804</td>
-      <td>-0.023220</td>
-      <td>0.060199</td>
-      <td>-0.012972</td>
+      <td>0.008700</td>
+      <td>0.020719</td>
+      <td>-0.008210</td>
+      <td>-0.033302</td>
+      <td>0.005828</td>
+      <td>-0.005541</td>
+      <td>0.010984</td>
+      <td>0.022066</td>
+      <td>-0.003017</td>
+      <td>0.051243</td>
     </tr>
     <tr>
       <th>804</th>
-      <td>-0.039475</td>
+      <td>-0.039474</td>
       <td>0.017813</td>
-      <td>0.019706</td>
-      <td>0.002304</td>
-      <td>-0.022022</td>
-      <td>0.022696</td>
-      <td>0.018597</td>
-      <td>-0.000956</td>
-      <td>0.015437</td>
-      <td>0.015441</td>
+      <td>0.019712</td>
+      <td>0.002303</td>
+      <td>-0.021986</td>
+      <td>0.022708</td>
+      <td>0.018554</td>
+      <td>-0.000948</td>
+      <td>0.015360</td>
+      <td>0.015367</td>
       <td>...</td>
-      <td>-0.006948</td>
-      <td>0.006000</td>
-      <td>0.003573</td>
-      <td>0.006003</td>
-      <td>0.008599</td>
-      <td>0.013555</td>
-      <td>-0.001900</td>
-      <td>0.008891</td>
-      <td>-0.006591</td>
-      <td>-0.021602</td>
+      <td>-0.005696</td>
+      <td>-0.020838</td>
+      <td>-0.006894</td>
+      <td>0.031798</td>
+      <td>-0.009461</td>
+      <td>-0.013241</td>
+      <td>-0.010652</td>
+      <td>-0.012382</td>
+      <td>0.003857</td>
+      <td>-0.006599</td>
     </tr>
   </tbody>
 </table>
 <p>805 rows × 150 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-3a1d7289-a9b5-4cd7-91ec-ff1fb5dd8ee7')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a25380a8-0985-48c2-9905-410e32b0b60b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -3277,12 +3250,12 @@ TF-IDF  &lt;class &#39;numpy.ndarray&#39;&gt; (805, 6511)
 
       <script>
         const buttonEl =
-          document.querySelector('#df-3a1d7289-a9b5-4cd7-91ec-ff1fb5dd8ee7 button.colab-df-convert');
+          document.querySelector('#df-a25380a8-0985-48c2-9905-410e32b0b60b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-3a1d7289-a9b5-4cd7-91ec-ff1fb5dd8ee7');
+          const element = document.querySelector('#df-a25380a8-0985-48c2-9905-410e32b0b60b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3302,6 +3275,555 @@ TF-IDF  &lt;class &#39;numpy.ndarray&#39;&gt; (805, 6511)
     </div>
   </div>
   </div></div>
+</div>
+</div>
+<div class="section" id="k-means-klastering">
+<h2>K-Means Klastering<a class="headerlink" href="#k-means-klastering" title="Permalink to this heading">#</a></h2>
+<div class="section" id="load-data-untuk-k-mean">
+<h3>load data untuk k-mean<a class="headerlink" href="#load-data-untuk-k-mean" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_tf_idf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Text_TF_IDF.csv&quot;</span><span class="p">)</span>
+<span class="n">data_tf_idf</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-fca9c014-a498-4d12-a4d5-2a92521032d3">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>aalysis</th>
+      <th>aam</th>
+      <th>ab</th>
+      <th>abad</th>
+      <th>abadi</th>
+      <th>abai</th>
+      <th>abdi</th>
+      <th>ability</th>
+      <th>abjad</th>
+      <th>...</th>
+      <th>zara</th>
+      <th>zat</th>
+      <th>zcz</th>
+      <th>zf</th>
+      <th>zona</th>
+      <th>zone</th>
+      <th>zoning</th>
+      <th>zoom</th>
+      <th>zucara</th>
+      <th>zungu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 6512 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-fca9c014-a498-4d12-a4d5-2a92521032d3')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-fca9c014-a498-4d12-a4d5-2a92521032d3 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-fca9c014-a498-4d12-a4d5-2a92521032d3');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kategori</span> <span class="o">=</span> <span class="n">datap</span><span class="p">[</span><span class="s1">&#39;Kategori&#39;</span><span class="p">]</span>
+<span class="n">kategori</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0            RPL
+1            RPL
+2            RPL
+3      KOMPUTASI
+4            RPL
+         ...    
+800    KOMPUTASI
+801    KOMPUTASI
+802    KOMPUTASI
+803    KOMPUTASI
+804    KOMPUTASI
+Name: Kategori, Length: 805, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
+<span class="n">le</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">label</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">kategori</span><span class="p">)</span>
+
+<span class="n">label</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
+       1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+       0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+       1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1,
+       1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0,
+       0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0,
+       1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1,
+       0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0,
+       0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0,
+       1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0,
+       0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0,
+       1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1,
+       1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1,
+       0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1,
+       1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0,
+       1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1,
+       1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0,
+       0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0,
+       1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1,
+       0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0,
+       1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1,
+       0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1,
+       0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0,
+       0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1,
+       0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0,
+       0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1,
+       1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+       1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0,
+       0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+       0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="k-means">
+<h3>k-means<a class="headerlink" href="#k-means" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="c1">#number of cluster</span>
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">#fitting the input data</span>
+<span class="n">kmeans</span><span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">pca_abstrak</span><span class="p">)</span>
+<span class="c1">#getting the clusters  labels</span>
+<span class="n">prediksi</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pca_abstrak</span><span class="p">)</span>
+<span class="c1">#centroids values</span>
+<span class="n">centroids</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
+
+<span class="n">centroids</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 2.60050666e-02, -2.05526370e-02, -6.68130061e-05,
+        -4.20395030e-03,  3.73985642e-04,  4.14233276e-04,
+         1.92760594e-03, -2.00823836e-04,  9.44229521e-04,
+         1.26908289e-03,  6.66384475e-05,  8.06421285e-04,
+         2.09051045e-05,  4.66916678e-04,  1.04850273e-03,
+        -5.18134190e-04,  5.18497869e-04,  6.73970783e-04,
+        -8.78036655e-04, -5.25795830e-04, -1.06608204e-03,
+         2.64932094e-04, -1.16574907e-04, -6.87822270e-05,
+         4.35840877e-05,  2.30991996e-04, -2.09809242e-04,
+         5.43571099e-04,  8.50336630e-04,  5.24775583e-04,
+         1.26958493e-04,  1.68080871e-04,  2.95303919e-04,
+        -4.18095945e-04,  1.22531398e-03,  1.59078658e-04,
+         1.89245985e-04,  3.72746716e-04,  2.34507061e-04,
+         3.69892721e-04, -4.80121913e-04,  1.37622551e-05,
+        -6.22939847e-05, -7.42426351e-04,  5.93050427e-04,
+         2.87825648e-04, -3.70959949e-04,  5.49567432e-04,
+        -2.42746596e-04,  2.39067793e-04,  2.09225608e-04,
+         3.12287989e-04,  6.33907576e-04,  5.45234593e-05,
+        -1.61301426e-04,  1.27515013e-03, -3.53244643e-04,
+        -8.08665205e-04,  2.99681565e-04, -4.69871928e-04,
+        -3.87517246e-04, -1.37189552e-03, -3.41786738e-04,
+         1.13261160e-03, -9.47098862e-05, -5.51947975e-04,
+         2.22316429e-04,  9.07300627e-04,  1.87672390e-04,
+         5.10323001e-04, -5.65980640e-04, -2.01842942e-04,
+        -3.69955430e-04,  1.31366049e-04, -1.65806825e-04,
+         7.30537010e-05, -1.80943115e-05,  2.60544056e-04,
+        -2.37055150e-04,  2.17514580e-04, -9.45767193e-05,
+         2.72462906e-04,  1.36728563e-04, -4.29217123e-04,
+        -4.25900510e-04,  2.44960445e-05, -1.00737274e-04,
+         6.10814496e-04,  1.42624006e-04, -4.62807577e-04,
+        -3.46462810e-04,  1.37525982e-04,  5.59545330e-04,
+         1.50389225e-04,  5.38440023e-05,  1.36345686e-04,
+         1.71926382e-04, -4.66883624e-04,  4.32473457e-04,
+         1.56542107e-04, -1.08893708e-04, -3.04594598e-04,
+         5.08987364e-04,  1.57814506e-04, -8.86736062e-05,
+         5.25396164e-05,  5.12137763e-05, -1.89839024e-04,
+         7.04801276e-05, -5.67034363e-05,  4.17247472e-05,
+         6.07044963e-05,  2.44695636e-05,  3.26314686e-04,
+        -3.99516016e-04,  2.01296467e-04,  5.50462576e-05,
+        -3.10321597e-04, -2.56972225e-04, -2.13892782e-05,
+        -1.91361749e-04,  2.29455909e-04, -1.21690145e-04,
+         7.39456262e-05, -2.92571098e-04, -1.29158845e-04,
+        -1.92807869e-04, -4.54106272e-04, -1.16438292e-04,
+        -2.14714767e-05,  5.83373214e-05, -1.52782277e-04,
+         7.11079521e-05, -2.71300138e-05,  8.75110069e-05,
+        -2.59365486e-04, -1.95837065e-04, -7.67037919e-05,
+        -1.13417558e-04, -1.36800404e-05, -8.08265635e-06,
+        -2.61803968e-04,  1.76365965e-04,  1.26955618e-04,
+        -2.14288935e-05, -2.14984404e-05, -3.58010338e-04,
+        -2.39674913e-04,  8.66580061e-05,  1.11126835e-04],
+       [-1.66050701e-01,  1.31235187e-01,  4.26622498e-04,
+         2.68435725e-02, -2.38801841e-03, -2.64501248e-03,
+        -1.23083829e-02,  1.28232468e-03, -6.02920868e-03,
+        -8.10350174e-03, -4.25507885e-04, -5.14925885e-03,
+        -1.33485805e-04, -2.98141292e-03, -6.69502663e-03,
+         3.30845318e-03, -3.31077539e-03, -4.30351986e-03,
+         5.60654598e-03,  3.35737521e-03,  6.80727616e-03,
+        -1.69167649e-03,  7.44368215e-04,  4.39196605e-04,
+        -2.78298395e-04, -1.47495807e-03,  1.33969938e-03,
+        -3.47087601e-03, -5.42967243e-03, -3.35086060e-03,
+        -8.10670745e-04, -1.07325033e-03, -1.88561034e-03,
+         2.66967686e-03, -7.82402321e-03, -1.01576831e-03,
+        -1.20839638e-03, -2.38010747e-03, -1.49740288e-03,
+        -2.36188380e-03,  3.06573258e-03, -8.78764177e-05,
+         3.97767095e-04,  4.74063064e-03, -3.78681741e-03,
+        -1.83785919e-03,  2.36869839e-03, -3.50916452e-03,
+         1.55001496e-03, -1.52652462e-03, -1.33597269e-03,
+        -1.99405909e-03, -4.04770342e-03, -3.48149795e-04,
+         1.02996140e-03, -8.14224305e-03,  2.25558047e-03,
+         5.16358700e-03, -1.91356302e-03,  3.00028314e-03,
+         2.47442205e-03,  8.75999343e-03,  2.18241807e-03,
+        -7.23208874e-03,  6.04753035e-04,  3.52436505e-03,
+        -1.41956178e-03, -5.79340584e-03, -1.19834847e-03,
+        -3.25857623e-03,  3.61396813e-03,  1.28883200e-03,
+         2.36228421e-03, -8.38814405e-04,  1.05872982e-03,
+        -4.66471339e-04,  1.15537989e-04, -1.66365746e-03,
+         1.51367325e-03, -1.38890044e-03,  6.03902721e-04,
+        -1.73976314e-03, -8.73055780e-04,  2.74068915e-03,
+         2.71951151e-03, -1.56415110e-04,  6.43239838e-04,
+        -3.90024669e-03, -9.10700078e-04,  2.95517498e-03,
+         2.21227629e-03, -8.78147558e-04, -3.57287660e-03,
+        -9.60283493e-04, -3.43811244e-04, -8.70610984e-04,
+        -1.09780515e-03,  2.98120185e-03, -2.76148189e-03,
+        -9.99571619e-04,  6.95321289e-04,  1.94493431e-03,
+        -3.25004776e-03, -1.00769629e-03,  5.66209449e-04,
+        -3.35482321e-04, -3.27016406e-04,  1.21218312e-03,
+        -4.50038246e-04,  3.62069648e-04, -2.66425909e-04,
+        -3.87617701e-04, -1.56246021e-04, -2.08362405e-03,
+         2.55103804e-03, -1.28534258e-03, -3.51488030e-04,
+         1.98150304e-03,  1.64085017e-03,  1.36577409e-04,
+         1.22190622e-03, -1.46514966e-03,  7.77030652e-04,
+        -4.72166567e-04,  1.86816041e-03,  8.24720697e-04,
+         1.23114015e-03,  2.89961436e-03,  7.43495882e-04,
+         1.37102273e-04, -3.72502529e-04,  9.75563897e-04,
+        -4.54047107e-04,  1.73233850e-04, -5.58785879e-04,
+         1.65613191e-03,  1.25048255e-03,  4.89778341e-04,
+         7.24207523e-04,  8.73514505e-05,  5.16103561e-05,
+         1.67170240e-03, -1.12615332e-03, -8.10652386e-04,
+         1.36830366e-04,  1.37274445e-04,  2.28601096e-03,
+         1.53040128e-03, -5.53339195e-04, -7.09580526e-04]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">unique</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">where</span> 
+<span class="n">yhat</span> <span class="o">=</span> <span class="n">unique</span><span class="p">(</span><span class="n">prediksi</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">unique</span><span class="p">(</span><span class="n">yhat</span><span class="p">)</span>
+<span class="c1">#create scatter plot for samples from each cluster</span>
+<span class="k">for</span> <span class="n">cluster</span> <span class="ow">in</span> <span class="n">clusters</span><span class="p">:</span>
+  <span class="c1">#get row indexes for samples with this cluster</span>
+  <span class="n">row_ix</span> <span class="o">=</span> <span class="n">where</span> <span class="p">(</span><span class="n">yhat</span> <span class="o">==</span> <span class="n">cluster</span><span class="p">)</span>
+  <span class="c1">#create scatter of these samples</span>
+  <span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">pca_abstrak</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">pca_abstrak</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="c1">#show the plot</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/62d9042d629cc9fc68dd6d8caa7dd07fb19ba0292e2662c4f19af8e947a0ebd1.png" src="_images/62d9042d629cc9fc68dd6d8caa7dd07fb19ba0292e2662c4f19af8e947a0ebd1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">prediksi</span>
+<span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">mapping</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">]</span>
+
+<span class="n">prediksi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">prediksi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1,
+       1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1,
+       1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+       1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+       1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0,
+       1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0,
+       1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1,
+       0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+       1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+       0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1,
+       1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+       0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1,
+       0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1,
+       1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1,
+       1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0,
+       1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1,
+       1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hasil akurasi jika di bandingkan dengan label sebelumnya</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="n">accuracy_score</span><span class="p">(</span><span class="n">label</span><span class="p">,</span><span class="n">prediksi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4720496894409938
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="split-data">
@@ -3576,612 +4098,12 @@ jumlah nilai pca naive bayes maksimum 1
 </div>
 </div>
 </div>
-<div class="section" id="k-means-klastering">
-<h2>K-Means Klastering<a class="headerlink" href="#k-means-klastering" title="Permalink to this heading">#</a></h2>
-<div class="section" id="load-data-untuk-k-mean">
-<h3>load data untuk k-mean<a class="headerlink" href="#load-data-untuk-k-mean" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># proses pca</span>
-<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
-<span class="n">pca_abstrak</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">133</span><span class="p">)</span>
-<span class="n">principalComponents_abstrak</span> <span class="o">=</span> <span class="n">pca_abstrak</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dfbtf</span><span class="p">)</span>
-<span class="n">abstrak_pca</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">principalComponents_abstrak</span><span class="p">)</span>
-<span class="n">abstrak_pca</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-75d062b5-9c72-492f-bc0d-32b6c843d563">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-      <th>...</th>
-      <th>123</th>
-      <th>124</th>
-      <th>125</th>
-      <th>126</th>
-      <th>127</th>
-      <th>128</th>
-      <th>129</th>
-      <th>130</th>
-      <th>131</th>
-      <th>132</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>-0.010808</td>
-      <td>-0.067898</td>
-      <td>-0.014037</td>
-      <td>-0.029783</td>
-      <td>-0.036426</td>
-      <td>0.039732</td>
-      <td>-0.044400</td>
-      <td>-0.046098</td>
-      <td>-0.003085</td>
-      <td>-0.010928</td>
-      <td>...</td>
-      <td>-0.029787</td>
-      <td>-0.007179</td>
-      <td>0.003424</td>
-      <td>0.061942</td>
-      <td>0.009343</td>
-      <td>-0.027204</td>
-      <td>0.022079</td>
-      <td>0.034204</td>
-      <td>-0.049100</td>
-      <td>0.026287</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.010502</td>
-      <td>-0.041959</td>
-      <td>-0.026735</td>
-      <td>-0.070732</td>
-      <td>-0.025666</td>
-      <td>0.085427</td>
-      <td>-0.037451</td>
-      <td>0.047544</td>
-      <td>0.008789</td>
-      <td>-0.009180</td>
-      <td>...</td>
-      <td>0.029661</td>
-      <td>-0.007912</td>
-      <td>-0.065537</td>
-      <td>-0.042097</td>
-      <td>0.010779</td>
-      <td>-0.071000</td>
-      <td>0.011353</td>
-      <td>0.046902</td>
-      <td>0.071190</td>
-      <td>0.040663</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.016420</td>
-      <td>-0.037036</td>
-      <td>-0.063993</td>
-      <td>-0.057733</td>
-      <td>-0.089256</td>
-      <td>0.116843</td>
-      <td>0.139927</td>
-      <td>-0.154737</td>
-      <td>0.152104</td>
-      <td>0.030223</td>
-      <td>...</td>
-      <td>0.008065</td>
-      <td>0.061644</td>
-      <td>0.055842</td>
-      <td>-0.077329</td>
-      <td>-0.030683</td>
-      <td>0.010880</td>
-      <td>-0.048280</td>
-      <td>-0.026946</td>
-      <td>0.015311</td>
-      <td>-0.012188</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.016488</td>
-      <td>-0.045989</td>
-      <td>-0.058217</td>
-      <td>0.045247</td>
-      <td>-0.003264</td>
-      <td>0.030304</td>
-      <td>-0.002803</td>
-      <td>-0.035254</td>
-      <td>0.043624</td>
-      <td>0.381696</td>
-      <td>...</td>
-      <td>0.014086</td>
-      <td>-0.010207</td>
-      <td>0.032486</td>
-      <td>0.015072</td>
-      <td>0.011045</td>
-      <td>-0.019067</td>
-      <td>-0.020827</td>
-      <td>0.014044</td>
-      <td>-0.033666</td>
-      <td>-0.012443</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.061962</td>
-      <td>0.024018</td>
-      <td>0.019391</td>
-      <td>0.002902</td>
-      <td>-0.010485</td>
-      <td>0.154527</td>
-      <td>-0.045004</td>
-      <td>0.090564</td>
-      <td>0.015645</td>
-      <td>-0.003632</td>
-      <td>...</td>
-      <td>0.018508</td>
-      <td>-0.000647</td>
-      <td>0.002991</td>
-      <td>-0.052615</td>
-      <td>0.024615</td>
-      <td>-0.005225</td>
-      <td>0.014341</td>
-      <td>-0.013755</td>
-      <td>0.020749</td>
-      <td>0.000680</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>800</th>
-      <td>-0.014960</td>
-      <td>-0.018899</td>
-      <td>0.015649</td>
-      <td>-0.025613</td>
-      <td>-0.022229</td>
-      <td>-0.027421</td>
-      <td>0.030153</td>
-      <td>0.029049</td>
-      <td>-0.013767</td>
-      <td>0.014863</td>
-      <td>...</td>
-      <td>0.000887</td>
-      <td>-0.032465</td>
-      <td>-0.013651</td>
-      <td>0.075416</td>
-      <td>0.047175</td>
-      <td>0.044525</td>
-      <td>-0.036539</td>
-      <td>-0.005200</td>
-      <td>-0.003191</td>
-      <td>-0.040359</td>
-    </tr>
-    <tr>
-      <th>801</th>
-      <td>-0.013177</td>
-      <td>-0.013913</td>
-      <td>-0.026702</td>
-      <td>-0.018079</td>
-      <td>-0.046302</td>
-      <td>0.030015</td>
-      <td>0.116085</td>
-      <td>-0.076773</td>
-      <td>0.084380</td>
-      <td>0.026632</td>
-      <td>...</td>
-      <td>0.016226</td>
-      <td>0.016308</td>
-      <td>0.058620</td>
-      <td>-0.023093</td>
-      <td>0.031386</td>
-      <td>0.020080</td>
-      <td>0.007025</td>
-      <td>-0.036516</td>
-      <td>0.024862</td>
-      <td>-0.008355</td>
-    </tr>
-    <tr>
-      <th>802</th>
-      <td>-0.107662</td>
-      <td>0.060592</td>
-      <td>-0.008559</td>
-      <td>0.018387</td>
-      <td>-0.027173</td>
-      <td>-0.014227</td>
-      <td>0.034446</td>
-      <td>0.011078</td>
-      <td>-0.018053</td>
-      <td>0.004892</td>
-      <td>...</td>
-      <td>0.007177</td>
-      <td>-0.020161</td>
-      <td>-0.015823</td>
-      <td>0.001422</td>
-      <td>0.010462</td>
-      <td>-0.007168</td>
-      <td>0.006894</td>
-      <td>-0.010738</td>
-      <td>0.012963</td>
-      <td>0.010680</td>
-    </tr>
-    <tr>
-      <th>803</th>
-      <td>-0.072869</td>
-      <td>0.034536</td>
-      <td>0.002888</td>
-      <td>-0.001256</td>
-      <td>-0.009646</td>
-      <td>-0.010843</td>
-      <td>0.040095</td>
-      <td>0.039871</td>
-      <td>-0.010437</td>
-      <td>-0.027382</td>
-      <td>...</td>
-      <td>0.016265</td>
-      <td>0.018510</td>
-      <td>-0.003541</td>
-      <td>-0.007124</td>
-      <td>-0.005102</td>
-      <td>0.013197</td>
-      <td>0.012762</td>
-      <td>-0.010614</td>
-      <td>-0.015381</td>
-      <td>0.008060</td>
-    </tr>
-    <tr>
-      <th>804</th>
-      <td>-0.039477</td>
-      <td>0.017814</td>
-      <td>0.019707</td>
-      <td>0.002332</td>
-      <td>-0.022061</td>
-      <td>0.022688</td>
-      <td>0.018477</td>
-      <td>-0.000991</td>
-      <td>0.015275</td>
-      <td>0.015411</td>
-      <td>...</td>
-      <td>-0.031655</td>
-      <td>-0.015378</td>
-      <td>-0.003674</td>
-      <td>-0.009037</td>
-      <td>-0.011096</td>
-      <td>-0.001229</td>
-      <td>-0.018549</td>
-      <td>0.028260</td>
-      <td>0.021498</td>
-      <td>-0.007487</td>
-    </tr>
-  </tbody>
-</table>
-<p>805 rows × 133 columns</p>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-75d062b5-9c72-492f-bc0d-32b6c843d563')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-75d062b5-9c72-492f-bc0d-32b6c843d563 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-75d062b5-9c72-492f-bc0d-32b6c843d563');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># kategori secara manual</span>
-<span class="n">kategori</span> <span class="o">=</span> <span class="n">datap</span><span class="p">[</span><span class="s1">&#39;Kategori&#39;</span><span class="p">]</span>
-<span class="n">kategori</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0            RPL
-1            RPL
-2            RPL
-3      KOMPUTASI
-4            RPL
-         ...    
-800    KOMPUTASI
-801    KOMPUTASI
-802    KOMPUTASI
-803    KOMPUTASI
-804    KOMPUTASI
-Name: Kategori, Length: 805, dtype: object
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mengubah kategori menjadi numerik</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
-<span class="n">le</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">LabelEncoder</span><span class="p">()</span>
-<span class="n">label</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">kategori</span><span class="p">)</span>
-
-<span class="n">label</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
-       1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0,
-       0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
-       1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1,
-       1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0,
-       0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0,
-       1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1,
-       0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0,
-       0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0,
-       1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0,
-       0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0,
-       1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1,
-       1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1,
-       0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1,
-       1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0,
-       1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1,
-       1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0,
-       0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0,
-       1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1,
-       0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0,
-       1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1,
-       0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1,
-       0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0,
-       0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1,
-       0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0,
-       0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1,
-       1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-       1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0,
-       0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
-       0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0])
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="k-means">
-<h3>k-means<a class="headerlink" href="#k-means" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># memanggil modul kmeans</span>
-<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
-<span class="c1"># menemtukan klaster</span>
-<span class="n">cluster_K</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="c1"># membuat prediksi</span>
-<span class="n">prediksi</span> <span class="o">=</span> <span class="n">cluster_K</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">abstrak_pca</span><span class="p">)</span>
-<span class="c1"># menampilkan claster dalam dataframe</span>
-<span class="n">cluster</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Cluster&#39;</span><span class="p">:</span> <span class="n">prediksi</span><span class="p">})</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
-  warnings.warn(
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Visualising the clusters</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Hasil Clustering Menggunakan  K-Means&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">principalComponents_abstrak</span><span class="p">[</span><span class="n">prediksi</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">principalComponents_abstrak</span><span class="p">[</span><span class="n">prediksi</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;RPL&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">principalComponents_abstrak</span><span class="p">[</span><span class="n">prediksi</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">principalComponents_abstrak</span><span class="p">[</span><span class="n">prediksi</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;brown&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Komputasi&#39;</span><span class="p">)</span>
-
-<span class="c1">#Plotting the centroids of the clusters</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">cluster_K</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">cluster_K</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Centroids&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fe265f95340&gt;
-</pre></div>
-</div>
-<img alt="_images/1ef362ba8d229d4ba9bf2547dcccbe97c37ca986eb2b6cd192db7110e0edec02.png" src="_images/1ef362ba8d229d4ba9bf2547dcccbe97c37ca986eb2b6cd192db7110e0edec02.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">a</span><span class="o">=</span><span class="n">prediksi</span>
-<span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">mapping</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">]</span>
-
-<span class="n">prediksi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="n">prediksi</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1,
-       1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1,
-       1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1,
-       1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
-       1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0,
-       1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0,
-       1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1,
-       0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
-       1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
-       0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1,
-       1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
-       0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1,
-       0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1,
-       1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1,
-       1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0,
-       1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1,
-       1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hasil akurasi jika di bandingkan dengan label sebelumnya</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
-<span class="n">accuracy_score</span><span class="p">(</span><span class="n">label</span><span class="p">,</span><span class="n">prediksi</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4720496894409938
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="section" id="kesimpulan">
 <h2>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>dari hasil pencarian nilai yang terbaik dari 500 kali percobaan hasilnya akurasi terbaik untuk metode knn adalah 88.02  % dan nilai akurasi terbaik untuk naive bayes adalah 78.98</p></li>
 <li><p>sedangkan nilai pca yang memiliki nilai akurasi tertinggi untuk naive bayes ada pada pca ke 9 dan 133 dengan nilai akurasi 78.93 % dan untuk knn nilai pca tebaik adalah pca ke 111 yang menghasilkan akurasi 88.02 %</p></li>
 <li><p>sehingga dari kedua metode yang terbaik adalah dengan menggunakan pca 111 untuk metode knn dengan nilai k = 9 yang akan menghasilkan nilai akurasi sebesar 88.02 %</p></li>
-<li><p>hasil k-means 2 centroid dengan pca = 133 data memiliki akurasi 47 %</p></li>
 </ul>
 <ul class="simple">
 <li><p>referensi:</p></li>
@@ -4222,15 +4144,6 @@ Name: Kategori, Length: 805, dtype: object
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="tugas2.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas 2</p>
-      </div>
-    </a>
 </div></div>
   
 </div>
@@ -4262,6 +4175,11 @@ Name: Kategori, Length: 805, dtype: object
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pca">PCA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-klastering">K-Means Klastering</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-untuk-k-mean">load data untuk k-mean</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means">k-means</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-data">Split Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes">Naive bayes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn">KNN</a><ul class="nav section-nav flex-column">
@@ -4269,11 +4187,6 @@ Name: Kategori, Length: 805, dtype: object
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pencarian-nilai-pca-terbaik">Pencarian nilai PCA terbaik</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-klastering">K-Means Klastering</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-untuk-k-mean">load data untuk k-mean</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means">k-means</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
 </ul>
   </nav></div>
