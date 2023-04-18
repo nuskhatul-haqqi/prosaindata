@@ -383,20 +383,25 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-pagerank">Rumus PageRank</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-manual-pagerank-dari-graph-yang-anda-buat">1. Hitung manual pagerank dari graph yang anda buat</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-menggunakan-pagerank-menggunakan-networkx">2. Hitung menggunakan pagerank menggunakan networkx</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-ulang-https-github-com-shakunni-extractive-text-summarization-blob-master-extractive-summarizer-ipynb">Implementasi ulang https://github.com/Shakunni/Extractive-Text-Summarization/blob/master/extractive_summarizer.ipynb</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-di-perlukan">1. import library yang di perlukan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-membaca-data-dari-user">2. membuat fungsi untuk membaca data dari user</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-tokenisasi-dokumen">3. membuat fungsi untuk tokenisasi dokumen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membaca-dokument-atau-dataset">4. membaca dokument atau dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-kalimat-pada-dokumen-kedalam-list">4. Menampilkan kalimat pada dokumen kedalam list</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasilkan-term-document-matrix-td-matrix-dari-data">5. Hasilkan term-document matrix (TD matrix) dari data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menmpilkan-hasil-graph-dalam-gambar">7. Menmpilkan hasil graph dalam gambar</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mendapatkan-peringkat-setiap-kalimat-menggunakan-textrank">8. Mendapatkan peringkat setiap kalimat menggunakan textrank</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menemukan-kalimat-penting-dan-menghasilkan-ringkasan">9. Menemukan kalimat penting dan menghasilkan ringkasan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menulis-ringkasan-ke-file-baru">10. Menulis ringkasan ke file baru</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buat-graph-berarah-dengan-networkx-minimal-9-node">1. Buat graph berarah dengan networkx (minimal 9 node )</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-pagerank">Rumus PageRank</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-manual-pagerank-dari-graph-yang-anda-buat">1. Hitung manual pagerank dari graph yang anda buat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-menggunakan-pagerank-menggunakan-networkx">2. Hitung menggunakan pagerank menggunakan networkx</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-ulang-https-github-com-shakunni-extractive-text-summarization-blob-master-extractive-summarizer-ipynb">2. Implementasi ulang https://github.com/Shakunni/Extractive-Text-Summarization/blob/master/extractive_summarizer.ipynb</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-di-perlukan">1. import library yang di perlukan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-membaca-data-dari-user">2. membuat fungsi untuk membaca data dari user</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-tokenisasi-dokumen">3. membuat fungsi untuk tokenisasi dokumen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membaca-dokument-atau-dataset">4. membaca dokument atau dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-kalimat-pada-dokumen-kedalam-list">5. Menampilkan kalimat pada dokumen kedalam list</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasilkan-term-document-matrix-td-matrix-dari-data">6. Hasilkan term-document matrix (TD matrix) dari data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-hasil-graph-dalam-gambar">7. Menampilkan hasil graph dalam gambar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mendapatkan-peringkat-setiap-kalimat-menggunakan-textrank">8. Mendapatkan peringkat setiap kalimat menggunakan textrank</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menemukan-kalimat-penting-dan-menghasilkan-ringkasan">9. Menemukan kalimat penting dan menghasilkan ringkasan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menulis-ringkasan-ke-file-baru">10. Menulis ringkasan ke file baru</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -421,6 +426,8 @@ document.write(`
 <li><p>Upload di github repository webstatis masing masing</p></li>
 <li><p>Beri penjelasan terkait dengan proses</p></li>
 </ol>
+<div class="section" id="buat-graph-berarah-dengan-networkx-minimal-9-node">
+<h2>1. Buat graph berarah dengan networkx (minimal 9 node )<a class="headerlink" href="#buat-graph-berarah-dengan-networkx-minimal-9-node" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import modul yang akan digunakan</span>
@@ -459,7 +466,8 @@ Jumlah edge :  12
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/f5c3988d6bc3122fe5600ed57b886c751d5d514c3511ec330fd0a1bc216ee0a3.png" src="_images/f5c3988d6bc3122fe5600ed57b886c751d5d514c3511ec330fd0a1bc216ee0a3.png" />
+<img alt="_images/21842aa29e4e744750fb320fd8c71405cc9fcd2368e11935ffc3a8cb9f6be4c4.png" src="_images/21842aa29e4e744750fb320fd8c71405cc9fcd2368e11935ffc3a8cb9f6be4c4.png" />
+</div>
 </div>
 </div>
 <div class="section" id="rumus-pagerank">
@@ -484,9 +492,8 @@ Jumlah edge :  12
 </ol>
 </li>
 </ul>
-</div>
 <div class="section" id="hitung-manual-pagerank-dari-graph-yang-anda-buat">
-<h2>1. Hitung manual pagerank dari graph yang anda buat<a class="headerlink" href="#hitung-manual-pagerank-dari-graph-yang-anda-buat" title="Permalink to this heading">#</a></h2>
+<h3>1. Hitung manual pagerank dari graph yang anda buat<a class="headerlink" href="#hitung-manual-pagerank-dari-graph-yang-anda-buat" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># koneksi colab ke google drive untuk mengambil dataset</span>
@@ -900,7 +907,7 @@ Jumlah edge :  12
 <p>implementasi perhitungan manual pada exel berikut <strong><a class="reference external" href="https://docs.google.com/spreadsheets/d/1YFTO5tnZO9kgSTwjSYI2PTz448dwLORv/edit?usp=sharing&amp;ouid=105351045145874451233&amp;rtpof=true&amp;sd=true">link ini</a></strong></p>
 </div>
 <div class="section" id="hitung-menggunakan-pagerank-menggunakan-networkx">
-<h2>2. Hitung menggunakan pagerank menggunakan networkx<a class="headerlink" href="#hitung-menggunakan-pagerank-menggunakan-networkx" title="Permalink to this heading">#</a></h2>
+<h3>2. Hitung menggunakan pagerank menggunakan networkx<a class="headerlink" href="#hitung-menggunakan-pagerank-menggunakan-networkx" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Perhitungan menggunakan networkx</span>
@@ -924,11 +931,11 @@ Jumlah edge :  12
 </div>
 </div>
 </div>
-<div class="section" id="implementasi-ulang-https-github-com-shakunni-extractive-text-summarization-blob-master-extractive-summarizer-ipynb">
-<h2>Implementasi ulang <a class="github reference external" href="https://github.com/Shakunni/Extractive-Text-Summarization/blob/master/extractive_summarizer.ipynb">Shakunni/Extractive-Text-Summarization</a><a class="headerlink" href="#implementasi-ulang-https-github-com-shakunni-extractive-text-summarization-blob-master-extractive-summarizer-ipynb" title="Permalink to this heading">#</a></h2>
 </div>
+<div class="section" id="implementasi-ulang-https-github-com-shakunni-extractive-text-summarization-blob-master-extractive-summarizer-ipynb">
+<h2>2. Implementasi ulang <a class="github reference external" href="https://github.com/Shakunni/Extractive-Text-Summarization/blob/master/extractive_summarizer.ipynb">Shakunni/Extractive-Text-Summarization</a><a class="headerlink" href="#implementasi-ulang-https-github-com-shakunni-extractive-text-summarization-blob-master-extractive-summarizer-ipynb" title="Permalink to this heading">#</a></h2>
 <div class="section" id="import-library-yang-di-perlukan">
-<h2>1. import library yang di perlukan<a class="headerlink" href="#import-library-yang-di-perlukan" title="Permalink to this heading">#</a></h2>
+<h3>1. import library yang di perlukan<a class="headerlink" href="#import-library-yang-di-perlukan" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">PyPDF2</span>
@@ -997,7 +1004,7 @@ Requirement already satisfied: docx2txt in /usr/local/lib/python3.9/dist-package
 </div>
 </div>
 <div class="section" id="membuat-fungsi-untuk-membaca-data-dari-user">
-<h2>2. membuat fungsi untuk membaca data dari user<a class="headerlink" href="#membuat-fungsi-untuk-membaca-data-dari-user" title="Permalink to this heading">#</a></h2>
+<h3>2. membuat fungsi untuk membaca data dari user<a class="headerlink" href="#membuat-fungsi-untuk-membaca-data-dari-user" title="Permalink to this heading">#</a></h3>
 <p>Format yang didukung dalam fungsi berupa type data : .txt, .pdf, kemudian untuk input berupa nama file yang akan di proses dan output berupa string yang berisi konten file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1045,7 +1052,7 @@ Requirement already satisfied: docx2txt in /usr/local/lib/python3.9/dist-package
 </div>
 </div>
 <div class="section" id="membuat-fungsi-untuk-tokenisasi-dokumen">
-<h2>3. membuat fungsi untuk tokenisasi dokumen<a class="headerlink" href="#membuat-fungsi-untuk-tokenisasi-dokumen" title="Permalink to this heading">#</a></h2>
+<h3>3. membuat fungsi untuk tokenisasi dokumen<a class="headerlink" href="#membuat-fungsi-untuk-tokenisasi-dokumen" title="Permalink to this heading">#</a></h3>
 <p>input berupa data string dari dokumen sedangkan outputnya berupa list dari hasil tokenisasi</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1068,7 +1075,7 @@ Requirement already satisfied: docx2txt in /usr/local/lib/python3.9/dist-package
 </div>
 </div>
 <div class="section" id="membaca-dokument-atau-dataset">
-<h2>4. membaca dokument atau dataset<a class="headerlink" href="#membaca-dokument-atau-dataset" title="Permalink to this heading">#</a></h2>
+<h3>4. membaca dokument atau dataset<a class="headerlink" href="#membaca-dokument-atau-dataset" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># reading a file and </span>
@@ -1091,7 +1098,7 @@ The length of the file is: 7127
 </div>
 </div>
 <div class="section" id="menampilkan-kalimat-pada-dokumen-kedalam-list">
-<h2>4. Menampilkan kalimat pada dokumen kedalam list<a class="headerlink" href="#menampilkan-kalimat-pada-dokumen-kedalam-list" title="Permalink to this heading">#</a></h2>
+<h3>5. Menampilkan kalimat pada dokumen kedalam list<a class="headerlink" href="#menampilkan-kalimat-pada-dokumen-kedalam-list" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we want to tokenize the document for further processing</span>
@@ -1335,7 +1342,7 @@ more pitiful than Bhungi&#39;s grievous cries.
 </div>
 </div>
 <div class="section" id="hasilkan-term-document-matrix-td-matrix-dari-data">
-<h2>5. Hasilkan term-document matrix (TD matrix) dari data<a class="headerlink" href="#hasilkan-term-document-matrix-td-matrix-dari-data" title="Permalink to this heading">#</a></h2>
+<h3>6. Hasilkan term-document matrix (TD matrix) dari data<a class="headerlink" href="#hasilkan-term-document-matrix-td-matrix-dari-data" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert a collection of text documents to a matrix of token counts</span>
@@ -1505,8 +1512,8 @@ Size of the matrix is: 48
 </div>
 </div>
 </div>
-<div class="section" id="menmpilkan-hasil-graph-dalam-gambar">
-<h2>7. Menmpilkan hasil graph dalam gambar<a class="headerlink" href="#menmpilkan-hasil-graph-dalam-gambar" title="Permalink to this heading">#</a></h2>
+<div class="section" id="menampilkan-hasil-graph-dalam-gambar">
+<h3>7. Menampilkan hasil graph dalam gambar<a class="headerlink" href="#menampilkan-hasil-graph-dalam-gambar" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># drawing a graph to proceed for the textrank algorithm</span>
@@ -1553,7 +1560,7 @@ Number of vertices 101
 </div>
 </div>
 <div class="section" id="mendapatkan-peringkat-setiap-kalimat-menggunakan-textrank">
-<h2>8. Mendapatkan peringkat setiap kalimat menggunakan textrank<a class="headerlink" href="#mendapatkan-peringkat-setiap-kalimat-menggunakan-textrank" title="Permalink to this heading">#</a></h2>
+<h3>8. Mendapatkan peringkat setiap kalimat menggunakan textrank<a class="headerlink" href="#mendapatkan-peringkat-setiap-kalimat-menggunakan-textrank" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ranks is a dictionary with key=node(sentences) and value=textrank (the rank of each of the sentences)</span>
@@ -1679,7 +1686,7 @@ The size used by the dictionary in Bytes is: 4696
 </div>
 </div>
 <div class="section" id="menemukan-kalimat-penting-dan-menghasilkan-ringkasan">
-<h2>9. Menemukan kalimat penting dan menghasilkan ringkasan<a class="headerlink" href="#menemukan-kalimat-penting-dan-menghasilkan-ringkasan" title="Permalink to this heading">#</a></h2>
+<h3>9. Menemukan kalimat penting dan menghasilkan ringkasan<a class="headerlink" href="#menemukan-kalimat-penting-dan-menghasilkan-ringkasan" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># enumerate method: returns an enumerate object</span>
@@ -1785,7 +1792,7 @@ The size used by the dictionary in Bytes is: 4696
 </div>
 </div>
 <div class="section" id="menulis-ringkasan-ke-file-baru">
-<h2>10. Menulis ringkasan ke file baru<a class="headerlink" href="#menulis-ringkasan-ke-file-baru" title="Permalink to this heading">#</a></h2>
+<h3>10. Menulis ringkasan ke file baru<a class="headerlink" href="#menulis-ringkasan-ke-file-baru" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print(sentence_list)</span>
@@ -1892,6 +1899,7 @@ hoped that he had forgotten his anger by then.
 </div>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1951,20 +1959,25 @@ hoped that he had forgotten his anger by then.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-pagerank">Rumus PageRank</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-manual-pagerank-dari-graph-yang-anda-buat">1. Hitung manual pagerank dari graph yang anda buat</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-menggunakan-pagerank-menggunakan-networkx">2. Hitung menggunakan pagerank menggunakan networkx</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-ulang-https-github-com-shakunni-extractive-text-summarization-blob-master-extractive-summarizer-ipynb">Implementasi ulang https://github.com/Shakunni/Extractive-Text-Summarization/blob/master/extractive_summarizer.ipynb</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-di-perlukan">1. import library yang di perlukan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-membaca-data-dari-user">2. membuat fungsi untuk membaca data dari user</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-tokenisasi-dokumen">3. membuat fungsi untuk tokenisasi dokumen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membaca-dokument-atau-dataset">4. membaca dokument atau dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-kalimat-pada-dokumen-kedalam-list">4. Menampilkan kalimat pada dokumen kedalam list</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasilkan-term-document-matrix-td-matrix-dari-data">5. Hasilkan term-document matrix (TD matrix) dari data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menmpilkan-hasil-graph-dalam-gambar">7. Menmpilkan hasil graph dalam gambar</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mendapatkan-peringkat-setiap-kalimat-menggunakan-textrank">8. Mendapatkan peringkat setiap kalimat menggunakan textrank</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menemukan-kalimat-penting-dan-menghasilkan-ringkasan">9. Menemukan kalimat penting dan menghasilkan ringkasan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menulis-ringkasan-ke-file-baru">10. Menulis ringkasan ke file baru</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buat-graph-berarah-dengan-networkx-minimal-9-node">1. Buat graph berarah dengan networkx (minimal 9 node )</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-pagerank">Rumus PageRank</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-manual-pagerank-dari-graph-yang-anda-buat">1. Hitung manual pagerank dari graph yang anda buat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-menggunakan-pagerank-menggunakan-networkx">2. Hitung menggunakan pagerank menggunakan networkx</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-ulang-https-github-com-shakunni-extractive-text-summarization-blob-master-extractive-summarizer-ipynb">2. Implementasi ulang https://github.com/Shakunni/Extractive-Text-Summarization/blob/master/extractive_summarizer.ipynb</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-yang-di-perlukan">1. import library yang di perlukan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-membaca-data-dari-user">2. membuat fungsi untuk membaca data dari user</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-fungsi-untuk-tokenisasi-dokumen">3. membuat fungsi untuk tokenisasi dokumen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membaca-dokument-atau-dataset">4. membaca dokument atau dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-kalimat-pada-dokumen-kedalam-list">5. Menampilkan kalimat pada dokumen kedalam list</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasilkan-term-document-matrix-td-matrix-dari-data">6. Hasilkan term-document matrix (TD matrix) dari data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-hasil-graph-dalam-gambar">7. Menampilkan hasil graph dalam gambar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mendapatkan-peringkat-setiap-kalimat-menggunakan-textrank">8. Mendapatkan peringkat setiap kalimat menggunakan textrank</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menemukan-kalimat-penting-dan-menghasilkan-ringkasan">9. Menemukan kalimat penting dan menghasilkan ringkasan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menulis-ringkasan-ke-file-baru">10. Menulis ringkasan ke file baru</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
