@@ -1,0 +1,3482 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; Proyek Sain Data</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'YoutubeCommentsCrawlerV2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/natul.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/natul.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tugas1.html">Tugas 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas2.html">Tugas 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uts2.html"><strong>UTS</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas3_fix.html">Tugas Page Rank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas4.html">Tugas 4</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/nuskhatul-haqqi/prosaindata/blob/gh-pages/_sources/YoutubeCommentsCrawlerV2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/nuskhatul-haqqi/prosaindata" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/nuskhatul-haqqi/prosaindata/issues/new?title=Issue%20on%20page%20%2FYoutubeCommentsCrawlerV2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/YoutubeCommentsCrawlerV2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p><strong>Tujuan</strong> dari program ini adalah melakukan crawling (pengambilan) data komentar pada sebuah video Youtube menggunakan <strong>Youtube Data API v3</strong>. Sebelum mencoba program ini, pastikan Anda sudah memiliki (mengaktifkan) layanan Youtube Data API dan telah membangkitkan <strong>API Key</strong>.</p>
+<p>Jika belum memiliki <strong>API KEY</strong>, Anda dapat mengikuti petunjuk singkat sebagai berikut:</p>
+<ol class="arabic simple">
+<li><p>Login ke Google Developer Console (<a class="reference external" href="https://console.developers.google.com/">https://console.developers.google.com/</a>)dengan akun Google Anda</p></li>
+<li><p>Buat project baru dan lengkapi isian yang diminta.</p></li>
+<li><p>Aktifkan Layanan API pada halaman project, dan cari <strong>Youtube Data API v3</strong>.</p></li>
+<li><p>Dari halaman dashboard, buat kredential agar API tersebut dapat digunakan. Klik tombol <strong>Buat Kredensial</strong> (<strong>Create Credential</strong>). Lengkapi isian formnya.</p></li>
+<li><p>Anda dapat mengakses / melihat API KEY pada tab <strong>Credentials</strong>.</p></li>
+</ol>
+<p>#1. Import Library</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">googleapiclient.discovery</span> <span class="kn">import</span> <span class="n">build</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>#2. Fungsi untuk crawling komentar</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">video_comments</span><span class="p">(</span><span class="n">video_id</span><span class="p">):</span>
+	<span class="c1"># empty list for storing reply</span>
+	<span class="n">replies</span> <span class="o">=</span> <span class="p">[]</span>
+
+	<span class="c1"># creating youtube resource object</span>
+	<span class="n">youtube</span> <span class="o">=</span> <span class="n">build</span><span class="p">(</span><span class="s1">&#39;youtube&#39;</span><span class="p">,</span> <span class="s1">&#39;v3&#39;</span><span class="p">,</span> <span class="n">developerKey</span><span class="o">=</span><span class="n">api_key</span><span class="p">)</span>
+
+	<span class="c1"># retrieve youtube video results</span>
+	<span class="n">video_response</span> <span class="o">=</span> <span class="n">youtube</span><span class="o">.</span><span class="n">commentThreads</span><span class="p">()</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">part</span><span class="o">=</span><span class="s1">&#39;snippet,replies&#39;</span><span class="p">,</span> <span class="n">videoId</span><span class="o">=</span><span class="n">video_id</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+
+	<span class="c1"># iterate video response</span>
+	<span class="k">while</span> <span class="n">video_response</span><span class="p">:</span>
+		
+		<span class="c1"># extracting required info</span>
+		<span class="c1"># from each result object</span>
+		<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">video_response</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">]:</span>
+			
+			<span class="c1"># Extracting comments ()</span>
+			<span class="n">published</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;publishedAt&#39;</span><span class="p">]</span>
+			<span class="n">user</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;authorDisplayName&#39;</span><span class="p">]</span>
+
+			<span class="c1"># Extracting comments</span>
+			<span class="n">comment</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;textDisplay&#39;</span><span class="p">]</span>
+			<span class="n">likeCount</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;likeCount&#39;</span><span class="p">]</span>
+
+			<span class="n">replies</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">published</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">comment</span><span class="p">,</span> <span class="n">likeCount</span><span class="p">])</span>
+			
+			<span class="c1"># counting number of reply of comment</span>
+			<span class="n">replycount</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;totalReplyCount&#39;</span><span class="p">]</span>
+
+			<span class="c1"># if reply is there</span>
+			<span class="k">if</span> <span class="n">replycount</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+				<span class="c1"># iterate through all reply</span>
+				<span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">][</span><span class="s1">&#39;comments&#39;</span><span class="p">]:</span>
+					
+					<span class="c1"># Extract reply</span>
+					<span class="n">published</span> <span class="o">=</span> <span class="n">reply</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;publishedAt&#39;</span><span class="p">]</span>
+					<span class="n">user</span> <span class="o">=</span> <span class="n">reply</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;authorDisplayName&#39;</span><span class="p">]</span>
+					<span class="n">repl</span> <span class="o">=</span> <span class="n">reply</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;textDisplay&#39;</span><span class="p">]</span>
+					<span class="n">likeCount</span> <span class="o">=</span> <span class="n">reply</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;likeCount&#39;</span><span class="p">]</span>
+					
+					<span class="c1"># Store reply is list</span>
+					<span class="c1">#replies.append(reply)</span>
+					<span class="n">replies</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">published</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">repl</span><span class="p">,</span> <span class="n">likeCount</span><span class="p">])</span>
+
+			<span class="c1"># print comment with list of reply</span>
+			<span class="c1">#print(comment, replies, end = &#39;\n\n&#39;)</span>
+
+			<span class="c1"># empty reply list</span>
+			<span class="c1">#replies = []</span>
+
+		<span class="c1"># Again repeat</span>
+		<span class="k">if</span> <span class="s1">&#39;nextPageToken&#39;</span> <span class="ow">in</span> <span class="n">video_response</span><span class="p">:</span>
+			<span class="n">video_response</span> <span class="o">=</span> <span class="n">youtube</span><span class="o">.</span><span class="n">commentThreads</span><span class="p">()</span><span class="o">.</span><span class="n">list</span><span class="p">(</span>
+					<span class="n">part</span> <span class="o">=</span> <span class="s1">&#39;snippet,replies&#39;</span><span class="p">,</span>
+					<span class="n">pageToken</span> <span class="o">=</span> <span class="n">video_response</span><span class="p">[</span><span class="s1">&#39;nextPageToken&#39;</span><span class="p">],</span> 
+					<span class="n">videoId</span> <span class="o">=</span> <span class="n">video_id</span>
+				<span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="k">break</span>
+	<span class="c1">#endwhile</span>
+	<span class="k">return</span> <span class="n">replies</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>#3. Jalankan Proses Crawling</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># isikan dengan api key Anda</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;AIzaSyAFAvA1TEFSa7ZDVXzHwvYlDjVSgm6BWME&#39;</span>
+
+<span class="c1"># Enter video id</span>
+<span class="c1"># contoh url video = https://www.youtube.com/watch?v=ox1WDX7MHKQ</span>
+<span class="n">video_id</span> <span class="o">=</span> <span class="s2">&quot;ox1WDX7MHKQ&quot;</span> <span class="c1">#isikan dengan kode / ID video</span>
+
+<span class="c1"># Call function</span>
+<span class="n">comments</span> <span class="o">=</span> <span class="n">video_comments</span><span class="p">(</span><span class="n">video_id</span><span class="p">)</span>
+
+<span class="n">comments</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;2023-05-09T13:06:38Z&#39;, &#39;Tiyan #54&#39;, &#39;Madiun jatim Tetep prabowo&#39;, 0],
+ [&#39;2023-05-09T11:59:02Z&#39;,
+  &#39;Abah Tea&#39;,
+  &#39;Itu ls.ngimpi x ye dari mana Ganjar bisa no 1&lt;br&gt;Kebalik x PK Anis yg no 1&lt;br&gt;Ls.bayaran.&#39;,
+  0],
+ [&#39;2023-05-09T11:41:53Z&#39;,
+  &#39;petualang chanel😱&#39;,
+  &#39;Ya Ganjar Prabowo lah Anis mh byk bohong&#39;,
+  0],
+ [&#39;2023-05-09T11:37:41Z&#39;,
+  &#39;R. Endeh Rukmini&#39;,
+  &#39;Enggk percaya .masa p Anies dimana tinggi simpatisan masa ke 3.survey mana dulu pk ditayangin di tv segala rakyat cerdas tidk akan liat dr survey.buktinya .&#39;,
+  0],
+ [&#39;2023-05-09T11:27:57Z&#39;,
+  &#39;Jaguar Jaguar&#39;,
+  &#39;Pak ganjar the nex president, anis minggir aja😆😆&#39;,
+  0],
+ [&#39;2023-05-09T10:50:07Z&#39;,
+  &#39;Mixeers Boy&#39;,
+  &#39;🎉Ganjar Pranowo yes hanya beliau yg layak jadi pemimpin RI I  g perlu yg lain apalagi Anis baksetan g ada apa apanya mulut gede otak kecil😅😅😅😅&#39;,
+  0],
+ [&#39;2023-05-09T09:44:07Z&#39;,
+  &#39;Satria Piningit&#39;,
+  &#39;Mudah2han ada Survey yang Independent dan Netral.&#39;,
+  0],
+ [&#39;2023-05-09T09:43:41Z&#39;,
+  &#39;Satria Piningit&#39;,
+  &#39;Survey bayaran pasti menangkan rezim...rakyat tidak bodoh&#39;,
+  0],
+ [&#39;2023-05-09T09:16:27Z&#39;,
+  &#39;Achmad Kosasih&#39;,
+  &#39;Insyah Allah pak ganjar pranowo so&amp;quot;k jd presiden RI 2024 👍&#39;,
+  0],
+ [&#39;2023-05-09T08:22:26Z&#39;,
+  &#39;Daniella Srie Happy Gloria&#39;,
+  &#39;Pilihan PDIP merupakan langkah yg tepat (Untuk wakilnya harus orang yg tepat pula) Jangan sampai salah pilih wapres, Untuk wapresnya harus orang yg sejalan dengan ganjar, Hidup Ganjar Capres Pilihan Raktat Terbaik &amp;quot;Glory Glory Ganjar Presiden&amp;quot; GLORY GLORY GANJAR PRESIDENKU 2024&#39;,
+  0],
+ [&#39;2023-05-09T07:18:00Z&#39;,
+  &#39;Munibul Anwar&#39;,
+  &#39;Yakin 100℅ Si Rambut Putih Jagoan Jateng&#39;,
+  0],
+ [&#39;2023-05-09T07:17:11Z&#39;, &#39;Munibul Anwar&#39;, &#39;Waduh Mas Anies rendah Mulu&#39;, 0],
+ [&#39;2023-05-09T07:04:04Z&#39;,
+  &#39;Heru Isdianto&#39;,
+  &#39;survey nya hebat, tpi kok ada  perasaan ketakutan di reezim ini&#39;,
+  0],
+ [&#39;2023-05-09T06:10:13Z&#39;, &#39;Musrini Aku&#39;, &#39;Aku mileh pak Ganjar tros maju.&#39;, 0],
+ [&#39;2023-05-09T06:09:22Z&#39;,
+  &#39;Musrini Aku&#39;,
+  &#39;&lt;a href=&quot;https://www.youtube.com/watch?v=ox1WDX7MHKQ&amp;amp;t=0m13s&quot;&gt;0:13&lt;/a&gt;&#39;,
+  0],
+ [&#39;2023-05-09T06:02:24Z&#39;,
+  &#39;Ibrahim Abdul Hamid&#39;,
+  &#39;Insyalllah ganjar amin 2024&#39;,
+  0],
+ [&#39;2023-05-09T05:30:56Z&#39;,
+  &#39;J&#39;,
+  &#39;Jabatan pimpinan jadi apapun semuanya ada di atas TAQDIR Allah SWT siapapun gk akan bisa merubah  manusia cuman hanya sekedar rencana rencana &amp;amp; rencana Allah Lah yg menentukan nya ( mudah2an yg jd orang no 1 Indonesia bisa jadi negara yg baldatun toyyibatun warobbun Ghofur NEGARA BAROKAH 🤲🤲🤲  ( Aurah wajah kayak nya BPK Subianto ada harapan )&#39;,
+  0],
+ [&#39;2023-05-09T04:29:39Z&#39;, &#39;Zeindita Zein&#39;, &#39;Ganjar - Mahfud ❤😊&#39;, 0],
+ [&#39;2023-05-09T04:23:15Z&#39;,
+  &#39;Hariyanto Yanto&#39;,
+  &#39;Aduh ada yg ketar ketir neh bisa bisa musuh musuh bikin hoax dan fitnah kaya foto sama myabi...wkwkwk...&#39;,
+  0],
+ [&#39;2023-05-09T02:22:45Z&#39;, &#39;Sulas Hadi&#39;, &#39;Lembaga survey = Lembaga DUSTA&#39;, 0],
+ [&#39;2023-05-09T02:21:27Z&#39;,
+  &#39;Maryam Rode&#39;,
+  &#39;Pak ganjar mantap seluruh Indonesia mendukung pak ganjar penerus pak presiden jokowi melanjutkan program pembangunan seluruh Indonesia menuju Indonesia maju Rakyat makmur menjaga keselamatan bangsa Indonesia NKRI merdeka&#39;,
+  0],
+ [&#39;2023-05-09T01:04:05Z&#39;,
+  &#39;Mamanya Laksmi&#39;,
+  &#39;...judul selalu teratas....tidak bijak......saya pilih prabowo.. kita harus hormati semua pilihan yang beda.. kata pak prabowo : pak anis pak ganjar  kader kader terbaik bangsa juga..&#39;,
+  0],
+ [&#39;2023-05-09T00:51:50Z&#39;,
+  &#39;Rosita Justianies&#39;,
+  &#39;P Ganjar y plg trbaik dr y lain d sandi wkly d lht dr orgny trbaik luar dlm sopan santun trjga omgnny d BS d pegang  DM rakyat org ini rela berkorban apapun DM rakyat Indonesia y adil makmur aman d TDK korupsi&#39;,
+  0],
+ [&#39;2023-05-09T00:28:03Z&#39;,
+  &#39;Mami Zizi&#39;,
+  &#39;Sampai sekarang kami sekeluarga slalu mendukung pak Prabowo sampek 4x calon kami tetap pak prabowo&lt;br&gt;Karna yg tulus sama negara ini cuman pak prabowo&#39;,
+  0],
+ [&#39;2023-05-08T20:37:32Z&#39;,
+  &#39;Rudi Chaniago&#39;,
+  &#39;SURVEY DIBAYAR CUKONG&amp;quot;&amp;quot;!!! NGAK PERCAYA TUUUUHH&amp;quot;&amp;quot;&amp;quot;!!&#39;,
+  0],
+ [&#39;2023-05-08T19:14:20Z&#39;, &#39;putra nusantara&#39;, &#39;ANIES  PASTI  MENANG&#39;, 0],
+ [&#39;2023-05-08T18:21:10Z&#39;, &#39;Annisa Icha&#39;, &#39;no comen😅&#39;, 0],
+ [&#39;2023-05-08T18:02:17Z&#39;,
+  &#39;YouTubers Pemula&#39;,
+  &#39;SAYA TIDAK PERCAYA DENGAN SURVEI SURVEI ... 😅😅&#39;,
+  0],
+ [&#39;2023-05-08T17:57:19Z&#39;,
+  &#39;AA TV VLOG 21 bukittinggi&#39;,
+  &#39;pak anis RI 1 2024&#39;,
+  0],
+ [&#39;2023-05-08T17:17:00Z&#39;,
+  &#39;Ismi Farida&#39;,
+  &#39;Mari KITA RAPATKAN BARISAN untuk MENJAGA NKRI dengan MEMILIH GANJAR PRANOWO sebagai PRESIDEN RI di PILPRES 2024. Merdeka Merdeka Merdeka&#39;,
+  0],
+ [&#39;2023-05-08T16:05:18Z&#39;, &#39;Pak Anton&#39;, &#39;Ganjar Pranowo ♥️♥️♥️&#39;, 0],
+ [&#39;2023-05-08T16:04:04Z&#39;,
+  &#39;Ummu Salsa&#39;,
+  &#39;Survei abal2....emang selalu rakyat udah di tanya i semua ???? Sehat selalu pak Anies Baswedan 🙏&#39;,
+  0],
+ [&#39;2023-05-08T15:52:50Z&#39;,
+  &#39;Rezqiansyah Setyawan&#39;,
+  &#39;Survei itu tergantung 😂😂😂&#39;,
+  0],
+ [&#39;2023-05-08T15:21:33Z&#39;,
+  &#39;Jaka Jaya&#39;,
+  &#39;Hasil survey Anies no 3&lt;br&gt;Tapi ditakuti rezim😂😂&#39;,
+  0],
+ [&#39;2023-05-08T15:10:09Z&#39;, &#39;Naya Bkl&#39;, &#39;Ngarang dan ngaur gak masuk akal&#39;, 0],
+ [&#39;2023-05-08T15:05:28Z&#39;, &#39;Syukur Abidin&#39;, &#39;notonegoro lur yg langgeng&#39;, 0],
+ [&#39;2023-05-08T14:49:54Z&#39;,
+  &#39;Mengenal Tuhan&#39;,
+  &#39;Ganjar vs prabowo bakalan ketat&#39;,
+  0],
+ [&#39;2023-05-08T14:35:30Z&#39;, &#39;DAVIY OFFICIAL&#39;, &#39;Yes ganjar&#39;, 0],
+ [&#39;2023-05-08T14:33:08Z&#39;,
+  &#39;Mario Superjoc&#39;,
+  &#39;survey teratas kok masih mengkhawatirkan no 3?? aneh.. jangan2 abal2&#39;,
+  0],
+ [&#39;2023-05-08T14:11:51Z&#39;,
+  &#39;asep sukandar&#39;,
+  &#39;Klw ya suka bola pasti tau&lt;br&gt;.....😂😂😂😂😂😂😂&#39;,
+  0],
+ [&#39;2023-05-08T13:47:24Z&#39;,
+  &#39;Nur Rois&#39;,
+  &#39;Pak ganjar pilahanku sekeluarga. Aku yakin tetap jagoanku pak gamjar.&#39;,
+  1],
+ [&#39;2023-05-08T13:30:41Z&#39;,
+  &#39;Wiyan Yanti&#39;,
+  &#39;Surve mu ning ndi...Rakyat indonesia pilih Anis baswedan  yo...&#39;,
+  0],
+ [&#39;2023-05-08T12:38:59Z&#39;, &#39;Yunus bin Akhmad Yani&#39;, &#39;Pa Prabowo.&#39;, 1],
+ [&#39;2023-05-08T12:33:15Z&#39;, &#39;kintul official&#39;, &#39;Top ganjar 🎉&#39;, 0],
+ [&#39;2023-05-08T12:31:10Z&#39;, &#39;Anddo Pirmansa&#39;, &#39;Ttp pilih prabowo.ngk gntar&#39;, 0],
+ [&#39;2023-05-08T12:24:12Z&#39;,
+  &#39;Tri Lampung&#39;,
+  &#39;Ganjar Pranowo RI 1 putra terbaik bangsa Indonesia&#39;,
+  1],
+ [&#39;2023-05-08T11:41:43Z&#39;, &#39;Aqil Kurniawan&#39;, &#39;Anies tetap di hati ❤🥰👍😍&#39;, 2],
+ [&#39;2023-05-09T00:46:10Z&#39;,
+  &#39;Akbar Alamsyah&#39;,
+  &#39;Tetap dihati Anies Baswedan berpelukan dengan bukan muhrimnya dan istri orang, yg sudah jelas2 diharamkan oleh Allah SWT, dukunglah Anies Baswedan sampai akhir khayat ente bro&#39;,
+  0],
+ [&#39;2023-05-08T11:40:26Z&#39;,
+  &#39;Aqil Kurniawan&#39;,
+  &#39;Alhamdulillah ganjar di atas 😍👍 sudah jelas karena biaya kampanye nya lebih besar ✊❤️❤️❤️ tak lupa bersama partai nya puan Maharani 🥰🥰🥰&#39;,
+  1],
+ [&#39;2023-05-08T11:38:40Z&#39;,
+  &#39;Aqil Kurniawan&#39;,
+  &#39;Alhamdulillah ganjar di atas 😍👍 sudah jelas karena biaya kampanye nya lebih besar ✊❤️❤️❤️&#39;,
+  6],
+ [&#39;2023-05-08T10:45:26Z&#39;,
+  &#39;P.S Putranto&#39;,
+  &#39;Survey pilihan capres oleh lembaga² survey tidak sepenting uji berita.satu, sebagai pembanding cukup lewat youtube ini saja.., buktikan..!!!&#39;,
+  0],
+ [&#39;2023-05-08T10:05:41Z&#39;,
+  &#39;Mahesa Jenar&#39;,
+  &#39;Saya sebagai rakyat kecik sudah muak dg janji&amp;quot; kampanya para capres... Dari semua pemilu banyak capres&amp;quot; yg mngumbar janji politik tapi setelah menjabat belum tentu bisa menepati janjinya... Karena setiap kali ganti pemimpin mereka pasti tidak melanjutkan program pemimpin terdahulu.&#39;,
+  0],
+ [&#39;2023-05-08T09:46:21Z&#39;, &#39;Muhammad Rizky&#39;, &#39;Pak Ganjarrr yess&#39;, 1],
+ [&#39;2023-05-08T09:46:13Z&#39;,
+  &#39;I0S&#39;,
+  &#39;Siapapun presiden, mudah mudahan amanah. 🇮🇩❤❤❤&#39;,
+  1],
+ [&#39;2023-05-08T09:24:20Z&#39;,
+  &#39;Iswantoro Yudi&#39;,
+  &#39;Pak GANJAR pancen 👍👍👍ngetennnn&#39;,
+  0],
+ [&#39;2023-05-08T07:30:33Z&#39;,
+  &#39;Bunyamin Bin Yahya&#39;,
+  &#39;Ini akan semakin meningkat seiring waktu berjalan karena rakyat dan bangsa Indonesia sudah lelah dengan segala macam persoalan yang dihadapi negri ini terutama sekali yang berkaitan dengan yang berbau radikalisme dan politik identitas.. Rakyat dan Bangsa Indonesia sangat merindukan politik santun dan berkepribadian dan mengedepankan sebuah gagasan yang luhur dan itu semua hanya ada dan hanya dimiliki oleh sosok seorang anak bangsa yang paling relevan untuk itu.. yaitu Mas Bro Ganjar Pranowo&#39;,
+  0],
+ [&#39;2023-05-08T06:52:20Z&#39;,
+  &#39;Mentari Di upuk timur&#39;,
+  &#39;Survei bohongan untuk menarik simpati rakyat.&#39;,
+  0],
+ [&#39;2023-05-08T06:34:13Z&#39;,
+  &#39;Eby Saputra&#39;,
+  &#39;Pertanyaan nya ini lembaga survei lewat mana mereka mengsurvei kita rakyat biasa di sini aja belum pernah tuh di tanya satu persatu apa pilih pilpres anda kok bisa tau taunya unggul 😅😅😂😂😂😂😂😂😂😂😂&#39;,
+  0],
+ [&#39;2023-05-08T05:47:31Z&#39;,
+  &#39;Nasrul Nr&#39;,
+  &#39;Saya orang Sulsel, mayoritas di sni mendukung Anies tpi saya tetap mendukung Ganjar,, walaupun sebelumnya saya kadeer Nasdem&#39;,
+  0],
+ [&#39;2023-05-08T05:46:45Z&#39;, &#39;Min Chyun&#39;, &#39;Jangan lupa Bismillah❤&#39;, 0],
+ [&#39;2023-05-08T04:42:03Z&#39;,
+  &#39;Yoga Reynanda&#39;,
+  &#39;Prabowo pemimpin terbaik dan sangat cocok jadi presiden RI ya lain masih amatir&#39;,
+  1],
+ [&#39;2023-05-08T04:30:56Z&#39;, &#39;Ausie 74&#39;, &#39;Survey electabilitas Anak-anak 😀🤣😀&#39;, 0],
+ [&#39;2023-05-08T01:47:28Z&#39;, &#39;Hola75&#39;, &#39;Tak ada yang menarik&#39;, 0],
+ [&#39;2023-05-08T01:05:04Z&#39;, &#39;Abe_89&#39;, &#39;Bismillah ganjar&#39;, 0],
+ [&#39;2023-05-08T00:39:01Z&#39;,
+  &#39;Uchox Nasution&#39;,
+  &#39;Prabowo bagus tapi sudah kurang produktif karena faktor usia. Ganjar bagus dan produktif...&#39;,
+  0],
+ [&#39;2023-05-08T00:35:56Z&#39;, &#39;Uchox Nasution&#39;, &#39;Alhamdulillah...&#39;, 0],
+ [&#39;2023-05-07T23:29:09Z&#39;, &#39;Erik&#39;, &#39;Klu sy lebih yakin dg Pak Anis&#39;, 0],
+ [&#39;2023-05-07T23:17:52Z&#39;, &#39;Mella 124&#39;, &#39;Rakyat GK butuh survey,,&#39;, 0],
+ [&#39;2023-05-07T23:17:25Z&#39;,
+  &#39;Mella 124&#39;,
+  &#39;Klo GK jadi ngamuk,atau berkata curang,karena survey tinggi,jgn salahin rakyat,salahin yg survey loh&#39;,
+  0],
+ [&#39;2023-05-07T23:01:26Z&#39;,
+  &#39;Menclank Geming&#39;,
+  &#39;CUMA PAK ANIES YG LAYAK JD PRESIDEN RI 2024....SMART N GAK  PLONGA PLONGO👍👍👍&#39;,
+  0],
+ [&#39;2023-05-07T22:29:46Z&#39;,
+  &#39;N Meci&#39;,
+  &#39;Jadi ingat pilgub dki. Hasil survey anies ditempatkan di urutan buncit tapi akhirnya jadi pemenang😂😂&#39;,
+  0],
+ [&#39;2023-05-07T18:28:33Z&#39;, &#39;Verolista Safitri&#39;, &#39;Ganjar yes..&#39;, 0],
+ [&#39;2023-05-07T17:32:56Z&#39;, &#39;Ahmad Hasibuan&#39;, &#39;Survey😂😂😂&#39;, 0],
+ [&#39;2023-05-07T17:18:31Z&#39;,
+  &#39;Azrul Azis&#39;,
+  &#39;Survey independe diindonesia timur untuk anis&lt;br&gt;Sullawesi selatan 87%&lt;br&gt;Suawesi tenggara 75%&lt;br&gt;Sulawesi tengah 66%&lt;br&gt;Sulawesi barat 80%&lt;br&gt;Sulawesi utara 35%&lt;br&gt;Maluku tengah 45%&lt;br&gt;Maluku utara 70%&lt;br&gt;Maluku tenggara 40%&lt;br&gt;Papua  35%&lt;br&gt;Papua barat 57%&#39;,
+  1],
+ [&#39;2023-05-08T00:02:20Z&#39;, &#39;Ady Bdg&#39;, &#39;Iya udah iya 😭😭😭😭&#39;, 0],
+ [&#39;2023-05-07T16:57:08Z&#39;, &#39;MatiusTony Samara&#39;, &#39;Ganjar RI 1 yes&#39;, 0],
+ [&#39;2023-05-07T16:53:17Z&#39;,
+  &#39;kata bijak99&#39;,
+  &#39;Prediksi angin saya tetap prabowo&#39;,
+  0],
+ [&#39;2023-05-07T16:52:06Z&#39;, &#39;kata bijak99&#39;, &#39;Prabowo president❤&#39;, 0],
+ [&#39;2023-05-07T16:51:20Z&#39;,
+  &#39;angga putra&#39;,
+  &#39;Semoga pak ganjar jadi presiden dunia maya.AMINNN&#39;,
+  0],
+ [&#39;2023-05-07T15:39:11Z&#39;, &#39;Mutiara Islam Official&#39;, &#39;Presiden palestina&#39;, 0],
+ [&#39;2023-05-07T15:31:59Z&#39;,
+  &#39;Hari Yunal&#39;,
+  &#39;Bolehlah fanatik..tp ga gitu2 amatlah..buka mata.pasang telinga..udh jelas2 gak ad kemajuan eeeee malah didukung jg.jangan salahkan pemerintah nantik kalau negri ini tambah ancurrr&#39;,
+  0],
+ [&#39;2023-05-07T15:28:14Z&#39;, &#39;Hari Yunal&#39;, &#39;Saya pilih p.Anis baswedan&#39;, 0],
+ [&#39;2023-05-07T15:24:57Z&#39;,
+  &#39;Mustaqien Mustaqien&#39;,
+  &#39;Warga wadas di tindas kenapa elektabilitas ganjar yg di atas...  &lt;br&gt;Bos sayuran saja ketika di pasar pasti mencari untung, apalagi bos lembaga survei..  &lt;br&gt;Alhmdllah rakyat sudah semakin cerdas&#39;,
+  0],
+ [&#39;2023-05-07T14:34:00Z&#39;,
+  &#39;Aji Purnomo Ashter&#39;,
+  &#39;Ganjar akan Tumbang di lap ke 2&#39;,
+  0],
+ [&#39;2023-05-07T14:33:41Z&#39;,
+  &#39;Mburi Omah Studio&#39;,
+  &#39;Emang ngaco survey&amp;quot; ky gini&#39;,
+  0],
+ [&#39;2023-05-07T14:32:14Z&#39;, &#39;Siswanto Susilo&#39;, &#39;Yang penting bukan anis..&#39;, 0],
+ [&#39;2023-05-07T14:18:30Z&#39;,
+  &#39;Totok Malaon&#39;,
+  &#39;Survei bayaran yang punya uang banyak pasti di UNGGULAKAN.&#39;,
+  0],
+ [&#39;2023-05-07T13:54:38Z&#39;,
+  &#39;Dwiky Darmawan&#39;,
+  &#39;Ganjar pranowo Andika perkasa&#39;,
+  0],
+ [&#39;2023-05-07T13:54:14Z&#39;,
+  &#39;Dwiky Darmawan&#39;,
+  &#39;Ganjar pranowo Andika perkasa&#39;,
+  0],
+ [&#39;2023-05-07T13:53:47Z&#39;,
+  &#39;Dwiky Darmawan&#39;,
+  &#39;Ganjar pranowo Andika perkasa.&#39;,
+  0],
+ [&#39;2023-05-07T13:47:27Z&#39;,
+  &#39;Dwiky Darmawan&#39;,
+  &#39;Semoga pak Andika perkasa dicalonkan jadi wakil Pak Ganjar pranowo.!&#39;,
+  0],
+ [&#39;2023-05-07T13:44:16Z&#39;, &#39;nataliuss&#39;, &#39;Top Ganjar Pranowo. Asli pribumi&#39;, 0],
+ [&#39;2023-05-07T13:31:34Z&#39;, &#39;Adhi Suwedi&#39;, &#39;Sufay gj netral&#39;, 0],
+ [&#39;2023-05-07T13:08:03Z&#39;,
+  &#39;Hafiz Bungo&#39;,
+  &#39;Asal jgn anis yg masuk ke putaran ke 2..&#39;,
+  0],
+ [&#39;2023-05-07T12:35:30Z&#39;, &#39;Amanda Chanel&#39;, &#39;Porno akan laris😂😂&#39;, 0],
+ [&#39;2023-05-07T12:56:36Z&#39;, &#39;Garong Anggaran&#39;, &#39;Ente kandrun 😁😁😁&#39;, 0],
+ [&#39;2023-05-07T12:31:52Z&#39;,
+  &#39;Susatio&#39;,
+  &#39;Pilihan saya&lt;br&gt;Presidennya Mahfud MD&lt;br&gt;Wapresnya Gibran raka bumi&#39;,
+  0],
+ [&#39;2023-05-07T12:31:46Z&#39;, &#39;Rifky Prayoga&#39;, &#39;Prabowo mahfud&#39;, 0],
+ [&#39;2023-05-07T12:18:18Z&#39;,
+  &#39;Erwin Zulkarnain&#39;,
+  &#39;Waw survey nya dimana itu?😂&#39;,
+  0],
+ [&#39;2023-05-07T12:13:27Z&#39;,
+  &#39;Solder Bengkong&#39;,
+  &#39;Apa pun presiden nya kita tetap makan nasi.. Memilihlah krn kerja nya bukan karna janji2 nya.. Karna Semua Kandidat fanatik dan tidak melambangkan bineka tunggal ika jadi saya tidak memilih semua..&#39;,
+  0],
+ [&#39;2023-05-07T12:08:45Z&#39;, &#39;Batam Botania&#39;, &#39;Ganjar  2024&#39;, 0],
+ [&#39;2023-05-07T11:44:04Z&#39;,
+  &#39;Sulastri Sulastri&#39;,
+  &#39;Ya memang paling cocok pak ganjar gesit, lincah mirip pak jokowi&#39;,
+  0],
+ [&#39;2023-05-07T11:36:27Z&#39;, &#39;Ngatemi Aja&#39;, &#39;Antaaap p ganjar&#39;, 0],
+ [&#39;2023-05-07T11:36:20Z&#39;, &#39;Tanda Tambunan&#39;, &#39;Masuk akal&#39;, 0],
+ [&#39;2023-05-07T11:35:20Z&#39;,
+  &#39;pain akatsuki&#39;,
+  &#39;Sebaiknya prabowo dan anis tidak usah capek capek buang buang duit waktu dan tenaga ikut capres, percuma karena pemilu mendatang akan seperti pemilu yg lalu, kecurangan terjadi dmn mana, terutama di daerah terpencil, PDIP, Megawati dan polis sebagai loyalis dan tunduk sepenuhnya kpd perintah mega akam berusaha dgn cara apapun untuk menang. Yg pasti polis tidak mau klu prabowo jadi presiden itu jelas&#39;,
+  0],
+ [&#39;2023-05-07T11:17:15Z&#39;,
+  &#39;Baby Iog&#39;,
+  &#39;Prabowo sih.percya banget sama beliau&#39;,
+  0],
+ [&#39;2023-05-07T10:25:56Z&#39;,
+  &#39;Tele Mbeseng&#39;,
+  &#39;NTT merasakan pembangunan Pak Jokowi...auto pilih Ganjar utk meneruskannya&#39;,
+  0],
+ [&#39;2023-05-07T10:13:52Z&#39;,
+  &#39;Sean martinez&#39;,
+  &#39;Makjoss Ganjar ,pribumi asli ❤️&#39;,
+  0],
+ [&#39;2023-05-07T10:02:18Z&#39;,
+  &#39;75 tahun&#39;,
+  &#39;2024 milik Prabowo. Pilihan paling aman dengan resiko paling minim. Anies cuma jadi bahan uji coba Nasdem. Tujuan utamanya mengerek perolehan suara partai. Ganjar, sudahlah. PDIP terlalu offside karena ulah ugal-ugalan Jokowi. Bakal jatuh perolehan suara Ganjar.&#39;,
+  0],
+ [&#39;2023-05-07T09:54:15Z&#39;,
+  &#39;Vivo Y21&#39;,
+  &#39;hrus berani mengambil kebijakan baru dan nuansa yg tdk melupakan  kebijakan pak jokowi, saya lebih percaya dgn pak prabowo sbg presiden selanjutnya..&#39;,
+  0],
+ [&#39;2023-05-07T09:52:31Z&#39;,
+  &#39;Koi Iwak&#39;,
+  &#39;Prabowo saatnya diberi kesempatan  memimpin negeri ini,, prabowo orang jujur dan iklas&#39;,
+  0],
+ [&#39;2023-05-07T09:51:02Z&#39;,
+  &#39;Anjing Pisan&#39;,
+  &#39;Ketiga tapi selalu di takuti oleh gerombolan oligarki&#39;,
+  0],
+ [&#39;2023-05-07T09:46:03Z&#39;,
+  &#39;MadSu&#39;,
+  &#39;Cukup Timnas dan Sungai saja yang di Naturalisasi kl Presiden tetap yg bukan Naturalisasi&#39;,
+  0],
+ [&#39;2023-05-07T09:35:09Z&#39;,
+  &#39;Aji Pangestu&#39;,
+  &#39;Pa Prabowo Subianto jgn egois jadi wapres Ganjar saja kalou benar tujuanya ingin memakmurkan rakyat Indonesia dan Indonesia maju&#39;,
+  0],
+ [&#39;2023-05-07T09:26:23Z&#39;, &#39;Tele Mbeseng&#39;, &#39;NTT dukung penuh Pak Ganjar&#39;, 0],
+ [&#39;2023-05-07T09:21:43Z&#39;,
+  &#39;Yanteio Channel&#39;,
+  &#39;Faktanya pak prabowo bkalan the next president&#39;,
+  0],
+ [&#39;2023-05-07T08:58:02Z&#39;, &#39;Yus Yus&#39;, &#39;Hidup probowo&#39;, 0],
+ [&#39;2023-05-07T08:47:28Z&#39;,
+  &#39;Eza Rahmat&#39;,
+  &#39;Ada yang lebih baik dari anis &amp;amp; prabowo,  Ganjar terbukti 2x terpilih menjadi gubernur jawa tengah tanpa politik identitas dan tanpa kampanye hoax dan udh berhasil mengungguli elaktibilitas puan yang didukung elit partai bahkan untuk jateng dan jatim udah mengalahkan elaktibilitas prabowo puan anis dan airlangga dan nantinya akan menundukkan anis &amp;amp; prabowo di pilpres karena Ganjar memang cerdas dan mampu menjadi pemimpin nasional bismillahhirohman Ganjar menjadi presiden RI 2024amin ya robbal alamin&#39;,
+  0],
+ [&#39;2023-05-07T08:26:57Z&#39;,
+  &#39;Wawan Karnawan&#39;,
+  &#39;Belum tahu pak Anis ya,lihat nanti,waktunya gak bakala ada photo sy di situ.&#39;,
+  0],
+ [&#39;2023-05-07T07:49:18Z&#39;,
+  &#39;Agus Mulyadi&#39;,
+  &#39;Mlih  ganjar biar melanjutkan  pembangunan  jokowi  lanjutkan&#39;,
+  0],
+ [&#39;2023-05-07T07:47:42Z&#39;,
+  &#39;sugi indriyono&#39;,
+  &#39;Insyaallah Alloh PDI Perjuangan.menang untuk calon Presiden Ganjar Pranowo&#39;,
+  0],
+ [&#39;2023-05-07T07:36:01Z&#39;,
+  &#39;muhammad fathoni&#39;,
+  &#39;Pendukung Ganjar = cebong&lt;br&gt;Pendukung anies.  = Kadrun&lt;br&gt;Kira kira nama buat pendukung Prabowo apa ya ???&#39;,
+  0],
+ [&#39;2023-05-07T07:26:52Z&#39;, &#39;Besama Zalukhu&#39;, &#39;Pak. Ganjar 👍&#39;, 0],
+ [&#39;2023-05-07T07:12:56Z&#39;,
+  &#39;dadang rifaldi&#39;,
+  &#39;survei opo toh, memangnya kalian percoyo survei&#39;,
+  0],
+ [&#39;2023-05-07T05:29:38Z&#39;,
+  &#39;Uti Mq&#39;,
+  &#39;InsyaAllah ganjar amanah melanjutkan perjuangan pak jokowi&#39;,
+  0],
+ [&#39;2023-05-07T05:20:57Z&#39;,
+  &#39;Andi Amiruddin&#39;,
+  &#39;Sekali Anies tetap Anies survey abal2&#39;,
+  0],
+ [&#39;2023-05-07T05:19:39Z&#39;,
+  &#39;Bapak supri Oke&#39;,
+  &#39;Survai pesanan oligargi (bayaran)&#39;,
+  0],
+ [&#39;2023-05-07T04:57:38Z&#39;,
+  &#39;Rivai J S Hutagalung&#39;,
+  &#39;Bagusnya duet kan aja prabowo ganjar..&#39;,
+  0],
+ [&#39;2023-05-07T04:56:17Z&#39;,
+  &#39;Gunawan Sulistiantara&#39;,
+  &#39;Saya sarankan ganjar berpasangan dgn ade armando saya jamin deh 95% menang mutlak 🤣🤣🤣👎👎&#39;,
+  0],
+ [&#39;2023-05-07T04:55:00Z&#39;,
+  &#39;Gunawan Sulistiantara&#39;,
+  &#39;🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣&lt;br&gt;Lembaga survei hajingan kok dipercaya&#39;,
+  0],
+ [&#39;2023-05-07T04:45:57Z&#39;, &#39;santa ahmed&#39;, &#39;Ganjar ❤❤🇮🇩🇮🇩👍&#39;, 0],
+ [&#39;2023-05-07T04:38:12Z&#39;,
+  &#39;Boy Boy&#39;,
+  &#39;&lt;b&gt;GANJAR PRANOWO PRESIDEN KE 8 NKRI&lt;/b&gt; ;^&#39;,
+  1],
+ [&#39;2023-05-07T04:21:13Z&#39;,
+  &#39;al Kausar&#39;,
+  &#39;Relawan pak jokowi harus kompak kita menangkan ganjar pranowo pilpres 2024. Kinerja pak jokowi harus diteruskan.&#39;,
+  2],
+ [&#39;2023-05-07T04:04:55Z&#39;, &#39;姊姊&#39;, &#39;Ganjar Pranowo gaspol&#39;, 0],
+ [&#39;2023-05-07T03:59:26Z&#39;, &#39;merdeka hero&#39;, &#39;Survey di jawa tengah.&#39;, 0],
+ [&#39;2023-05-07T03:47:19Z&#39;, &#39;Ade Hidayat&#39;, &#39;Survey abal2&#39;, 0],
+ [&#39;2023-05-07T03:43:46Z&#39;, &#39;Iskandar Muda&#39;, &#39;GASSS terusss PK ganjar&#39;, 0],
+ [&#39;2023-05-07T03:27:44Z&#39;,
+  &#39;Djulianto Rochadi&#39;,
+  &#39;Pilpres Tahap-I: Ganjar &amp;amp; Prabowo lolos putaran pertama. Lanjut Pilpres Tahap-II: Prabowo unggul karena pemilih Anis mayoritas akan pilih Prabowo.&#39;,
+  0],
+ [&#39;2023-05-07T12:38:21Z&#39;,
+  &#39;Rdn Nids&#39;,
+  &#39;Dulu pemilih Prabowo blm terpecah aja buktinya kalah.&#39;,
+  0],
+ [&#39;2023-05-07T03:20:51Z&#39;,
+  &#39;anjrit Lah&#39;,
+  &#39;Sumpah saya ga percaya survey 100 persen,,semua yg ada di yotub,,bisa femanipulasi,,co,,rkya sudah pada pintar sekarang,,percuma di acrakn di tipi klw saya asli ga percaya surfey&#39;,
+  0],
+ [&#39;2023-05-07T03:18:52Z&#39;,
+  &#39;Rio Rio&#39;,
+  &#39;Wkwkwk masih percaya entee sama survei surveii?? Hahahhaha&#39;,
+  0],
+ [&#39;2023-05-07T02:57:29Z&#39;,
+  &#39;Muklas kartono&#39;,
+  &#39;Sebaiknya Ganjar Prabowo gabung klo Prabowo kekeh RI 1 perkiraan saya Prabowo kalah lagi&#39;,
+  0],
+ [&#39;2023-05-07T02:57:09Z&#39;, &#39;Siswanto&#39;, &#39;GANJAR ❤&#39;, 0],
+ [&#39;2023-05-07T02:55:55Z&#39;, &#39;Eliandi Tjung&#39;, &#39;GANJAR PRANOWO RI 1👍👍👍👍&#39;, 0],
+ [&#39;2023-05-07T02:55:37Z&#39;,
+  &#39;ngaji ndeso&#39;,
+  &#39;Tapi ganjar nesti kalam lawan anis.dalam final karena akan di kerubut.&#39;,
+  0],
+ [&#39;2023-05-07T02:43:10Z&#39;, &#39;Edi Sutoko&#39;, &#39;Ganjar bossss&#39;, 0],
+ [&#39;2023-05-07T02:27:13Z&#39;,
+  &#39;satrio paningit ragiel gowor. Am&#39;,
+  &#39;bismillah pak ganjar penerus pak jokowi amin pengalaman memimpin jujur kerja nyata fakta bukan kata kata&#39;,
+  0],
+ [&#39;2023-05-07T02:19:42Z&#39;,
+  &#39;ASAL NGOMONG&#39;,
+  &#39;DUKUNG GANJAR 👍🏽👍🏽👍🏽&lt;br&gt;MASA KITA MAU DUKUNG ANIES ??? Juga PRABOWO &lt;br&gt;&lt;br&gt;MAU TAHU TTG ANIES ??&lt;br&gt;LIHAT SAJA SPT APA YG DIKERJAKAN\xa0 GUBERNUR LAMPUNG SAMA2\xa0 JD GUBERNUR\xa0 TAPI KERJAAN NYA TIDUR2 SAJA\xa0 DIATAS DANA APBD\xa0 YG DI KUASAI ...&lt;br&gt;HANYA BEDANYA DANA APBD YG ANIES KUASAI ITU LBH GEDE DR DANA GUB LAMPUNG ...&lt;br&gt;UENAK TENAN JD ANIES : DANA 86 TRILIUN/ THN\xa0 X 5 THN..HANYA BUAT PATUNG2 / TUGU2 SEPATU , TUGU PETI MATI , REVISI TROTOAR\xa0 DI SUDIRMAN DAN SKITARNYA , REVISI JEMBATAN DI DAERAH SUDIRMAN DAN SKITARNYA\xa0 , BUAT JIS YA HANYA 1 TRILIUN SAJA , FORMULA E YG TDK MENGUNTUNG KAN\xa0 ,\xa0 DP O% YG TDK UTK RAKYAT MISKIN ( mana ada rakyat miskin punya gaji 14 juta/ bln , syarat bs beli rusunawa ?? )\xa0 \xa0 , NATURALISASI TDK DI KERJAKAN\xa0 alias : 0% , PENDAPATAN 15% SEHARUS NYA DI TERIMA DKI\xa0 UTK PENJUALAN REKLAMASI DI HILANGKAN SUMBER DANA TSB , GANTI NAMA JLN N RUMAH SAKIT....ITU SAJA YG DI KERJAKAN, SOAL BANJIR N MACET...NGUMPET DIA&lt;br&gt;&lt;br&gt;SDNG KAN MILIH PRABOWO : &lt;br&gt;KATA AHMAD RIZA PATRIA YG MEWAKILI GERINDRA\xa0 BERUCAP : &lt;br&gt;RAKYAT INDONESIA HRS DIPIMPIN OLEH MILITER +\xa0 BERHUBUNG SKRG NEGARA2 ASING SDH SALING BERPERANG , MAKA MRK MEMPERSIAP KAN NKRI UNTUK IKUT SERTA\xa0 BER PERANG JUGA.&lt;br&gt;NAH TERNYATA GERINDRA TDK PUNYA NIAT N AKAL CERDAS JADI PEMIMPIN YG MAMPU IKUT SERTA\xa0 MENDAMAIKAN DUNIA...NGERI BUKAN RAKYAT DI KUASAI MILITER + RAKYAT INDONESIA DI KORBANKAN UTK MENGHADAPI PERANG DUNIA KE 3;.&lt;br&gt;GERINDRA SENDIRI\xa0 SALAH MENGERTI TTG TUGAS2 SUCI\xa0 MILITER\xa0 SEBETULNYA UTK MENGAMAN KAN RAKYAT N NEGARA N TURUT SERTA MENDAMAIKAN DUNIA, WAH MASA DEPAN NEGARA INI SUASANA NYA AKAN\xa0 TERCEKAM\xa0 N DI TAKUT2 I TERUS KLO BEGITU&lt;br&gt;Dan MASA LALU PRABOWO ADALAH TURUT MENGHILANG KAN PARA AKTIVIS 98 YG SAMPAI SKRG TDK TAHU KEBERADAAN KUBURAN MRK....itulah REKAM JEJAK MASA LALU PRABOWO....&lt;br&gt;MAU INDONESIA KAYA MYAMAR ????&lt;br&gt;&lt;br&gt;DAN dari\xa0 kelompok Anies n Prabowo\xa0 TERNYATA\xa0 KELOMPOK INI ADALAH KELOMPOK GOLKAR yg di pecah dgn Nama2 Partai Nasdem , Partai Gerindra , Partai Demokrat dll....&lt;br&gt;JD SBETULNYA YG BERTARUNG INI ADALAH : &lt;br&gt;PDI P YG NASIONALIS , YG INGIN NKRI INI MAJU N MAKMUR VS GOLKAR\xa0 YG REKAM JEJAK NYA HANYA CINTA TAHTA N\xa0 HARTA NKRI.&#39;,
+  0],
+ [&#39;2023-05-07T01:54:12Z&#39;,
+  &#39;Biyono&#39;,
+  &#39;RAKYAT NGGAK BUTUH SRVEY,RAKYAT HANYA PAK ANIS LAINNYA NGGAK SUNIK&#39;,
+  0],
+ [&#39;2023-05-07T01:17:16Z&#39;,
+  &#39;Nunung Roniah&#39;,
+  &#39;Presiden 1gk ad noda korupsi korupsinya banyak gimana jdi presiden .presiden itu yg berpendidikan tinggi .dri muda dh cerdas dh berpretasi.di kenal sama dunia berbahasa inggris oke .GK planga plongo.sesama beragama saling menghormati .jdi gubenur rakytnya sejahtera pembangunannya maju.tu Mash ad awal korupsi yaaa&#39;,
+  0],
+ [&#39;2023-05-07T01:15:37Z&#39;, &#39;Udin Lumban Raja&#39;, &#39;Ganjar P&#39;, 0],
+ [&#39;2023-05-07T01:13:00Z&#39;,
+  &#39;Antoso Djoko&#39;,
+  &#39;Si rambut putih selalu diatas sambil leyej leyeh nonton film bokep (penderita sosiopath)&#39;,
+  0],
+ [&#39;2023-05-07T01:11:00Z&#39;, &#39;ayufri&#39;, &#39;kok bisa dia yg teratas&#39;, 0],
+ [&#39;2023-05-07T00:56:58Z&#39;,
+  &#39;Hadi Salim&#39;,
+  &#39;Great news, yg penting asal bukan yaman ayat mayat.&#39;,
+  0],
+ [&#39;2023-05-06T22:16:24Z&#39;,
+  &#39;A&#39;,
+  &#39;Bisa 85% jika Pak Ganjar bersanding dengan Deni Siregar atau Ade armando sbg Cawapresnya.👍👍👍🇮🇩🇮🇩🇮🇩&#39;,
+  1],
+ [&#39;2023-05-07T15:25:49Z&#39;, &#39;Mustaqien Mustaqien&#39;, &#39;Amin&#39;, 0],
+ [&#39;2023-05-07T12:31:49Z&#39;,
+  &#39;Rdn Nids&#39;,
+  &#39;Bisa 89% bila Pak Anies bersanding dengan Sugik nur sbg cawapresnya 😃😃😃&#39;,
+  1],
+ [&#39;2023-05-06T21:01:33Z&#39;,
+  &#39;Su Marman&#39;,
+  &#39;Bohong terus dasar kena Azab dosa besar&#39;,
+  0],
+ [&#39;2023-05-06T20:59:15Z&#39;,
+  &#39;Garam dapur&#39;,
+  &#39;Tidak menjamin hasil survey akan menentukan hasil akhir&#39;,
+  0],
+ [&#39;2023-05-06T19:09:12Z&#39;, &#39;Kucang Lada&#39;, &#39;Cuan cuan lembaga survey&#39;, 0],
+ [&#39;2023-05-06T17:33:03Z&#39;, &#39;Infomase&#39;, &#39;Survey merusak tatanan demokrasi&#39;, 0],
+ [&#39;2023-05-06T17:23:42Z&#39;, &#39;Nagan Channel&#39;, &#39;POLITIK&#39;, 0],
+ [&#39;2023-05-06T16:29:28Z&#39;,
+  &quot;Wahyu O&#39;connor Motovlog&quot;,
+  &#39;GAS POLL ( GANJAR ALWAYS POKOKNYA LUR ) 😎😎😎😎&#39;,
+  0],
+ [&#39;2023-05-06T16:01:10Z&#39;,
+  &#39;Wahyu Bima&#39;,
+  &#39;Survey ame pooling ki podo rak? Kok kebalikannya hslnya&#39;,
+  0],
+ [&#39;2023-05-06T15:58:19Z&#39;,
+  &#39;Awaludin paty Awal&#39;,
+  &#39;Pak Ganjar adalah kita 👍👍&#39;,
+  0],
+ [&#39;2023-05-06T15:57:06Z&#39;,
+  &#39;Hendra Chandra&#39;,
+  &#39;Survei mah permainan lembaga aja siapa yg paling kuat bayar mereka untuk jualan atau endorse.. media jg sama siapa yg kuat uangnya itu yg di viralkan terus 😂😂&lt;br&gt;Kami sudah tidak mau tertipu lagi mau survei apapun itu&#39;,
+  0],
+ [&#39;2023-05-06T15:45:03Z&#39;,
+  &#39;septi ana&#39;,
+  &#39;Mugo&amp;quot;pak ganjar dadi presiden 2024 amin ya robbal alamin&#39;,
+  0],
+ [&#39;2023-05-06T14:45:08Z&#39;,
+  &#39;Pakde War&#39;,
+  &#39;Pak Ganjar Pranowo memperoleh suara 63% lebih&#39;,
+  1],
+ [&#39;2023-05-06T14:43:34Z&#39;,
+  &#39;Pakde War&#39;,
+  &#39;WASPADALAH  jurus ayat mayat akan tampil kembali. Jangan sampai kenak tipu muslihat dengan berbagai cara dusta&#39;,
+  1],
+ [&#39;2023-05-06T14:38:31Z&#39;,
+  &#39;Ridwan Sbg&#39;,
+  &#39;Gimana Ganjar ndak teratas terus... &lt;br&gt;Kami para pecinta Bokep ya dukung Ganjar krn satu hoby... &lt;br&gt;Bokep semakin terdepan... 😅😅😅😅😅😅&#39;,
+  0],
+ [&#39;2023-05-06T14:29:27Z&#39;, &#39;Monyeng Icha&#39;, &#39;Pendukung wan abud ketar ketir&#39;, 0],
+ [&#39;2023-05-06T14:15:31Z&#39;,
+  &#39;Nurmala Nur&#39;,
+  &#39;Tenggelamkan calon rezim ini Sngt berbahaya bgi banggsa n negara.calon rezim pemecah belah vmmt&#39;,
+  0],
+ [&#39;2023-05-06T14:09:40Z&#39;,
+  &#39;AdiMulkanny&#39;,
+  &#39;Media jangan di percaya kata prabowo&#39;,
+  0],
+ [&#39;2023-05-06T13:56:29Z&#39;, &#39;airlangga jaya wardana&#39;, &#39;Anies ya...&#39;, 0],
+ [&#39;2023-05-06T13:55:55Z&#39;,
+  &#39;airlangga jaya wardana&#39;,
+  &#39;Anies... Yg terbaik untuk jdi presiden R1&#39;,
+  0],
+ [&#39;2023-05-06T13:55:22Z&#39;, &#39;airlangga jaya wardana&#39;, &#39;Anies yg santun&#39;, 0],
+ [&#39;2023-05-06T13:55:12Z&#39;, &#39;airlangga jaya wardana&#39;, &#39;Anies yg pintar&#39;, 0],
+ [&#39;2023-05-06T13:55:00Z&#39;, &#39;airlangga jaya wardana&#39;, &#39;Anies yg bersih&#39;, 0],
+ [&#39;2023-05-06T13:54:48Z&#39;, &#39;airlangga jaya wardana&#39;, &#39;Anies oke&#39;, 0],
+ [&#39;2023-05-06T13:54:39Z&#39;, &#39;airlangga jaya wardana&#39;, &#39;Anies yess&#39;, 0],
+ [&#39;2023-05-06T13:51:40Z&#39;,
+  &#39;Jejen Jaenudin&#39;,
+  &#39;Pilpres dua putaran, pemenangnya prsbowo, pemilih anis di putaran pertama akan memilih prabowo&#39;,
+  0],
+ [&#39;2023-05-06T13:47:39Z&#39;, &#39;adrian channel&#39;, &#39;Anies yes&#39;, 0],
+ [&#39;2023-05-06T13:19:45Z&#39;, &#39;Rustam Vivi&#39;, &#39;Survey abal2 ini&#39;, 0],
+ [&#39;2023-05-06T13:06:24Z&#39;,
+  &#39;@Ilmy71&#39;,
+  &#39;Lembaga survey, mana yg VALID, di poling survey TVONE, capres ANIS UNGGUL,...TERUSS&#39;,
+  0],
+ [&#39;2023-05-06T12:54:46Z&#39;,
+  &#39;jejak tikus&#39;,
+  &#39;Ini yang ditayangkan selalu survey 3 pasang calon. Yg head to head ditampilkan belakangan😂😂&#39;,
+  0],
+ [&#39;2023-05-06T12:44:42Z&#39;, &#39;Heri Alfaridzi&#39;, &#39;Palsu&#39;, 0],
+ [&#39;2023-05-06T12:44:38Z&#39;,
+  &#39;Gulo Sona&#39;,
+  &#39;Yang penting bukan Anus, eh anis..🤪🤪&#39;,
+  0],
+ [&#39;2023-05-06T12:41:11Z&#39;,
+  &#39;Zulkarnain Kaur&#39;,
+  &#39;Semoga PDIP dan partai koalisinya serta Pak Jokowi semakin inten utk mengampanyekan Ganjar sbg capres !&#39;,
+  0],
+ [&#39;2023-05-06T12:39:49Z&#39;, &#39;Sofyan Wijaya&#39;, &#39;Survei Survei Bullshit&#39;, 0],
+ [&#39;2023-05-06T12:35:13Z&#39;,
+  &#39;Amirudin Saleh&#39;,
+  &#39;Saya yakin pak prabowo presiden di 2024.amin&#39;,
+  0],
+ [&#39;2023-05-06T12:33:44Z&#39;,
+  &#39;Ahmad Faizin&#39;,
+  &#39;Lembaga survei ini semua gentayangan, seolah olah yg di survei itu benar..!&#39;,
+  0],
+ [&#39;2023-05-06T12:31:58Z&#39;, &#39;Dudi Darmayon&#39;, &#39;Survei  abal abal... Haram&#39;, 0],
+ [&#39;2023-05-06T12:30:43Z&#39;, &#39;Dudi Darmayon&#39;, &#39;Nyatanya  Ganjar  nyungsep&#39;, 0],
+ [&#39;2023-05-06T12:30:39Z&#39;, &#39;Fudin Nisa&#39;, &#39;Tidak percaya,&#39;, 0],
+ [&#39;2023-05-06T12:30:27Z&#39;, &#39;Nday 17&#39;, &#39;😂😂😂😂&#39;, 0],
+ [&#39;2023-05-06T12:22:28Z&#39;,
+  &#39;Muhamad Ayra&#39;,
+  &#39;Ya elah rakyat udah pinter bro mana emas, mana perak&#39;,
+  0],
+ [&#39;2023-05-06T12:19:59Z&#39;, &#39;Muhamad Ayra&#39;, &#39;Preeetttttt&#39;, 0],
+ [&#39;2023-05-06T12:19:18Z&#39;,
+  &#39;Muhamad Ayra&#39;,
+  &#39;KOMPAS TV, BTV GITU LOH. CUMA NANYA SIAPA YG DISURVEY&#39;,
+  0],
+ [&#39;2023-05-06T12:12:18Z&#39;, &#39;Nur Wati&#39;, &#39;Abal-abal 😅😅😅😅😅&#39;, 0],
+ [&#39;2023-05-06T11:58:31Z&#39;,
+  &#39;Ardi Aja&#39;,
+  &#39;Ogah milih calon yg suka nonton barang haranm&#39;,
+  1],
+ [&#39;2023-05-06T11:57:39Z&#39;,
+  &#39;Ardi Aja&#39;,
+  &#39;Kenapa ya ganjar suka nonton bokef,  padahal dlm islam haram&#39;,
+  1],
+ [&#39;2023-05-06T11:55:23Z&#39;,
+  &#39;Mamad&#39;,
+  &#39;Coba kalau kalian berani langsung polling terbuka.. 😅&#39;,
+  0],
+ [&#39;2023-05-06T11:52:22Z&#39;,
+  &#39;heden jaya&#39;,
+  &#39;Pak ganjar sy dukung di pasangkan sama pak ahok,pasti gol mimpin indonesia❤&#39;,
+  0],
+ [&#39;2023-05-07T13:53:00Z&#39;,
+  &#39;Dwiky Darmawan&#39;,
+  &#39;Ganjar pranowo Andika Perkasa&#39;,
+  0],
+ [&#39;2023-05-06T11:47:31Z&#39;,
+  &#39;Riad Sidik&#39;,
+  &#39;Pikada dki terulang lagi survei survei bermunculan keyataan pakta sama realita jauh tau tau yg buncit yg bisa menang&#39;,
+  0],
+ [&#39;2023-05-06T11:45:49Z&#39;,
+  &#39;Iwan Apriliyanto&#39;,
+  &#39;KETURUNAN YAMAN BERBAHAYA UNTUK NKRI...&#39;,
+  1],
+ [&#39;2023-05-06T11:44:12Z&#39;,
+  &#39;Okezone RO&#39;,
+  &#39;Yang cerdas pasti dukung pak ganjar&#39;,
+  1],
+ [&#39;2023-05-06T11:43:56Z&#39;,
+  &#39;Riza Aspahani&#39;,
+  &#39;Hari gini masih ada yg percaya Lembaga Survey 😅😅😅😅😅&lt;br&gt;&lt;br&gt;Lucuuuuu....😅😅😅😅&#39;,
+  0],
+ [&#39;2023-05-06T11:39:38Z&#39;,
+  &#39;saran pribadi&#39;,
+  &#39;Lebih baik percaya sama tukang sulap dari pada tukang survei&#39;,
+  0],
+ [&#39;2023-05-06T11:37:59Z&#39;,
+  &#39;sunnyxx_cutie&#39;,
+  &#39;Semoga terus meroket pak Ganjar&#39;,
+  0],
+ [&#39;2023-05-06T11:31:49Z&#39;,
+  &#39;Next Time Bro&#39;,
+  &#39;Cuma Di Indonesia Presiden Menang Sebelum Di Coblos😂&#39;,
+  0],
+ [&#39;2023-05-06T11:29:09Z&#39;,
+  &#39;Dafa Dafa&#39;,
+  &#39;Surve apa an ini rakyat yg milih bukan partai hidup Prabowo&#39;,
+  0],
+ [&#39;2023-05-06T11:24:45Z&#39;, &#39;ashary ghina&#39;, &#39;Ganjar pranowo gaspol&#39;, 0],
+ [&#39;2023-05-06T11:20:36Z&#39;, &#39;fajar gunawan&#39;, &#39;Prabowo Presiden 🇮🇩&#39;, 0],
+ [&#39;2023-05-06T11:08:37Z&#39;, &#39;Bowo Rumekso&#39;, &#39;Survey versi tim sukses 😂😂&#39;, 0],
+ [&#39;2023-05-06T11:04:08Z&#39;,
+  &#39;basori adi&#39;,
+  &#39;Pola Pilkada DKI sedang berjalan reborn. Semoga Allah swt melindungi beliau dari kejahatan tangan2 kotor bayaran, hamba2 iblis yang anti kebenaran.&#39;,
+  0],
+ [&#39;2023-05-06T10:58:23Z&#39;, &#39;alam ghoib&#39;, &#39;Ganjar mantap&#39;, 0],
+ [&#39;2023-05-06T10:56:22Z&#39;,
+  &#39;Muhammad Reza afandy&#39;,
+  &#39;prabowo maju terus. insyaallah kami sekeluarga akan mendukung&#39;,
+  0],
+ [&#39;2023-05-06T10:48:08Z&#39;,
+  &#39;hadir slalu&#39;,
+  &#39;Sukses slalu pak Ganjar Pranowo 👍&#39;,
+  1],
+ [&#39;2023-05-06T10:32:15Z&#39;, &#39;Olhex Odhex&#39;, &#39;Anies tetap di hati&#39;, 0],
+ [&#39;2023-05-06T10:24:32Z&#39;,
+  &#39;Sofyrizal 007&#39;,
+  &#39;Survey sekarang masyarakat udah tak open lagi karena bisa dibeli, he, he, wsdlm&#39;,
+  0],
+ [&#39;2023-05-06T10:20:52Z&#39;,
+  &#39;Syahwan Rama&#39;,
+  &#39;Ko Anis gak maik2 sih &lt;br&gt;Kan sudah pke tenaga Surya&#39;,
+  0],
+ [&#39;2023-05-06T10:17:06Z&#39;,
+  &#39;Hermawan Salim&#39;,
+  &#39;UMAT KRISTEN AKAN MEMILIH CAPRES YG MAU MENCABUT SKB 3 MENTERI.&lt;br&gt;DENGAN SYARAT HITAM DI ATAS PUTIH, DI SAKSIKAN OLEH PARA PENDETA INDONESIA.&lt;br&gt;SELURUH SUARA UMAT KRISTEN 30% DARI JUMLAH PENDUDUK INDONESIA.&lt;br&gt;CUKUP BANYAK, CAPRES YG BERMINAT SILAKAN MERAPAT KE PSI.&#39;,
+  1],
+ [&#39;2023-05-06T10:14:14Z&#39;,
+  &#39;Herjianto Media&#39;,
+  &#39;Cuma bisnis politik doang kalau masih ada threshold 20 persen&#39;,
+  0],
+ [&#39;2023-05-06T10:09:38Z&#39;,
+  &#39;Sri ningsih Sei ayu&#39;,
+  &#39;Semngat pokonya BPK Ganjar Pranowo RI 1 lajutkn kerja BPK persiden Jokowi&#39;,
+  1],
+ [&#39;2023-05-06T09:55:01Z&#39;,
+  &#39;alghazjatta radeya&#39;,
+  &#39;Silahkan bebas tinggiin survey sendiri, aq sih ga percaya survey&#39;,
+  0],
+ [&#39;2023-05-06T09:26:47Z&#39;, &#39;Nafeeza Nafeeza&#39;, &#39;Pak anies baswedan mantap&#39;, 0],
+ [&#39;2023-05-06T09:17:27Z&#39;,
+  &#39;smantv&#39;,
+  &#39;Lembaga survey misal data yang masuk 100 untuk calon A, tpi yg diinputkan 10 misalnya, indikatornya apa ya? Kan hanya independensi dan moralitas saja yg bisa mencegah. Siapa yg bisa mencegah kejadian itu!?&#39;,
+  1],
+ [&#39;2023-05-06T09:15:51Z&#39;,
+  &#39;eko yuwono&#39;,
+  &#39;GANJAR TETEAP TERDEPAN...YANG LAIN KETINGGALAN...!!!&#39;,
+  1],
+ [&#39;2023-05-06T09:13:59Z&#39;,
+  &#39;Cipto Parmono&#39;,
+  &#39;HANYA. BP.PRABOWO SUBIANTO, YANG SIAP MENGAYOMI RAKYAT. DEMI KEMAKMURAN. PRESIDEN RI .TH.2024.&#39;,
+  0],
+ [&#39;2023-05-06T09:11:50Z&#39;,
+  &#39;One Heart&#39;,
+  &#39;1 putaran aj,,, kebanyakan biaya kalo 2putaran😂😂😂&#39;,
+  0],
+ [&#39;2023-05-06T08:48:36Z&#39;,
+  &#39;rudi hartono&#39;,
+  &#39;Ganjar gasssssss ,presiden 2024&#39;,
+  0],
+ [&#39;2023-05-06T08:46:30Z&#39;, &#39;Stay Weird&#39;, &#39;Pak ganjar&#39;, 0],
+ [&#39;2023-05-06T08:28:37Z&#39;,
+  &#39;Jansrul Djaja&#39;,
+  &#39;100% Ganjar pasti menang 2024 🎉🎉🎉🇮🇩🇮🇩🇮🇩👍👍👍🙏🏻🙏🏻🙏🏻&#39;,
+  0],
+ [&#39;2023-05-06T08:25:19Z&#39;, &#39;Omega Dua&#39;, &#39;Pak ganjar pranowo.&#39;, 1],
+ [&#39;2023-05-06T08:12:28Z&#39;, &#39;MR EDAN&#39;, &#39;GANJAR LANJUTKAN ,&#39;, 1],
+ [&#39;2023-05-06T08:08:18Z&#39;, &#39;Angga Setyo&#39;, &#39;Wkwkw&#39;, 0],
+ [&#39;2023-05-06T08:01:52Z&#39;,
+  &#39;Aji Suci&#39;,
+  &#39;Sayang Btv..siaranya  ga tertangkap didaerah Banyumas Raya.&#39;,
+  0],
+ [&#39;2023-05-06T07:13:14Z&#39;,
+  &#39;eko wijay&#39;,
+  &#39;Lha wong survei pesanan....propaganda utk mempengaruhi dan menggoda pikiran orang agar milih ganjar....padahal ganjar faktanya mengumbar bahwa dirinya penggemar pornografi nonton film bokep dan merasa tdk bersalah, hal itu dia sampaikan di depan publik...bisajadi ganjar ada gangguan moral&#39;,
+  0],
+ [&#39;2023-05-06T07:02:40Z&#39;, &#39;Aris Wahyu&#39;, &#39;Ganjar semakin dihati&#39;, 2],
+ [&#39;2023-05-06T06:49:26Z&#39;, &#39;Joice Lennon&#39;, &#39;Prabowo is my Voting 2024&#39;, 0],
+ [&#39;2023-05-06T06:38:39Z&#39;,
+  &#39;Masjun Kendal&#39;,
+  &#39;❤❤❤❤GANJAR.... &amp;amp; PRABOWO.. 👍👍👍👍👍...... BAMBU MESUM 500 juta.... Setahun di BONGKAR.... ohhh tidak..... Cukup JAKARTA Korbannya.. 😮😮😮&#39;,
+  0],
+ [&#39;2023-05-06T06:36:47Z&#39;,
+  &#39;Besi Tua&#39;,
+  &#39;Klu Ganjar ingin menang harus ada selisih 10% lebih tinggi dari pada Prabowo.. klu kurang dari 10% kemungkinan Ganjar akan kalah dengan Prabowo d putaran ke 2.&lt;br&gt;Nama y juga prediksi 😅&#39;,
+  6],
+ [&#39;2023-05-09T01:06:33Z&#39;,
+  &#39;Mamanya Laksmi&#39;,
+  &#39;\u200b@bakayaro_16 saudaraku stop polarisasi... karena narasi narasi spt itu, saya tidak pilih pak ganjar . Saya pilih pak prabowo.. kita semua anak bangsa, stop polarisasi...kita riil contohkan rekonsiliasi&#39;,
+  0],
+ [&#39;2023-05-08T05:03:23Z&#39;,
+  &#39;bray&#39;,
+  &#39;\u200b@bakayaro_16mending pilih puan jadi cawapresnya suara mic aja dimatikan orang lagi demo di aja malah ngrayain party didalam ruangan oia ganjar itu dari partai mana ya&#39;,
+  0],
+ [&#39;2023-05-07T15:34:26Z&#39;,
+  &#39;bakayaro_16&#39;,
+  &#39;Si wowo akan kalah di putaran kedua krna kadrun merapat ke wowo&lt;br&gt;Siapapun yg di dukung kadrun akan nyungsep&lt;br&gt;Dan projo akan kembali lagi ke ganjar&#39;,
+  1],
+ [&#39;2023-05-06T10:56:43Z&#39;,
+  &#39;Gelsy and genia&#39;,
+  &#39;Lah iyo klo putaran kedua suara anis gha akan ke ganjar,. 😅&#39;,
+  0],
+ [&#39;2023-05-06T06:28:55Z&#39;,
+  &#39;Karsiono 005&#39;,
+  &#39;Pak Ganjar pas banget ,jadi RI ,1,💟🇮🇩💪🙏🙏🙏&#39;,
+  12],
+ [&#39;2023-05-06T06:00:52Z&#39;,
+  &#39;Laurentius Samosir&#39;,
+  &#39;Kaum nasionalis benteng NKRI! Mari kita kepalkan tangan dan singsingkan lengan baju. Kita menangkan Bung GANJAR PRANOWO menjadi Presiden NKRI penerus VISI, MISI, dan PROGRAM-PROGRAM Presiden Joko Widodo untuk INDONESIA MAJU.&lt;br&gt;&lt;br&gt;Ganjar Pranowo yang paling dekat dan sangat perduli dengan wong cilik seperti Jokowi. Ganjar Pranowo itu relijius dan anti radikalisme. Ganjar Pranowo Presiden NKRI 2024. &lt;br&gt;&lt;br&gt;Ganjar Pranowo tidak ada kaitan dengan rejim otoriter ORDE BARU yang akan melahirkan kembali kejahatan dan kekejian ORDE BARU.&#39;,
+  0],
+ [&#39;2023-05-06T06:00:23Z&#39;,
+  &#39;ROHMAT RORI&#39;,
+  &#39;Alhamdulillah....&lt;br&gt;Semangat SELALU UNTUK Mendukung Dan Memilih Pak Ganjar Pranowo ❤️🙏💪🇮🇩🇮🇩🇮🇩🇮🇩&#39;,
+  8],
+ [&#39;2023-05-06T06:00:18Z&#39;, &#39;gonzales 1927&#39;, &#39;Alhamdulillah....&#39;, 0],
+ [&#39;2023-05-06T05:59:03Z&#39;,
+  &#39;Laurentius Samosir&#39;,
+  &#39;Kaum nasionalis benteng NKRI! Mari kita kepalkan tangan dan singsingkan lengan baju. Kita menangkan Bung GANJAR PRANOWO menjadi Presiden NKRI penerus VISI, MISI, dan PROGRAM-PROGRAM Presiden Joko Widodo untuk INDONESIA MAJU.&lt;br&gt;&lt;br&gt;Ganjar Pranowo yang paling dekat dan sangat perduli dengan wong cilik seperti Jokowi. Ganjar Pranowo itu relijius dan anti radikalisme. Ganjar Pranowo Presiden NKRI 2024. &lt;br&gt;&lt;br&gt;Ganjar Pranowo tidak ada kaitan dengan rejim otoriter ORDE BARU yang akan melahirkan kembali kejahatan dan kekejian ORDE BARU.&#39;,
+  0],
+ [&#39;2023-05-06T05:47:20Z&#39;, &#39;Krisna Preset&#39;, &#39;Ganjar pranowo OKE.....&#39;, 0],
+ [&#39;2023-05-06T05:39:36Z&#39;,
+  &#39;jul yani&#39;,
+  &#39;Jika anis kalah di putaran pertama, saya yakin prabowo menang. Dikarnakan suara anis pasti pindah ke prabowo. Tapi ganjar tetap msih bisa bersaing&#39;,
+  0],
+ [&#39;2023-05-06T05:36:25Z&#39;,
+  &#39;Rakyat Bersuara&#39;,
+  &#39;Aneh bin Ajaib. Survei dengan Sampel 1000 orang di jadikan pegangan. 😂&lt;br&gt;Sementara Poling Terbuka ( memberi suara langsung) oleh ratusan ribu, bahkan Jutaan orang ga di jadikan indikator  elektabilitas siapa tertingi. Lucu ga coba??😅😅. Akal sehat mana yg bisa terima???. 😂&lt;br&gt;1000 sampel VS Ratusan Ribu poling terbuka. Memberi suara langsung??.&lt;br&gt;Masa TIMNAS Menang 10 kosong. Tapi dihitung 1 kosong. 😂😂. Ya tuhan....&#39;,
+  1],
+ [&#39;2023-05-06T05:28:51Z&#39;,
+  &#39;A10 Duos&#39;,
+  &#39;Bayar uang brapa lembaga surve nya😂😂😂😂&#39;,
+  1],
+ [&#39;2023-05-06T05:27:46Z&#39;,
+  &#39;sdz&#39;,
+  &#39;Hasil Survei Independen hasilnya tdk jauh beda bila pilpres diselenggarakan.  Kalo sdh tau potensi menang besar,  ngapaen milih yg elektabilitasnya rendah. Gitu lho logic simple nya.  Ayok merapat ke Ganjar wahai kln yg masih ragu😊&#39;,
+  0],
+ [&#39;2023-05-06T05:27:36Z&#39;,
+  &#39;Rakyat Bersuara&#39;,
+  &#39;Sudah lah jangan lagi bikin rakyat ngakak😅. Sekarang bukan tahun 2019. Hampir 270.juta Rakyat Indonesia semua udah pada pegang HP dan telah melihat dimana mana, bahwa bukan survei tapi Poling terbuka di Semua medsos., mulai dari  facebook, tiktok, Youtube.dengan Respon poling terbuka  ratusan ribu orang. Bukan sampel seribu orang. Dan dimana mana Hasinya Anis menang Telak 80℅ sampa 90😅😅😅. Sampaikan Ke Yg Endors Ganjar  dan prabowo. Ga usa terlalu panik undang ketum ketum partai sana sini Untuk kalahkan Anis. 😅😂😂. Ntar publik menilai terlalu kelihatan Panik karena Kekuasaan akan segera Runtuh 2024.😅&#39;,
+  0],
+ [&#39;2023-05-06T05:18:13Z&#39;,
+  &#39;Delta Pujangga&#39;,
+  &#39;jangan mengulang sejarah arogan...ayoo  dukung Prabowo Presiden&#39;,
+  0],
+ [&#39;2023-05-06T05:17:16Z&#39;, &#39;Ahmad Rifai&#39;, &#39;Semoga menang semua&#39;, 0],
+ [&#39;2023-05-06T05:08:45Z&#39;,
+  &#39;jhonny tupan&#39;,
+  &#39;Rakyat indoneisia tidak meliat lagi serfei tingal meliat ,2024 tetap prabowo presiden ini kan permainan bola ,u20&#39;,
+  0],
+ [&#39;2023-05-06T04:54:00Z&#39;,
+  &#39;Lalu Nas&#39;,
+  &#39;Mantap pak ganjar, mudahan amanah jujur, merdeka&#39;,
+  4],
+ [&#39;2023-05-06T04:52:56Z&#39;, &#39;Fajar Nugraha&#39;, &#39;Survey abal abal&#39;, 1],
+ [&#39;2023-05-06T04:40:17Z&#39;,
+  &#39;MUST WE WITH&#39;,
+  &#39;Pilihan boleh beda tapi masyarakat yg cerdas pilih yg benar2 berprestasi&#39;,
+  0],
+ [&#39;2023-05-06T04:39:39Z&#39;, &#39;jonbudi&#39;, &#39;ok&#39;, 0],
+ [&#39;2023-05-06T04:32:41Z&#39;,
+  &#39;Awe Tiga&#39;,
+  &#39;Prabowo orang yang tepat untuk memimpin negeri ini setelah jokowi mengatasi konstetalasi  global. Pertarungan global, perekonomian global. Maaf, anies dan ganjar belum punya kapasitas itu. Pemimpin merakyat beda dengan pemimpin Berjiwa negarawan untuk rakyat. Prabowo Negarawan untuk rakyat. NKRI harga mati.. 2024 Prabowo presiden🇮🇩&#39;,
+  1],
+ [&#39;2023-05-08T05:53:45Z&#39;,
+  &#39;Awe Tiga&#39;,
+  &#39;@Karsiono 005 menjadi daerah kolam renang terluas 😂, biarkan banjir pak gub nanti surut sendiri yg penting tiktokan dulu toh&#39;,
+  0],
+ [&#39;2023-05-08T05:49:35Z&#39;,
+  &#39;Awe Tiga&#39;,
+  &#39;@ITE WAHYU apakah mendukung israel untuk kepentingan kelompok pribadi seakan membela nega islam. Bicara islam itu si ganjar suka nonton bokep, piyee😂, seorang pejabat publik sosok panutan suri tauladan&#39;,
+  0],
+ [&#39;2023-05-08T04:09:38Z&#39;,
+  &#39;ITE WAHYU&#39;,
+  &#39;@Awe Tiga mungkin penjajahan di atas dunia itu terkhusus untuk israel kali..&lt;br&gt;Kalau mau nolak rusia karena penjajahan efek nya ga signifikan &lt;br&gt;Tapi efek dari nolak israel itu buntut nya indonesia gagal jadi tuan rumah pildun &lt;br&gt;Negara rugi,generasi muda rugi,mau memerdekakan negara orang, tapi tertindas di negara sendiri oleh rakyat sendiri&#39;,
+  1],
+ [&#39;2023-05-08T02:45:04Z&#39;,
+  &#39;Awe Tiga&#39;,
+  &#39;@ITE WAHYU banyak yg bilang berjiwa nasionalis karena bersikap penjajahan diatas dunia harus di hapuskan, kilas balik ke G20 kok pada diam kehadiran rusia ya&#39;,
+  0],
+ [&#39;2023-05-08T00:40:28Z&#39;,
+  &#39;ITE WAHYU&#39;,
+  &#39;Terus kabarnya indonesia rugi triliunan gar² pak ganjar,,tidak mau menerima israel pada pildun u20&#39;,
+  0],
+ [&#39;2023-05-06T04:25:02Z&#39;, &#39;maryati 123&#39;, &#39;MANTAP MASEEEEE GASPUOL&#39;, 0],
+ [&#39;2023-05-06T04:14:27Z&#39;,
+  &#39;Tiger Vega&#39;,
+  &#39;Jadi ingat survai waktu pemilihan gubernur DKI..di saat itu pendukung pak ahok amat sangat percaya diri secara dari PDI pasti akan menang pak ahok.karna hasil survainya slalu peringkat teratas dan pak anis terendah.tapi tangan allah akan melindungi dan di beri kelancaran ke pada pemimpin yg bersungguh sungguh utk rakyat.ternyata pak anis menang....allah akan slalu melindungi pemimpin yg benar2 niatnya hanya utk rakyat....&lt;br&gt;innsaallah☝🏼&#39;,
+  18],
+ [&#39;2023-05-08T14:15:38Z&#39;,
+  &#39;Zulkifli Siregar&#39;,
+  &#39;Pilihan survai dengan pilihan rakyat itu jauh berbeda,,sudah pasti Pak Anies Pilihan Rakyat,,,&#39;,
+  0],
+ [&#39;2023-05-08T10:08:03Z&#39;,
+  &#39;Iswantoro Yudi&#39;,
+  &#39;@Tri Nugroho 😂😂😂 kok misoh to mas&#39;,
+  0],
+ [&#39;2023-05-08T03:40:04Z&#39;,
+  &#39;Ani AW&#39;,
+  &#39;2024 mindset dan karakter bangsa tetap sama untuk pemilu,yakin tdk akan ada perubahan, pembangunan yg terlihat hanya fiktif untuk menutupi kebobrokan yg ada,, siapa pun presiden nya mesti nya kita lebih smart dan bijak dalam memilih,,capres yg benar2 punya karakter tegas ,bukan dibayang2 i dan di bawah tekanan ketum partai,, semestinya kita bersatu demi NKRI tercinta tetap jaya,, karena siapapun pemimpinnya, rakyat Indonesia yg akan merasakan nya... kenapa kita tidak mempersiapkan nya dr sekarang,,&#39;,
+  0],
+ [&#39;2023-05-07T12:50:21Z&#39;,
+  &#39;Rdn Nids&#39;,
+  &#39;Ini Indonesia drun, bukan DKI....&lt;br&gt;DKI markasnya kadrun...mereka leluasa demo berjilid jilid di DKI.&#39;,
+  0],
+ [&#39;2023-05-07T07:15:51Z&#39;,
+  &#39;yani -&#39;,
+  &#39;Ada kejadian luar biasa yg merubah semuanya karena p ahok tersandung penistaan agama..&#39;,
+  0],
+ [&#39;2023-05-06T04:10:13Z&#39;,
+  &#39;deAthoo_Channel&#39;,
+  &#39;Prabowo Capres terkuat, head to head thd ganjar maupun anis pasti akan menang&#39;,
+  0],
+ [&#39;2023-05-06T04:05:31Z&#39;,
+  &#39;Tom Jerry&#39;,
+  &#39;Kalau saya jadi tukang survei elektabilitas Anis B  pasti saya katakan Anis B yg teratas...&#39;,
+  0],
+ [&#39;2023-05-06T08:00:58Z&#39;, &#39;backbone&#39;, &#39;@Tom Jerry lahh...buktinya apa?&#39;, 0],
+ [&#39;2023-05-06T07:57:21Z&#39;,
+  &#39;Tom Jerry&#39;,
+  &#39;@backbone kalau memilih presiden lain dari Anis siap2 untuk di bohongi lagi...&#39;,
+  0],
+ [&#39;2023-05-06T05:40:45Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Anies bohongin warga jakarta dgn buat strategi marketing rumah dp 0 Rp yang bulshitttt....👎&#39;,
+  0],
+ [&#39;2023-05-06T03:58:47Z&#39;,
+  &#39;muhammad Nur Syams&#39;,
+  &#39;Anies Rasyid Baswedan presiden kita 2024&#39;,
+  1],
+ [&#39;2023-05-06T03:54:53Z&#39;,
+  &#39;Supri Adi&#39;,
+  &#39;Kq elektabilitas parpol angkanya 28,9% semua...... 👎👎👎👎👎&#39;,
+  0],
+ [&#39;2023-05-06T03:53:50Z&#39;, &#39;Noldy auna&#39;, &#39;Anies Baswedan Ok&#39;, 1],
+ [&#39;2023-05-06T03:53:18Z&#39;, &#39;Noldy auna&#39;, &#39;Anies Baswedan Ok&#39;, 1],
+ [&#39;2023-05-06T03:48:35Z&#39;, &#39;Ira Wati&#39;, &#39;❤ter ganjar ganjar&#39;, 0],
+ [&#39;2023-05-06T03:48:19Z&#39;,
+  &#39;mukhlis amir&#39;,
+  &#39;Pak ganjar duwet sama pak giring saya yakin surveynya pasti tambah meroket&#39;,
+  1],
+ [&#39;2023-05-06T03:43:13Z&#39;, &#39;Eliandi Tjung&#39;, &#39;GANJAR PRANOWO RI 1👍👍👍&#39;, 1],
+ [&#39;2023-05-06T03:32:07Z&#39;, &#39;UNTUNG S&#39;, &#39;Ganjar penerus pak dek 💪&#39;, 1],
+ [&#39;2023-05-06T03:22:53Z&#39;, &#39;Imam Syafi i&#39;, &#39;Siap pilih pk ganjar&#39;, 1],
+ [&#39;2023-05-06T03:22:24Z&#39;,
+  &#39;Fadlon RJ.A&#39;,
+  &#39;Kmi di Aceh 80%mendukung pak anies&#39;,
+  0],
+ [&#39;2023-05-06T03:19:34Z&#39;, &#39;Nurhidayat&#39;, &#39;🤟🤟&#39;, 0],
+ [&#39;2023-05-06T03:15:41Z&#39;, &#39;mas thofik&#39;, &#39;Joss ganjar&#39;, 0],
+ [&#39;2023-05-06T03:15:15Z&#39;,
+  &#39;S. Lukman244&#39;,
+  &#39;Survey abal&amp;quot;, pecah perut para lembaga survey kekenyangan..&#39;,
+  1],
+ [&#39;2023-05-06T03:15:13Z&#39;, &#39;Joss Ivan M&#39;, &#39;PRABOWO TETAP TERBAIK👍👍..&#39;, 0],
+ [&#39;2023-05-06T03:12:51Z&#39;, &#39;gunawan liwijaya&#39;, &#39;Ganjar tetap di hati&#39;, 1],
+ [&#39;2023-05-06T03:08:07Z&#39;, &#39;Margaretha Yohana&#39;, &#39;Pilih Ganjar dong....❤&#39;, 1],
+ [&#39;2023-05-06T03:08:06Z&#39;, &#39;arsyah saputra&#39;, &#39;Gass pool pak ganjar.....&#39;, 1],
+ [&#39;2023-05-06T03:00:03Z&#39;,
+  &#39;suprapto tewel&#39;,
+  &#39;Walaupu paling kecil &amp;amp; terendah Survei y, tapi Anies paling di takuti&amp;#39; &amp;quot;Anies 👍&#39;,
+  1],
+ [&#39;2023-05-06T02:58:09Z&#39;,
+  &#39;Kim myungdae&#39;,
+  &#39;Alhamdulillah selamat Pak Ganjar&#39;,
+  2],
+ [&#39;2023-05-06T02:57:42Z&#39;,
+  &#39;Wawan PJ&#39;,
+  &#39;Hebat LSI cerdas sesuai dg pikiran saya. Yg saya baca juga begitu. Pada akhirnya prabowo yg akn menang. Klo ingin satu putaran ya ganjar hrs mengalah untuk jd cawapres prabowo. Megawati hrs Mengalah skli2, kn prabowo sdh buktikan disiplin dirinya dan memgalahnya, sekrng gantian dooong. Masa cuma bisa nyuruh saja kpd orang untuk sabar, tp dirinya tdk sabar2. Apa kata dunia.&#39;,
+  0],
+ [&#39;2023-05-06T02:48:45Z&#39;,
+  &#39;putri&#39;,
+  &#39;Basis prabowo disemua kalangan.pdi sdh ketar ketir jika prabowo masuk pencalonan&#39;,
+  0],
+ [&#39;2023-05-06T02:46:29Z&#39;, &#39;putri&#39;, &#39;Putaran kedua terjadi&#39;, 0],
+ [&#39;2023-05-06T02:42:39Z&#39;, &#39;Hamikua Aja&#39;, &#39;Ganjar Ganjar next ，RI 1&#39;, 0],
+ [&#39;2023-05-06T02:40:25Z&#39;,
+  &#39;Deni Aja&#39;,
+  &#39;ARaB  (  Anis Rasid Baswedan )   Pas...&#39;,
+  1],
+ [&#39;2023-05-06T02:36:24Z&#39;,
+  &#39;Sumber Mandiri&#39;,
+  &#39;Lakon metune keri tanpa gembor2 ganjar yesss&#39;,
+  0],
+ [&#39;2023-05-06T02:36:19Z&#39;,
+  &#39;Gigih Berbakti&#39;,
+  &#39;Ganjar Pranowo yes.....subianto no&#39;,
+  0],
+ [&#39;2023-05-06T02:36:11Z&#39;,
+  &#39;Sutik No&#39;,
+  &#39;Sekali ganjar tetap ganjar   yg lain,,, NO,,,!!!!!&#39;,
+  1],
+ [&#39;2023-05-06T02:35:01Z&#39;,
+  &#39;Pak Warjo&#39;,
+  &#39;Kaum buruh sama driver truk Indonesia gabung Ganjar&#39;,
+  1],
+ [&#39;2023-05-06T02:33:59Z&#39;,
+  &#39;Lioe Fung&#39;,
+  &#39;No  1  prabowo  presiden  nkri .petugas  rakyat  th  2024 ...gerindra  menang  ❤❤❤&#39;,
+  0],
+ [&#39;2023-05-06T02:33:24Z&#39;,
+  &#39;Juse Mink&#39;,
+  &#39;Kenapa saya pilih bapak Anis Baswedan sebagai presiden, karena hanya di tangan beliaulah RUU perampasan aset koruptor bisa di sahkan, kalau jokowi gak akan berani karena partai nya yaitu PDIP menolak keras undang-undang tersebut begitu pun ganjar pranowo, yang sama sama di usung PDIP, secara pribadi saya himbau kepada seluruh warga negara indonesia yang menginginkan perubahan untuk kesejahteraan bangsa ini marilah kita secara suka rela mendukung koalisi perubahan agar koruptor bisa di tindak secara maksimal karena telah menyengsarakan hidup orang banyak di negeri ini&#39;,
+  1],
+ [&#39;2023-05-06T12:44:38Z&#39;,
+  &#39;Juse Mink&#39;,
+  &#39;@backbone faktanya arteria Dahlan menjegal RUU perampasan aset tersebut bahkan diruang rapat DPR dan di hadapan kemenkuham, Arteria itu adalah kader PDIP, yang anda bangga banggakan itu, menurutku PDIP itu adalah sarang koruptor&#39;,
+  0],
+ [&#39;2023-05-06T05:50:21Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Lahh...emangnya untuk mensahkan UU itu cuman didukung oleh satu partai, perlu juga partai lainnya bro karena khan musyawarah untuk mencapai mufakat/ dengan pemungutan suara anggota dewan dari semua partai...jadi jangan menuduh partai pdi p gak.mendukung UU perampasan aset cuy!!!&#39;,
+  0],
+ [&#39;2023-05-06T02:30:17Z&#39;, &#39;Ernawati 03&#39;, &#39;Prabowo yes&#39;, 0],
+ [&#39;2023-05-06T02:30:15Z&#39;, &#39;ana sobirin&#39;, &#39;Skali prabowo tetap prabowo&#39;, 0],
+ [&#39;2023-05-06T02:27:35Z&#39;,
+  &#39;Dudi Prayogo&#39;,
+  &#39;Insyaallah Anies Baswedan menjadi presiden RI 1 di tahun 2024&#39;,
+  0],
+ [&#39;2023-05-06T02:27:24Z&#39;,
+  &#39;Kunci Yayan&#39;,
+  &#39;Yg surfe nya di bawah biasanya bakal menang telak,&#39;,
+  1],
+ [&#39;2023-05-06T02:26:15Z&#39;,
+  &#39;Josh.F Tambunan&#39;,
+  &#39;Pak ganjar the real penerus pak jkowi❤&#39;,
+  4],
+ [&#39;2023-05-07T00:03:37Z&#39;,
+  &#39;Josh.F Tambunan&#39;,
+  &#39;@Mocci Occ itu perintah konstitusi partai&amp;amp;negara kita utk tak bersahabat dgn palestina bos 😒&#39;,
+  0],
+ [&#39;2023-05-06T22:58:01Z&#39;,
+  &#39;Mocci Occ&#39;,
+  &#39;kalau penerus Jokowi kenapa menentang Jokowi pada pildum U20&#39;,
+  0],
+ [&#39;2023-05-06T22:56:34Z&#39;, &#39;Mocci Occ&#39;, &#39;presiden bokep&#39;, 0],
+ [&#39;2023-05-06T02:22:26Z&#39;,
+  &#39;Diki Aditri&#39;,
+  &#39;Menolak Lupa Pildun Indonesia yang gagal😮&#39;,
+  1],
+ [&#39;2023-05-06T02:20:57Z&#39;,
+  &#39;Yogi Suwarno&#39;,
+  &#39;Aurvey bayaaran ngak aeauai fakta laapaangan&#39;,
+  0],
+ [&#39;2023-05-06T02:18:28Z&#39;,
+  &#39;Iyan Sopyan&#39;,
+  &#39;Wkwkwkwk&lt;br&gt;Survei bayaran,&lt;br&gt;Rakyat gak ada yg percaya lagi&#39;,
+  1],
+ [&#39;2023-05-06T02:16:50Z&#39;,
+  &#39;Ganda Simanjuntak&#39;,
+  &#39;Selalu..!! ??? Dasar penipu..&#39;,
+  0],
+ [&#39;2023-05-06T02:15:45Z&#39;,
+  &#39;adiva official&#39;,
+  &#39;Klo 3 Capres trus 2 Putaran,..Ganjar jangan Berharap Menang.&#39;,
+  0],
+ [&#39;2023-05-06T02:15:25Z&#39;,
+  &#39;Sahat Napitupulu&#39;,
+  &#39;Dan akan tetap semakin naik dari waktu kewaktu sampai pendaftatan ke KPU.  Satu putaran..&#39;,
+  0],
+ [&#39;2023-05-06T02:03:37Z&#39;, &#39;La ode Sukman&#39;, &#39;Surfei ji&#39;, 0],
+ [&#39;2023-05-06T02:01:41Z&#39;,
+  &#39;CREATORS709&#39;,
+  &#39;Survei nya 1 2 tapi seperti takut sama nomor 3 😂😂😂😂&#39;,
+  1],
+ [&#39;2023-05-06T02:01:31Z&#39;,
+  &#39;Pangat Bador&#39;,
+  &#39;Pak Ganjar Pranowo Yeeeeeeess.....👍👍&#39;,
+  1],
+ [&#39;2023-05-06T02:00:22Z&#39;,
+  &#39;Agus Sulaiman&#39;,
+  &#39;Hari gini masih percaya survei&#39;,
+  1],
+ [&#39;2023-05-06T01:59:38Z&#39;, &#39;Mama Dhanie&#39;, &#39;Tetap Pak Ganjar pranowo ❤&#39;, 1],
+ [&#39;2023-05-06T01:58:57Z&#39;, &#39;Sao Dah&#39;, &#39;Pilih kang Ganjar gk bakal menyesal&#39;, 0],
+ [&#39;2023-05-06T01:56:41Z&#39;,
+  &quot;La&#39; Viory&quot;,
+  &#39;Semoga saja dukungan utk bpk Ganjar Pranowo semakin bertambah byk utk menuju RI.1&#39;,
+  42],
+ [&#39;2023-05-08T09:53:34Z&#39;,
+  &#39;N Meci&#39;,
+  &#39;@Iswantoro Yudi wah ngaku aja kalah. cari2 alasan.&#39;,
+  0],
+ [&#39;2023-05-08T09:39:51Z&#39;,
+  &#39;dapit nurpalah&#39;,
+  &#39;@Iswantoro Yudi kalo di negara Republik Indonesia itu negara yang sangat demokratis. Beda dengan negara +26 Konoha banyak setingan dan titipan 🤣🤣&#39;,
+  0],
+ [&#39;2023-05-08T09:27:40Z&#39;,
+  &#39;Iswantoro Yudi&#39;,
+  &#39;@N Meci waduuu...hasil begalan....andai ahok gk kna kasus pasti menang ahok bro&#39;,
+  0],
+ [&#39;2023-05-08T09:26:06Z&#39;,
+  &#39;Iswantoro Yudi&#39;,
+  &#39;@dapit nurpalah kayak hidup lu aja udah diseting😂😂😂&#39;,
+  0],
+ [&#39;2023-05-07T22:30:00Z&#39;,
+  &#39;N Meci&#39;,
+  &#39;Jadi ingat pilgub dki. Hasil survey anies ditempatkan di urutan buncit tapi akhirnya jadi pemenang😂😂&#39;,
+  0],
+ [&#39;2023-05-06T01:54:22Z&#39;,
+  &#39;AH OK&#39;,
+  &#39;Yg pasti 2024 PARTAI ORBA NEW CUSTOM VS PARTAI WONG CILIK😊&#39;,
+  0],
+ [&#39;2023-05-06T01:50:55Z&#39;,
+  &#39;moh giri&#39;,
+  &#39;CERVEI ABAL ABAL ...&lt;br&gt;RAKYAY SUDAH PINTAR JANGAN KALIAN BODOHI MIN .&#39;,
+  0],
+ [&#39;2023-05-06T01:50:04Z&#39;,
+  &#39;Guno Gumowongso&#39;,
+  &#39;Ganjar pribumi asli prabowo campuran cina anis yaman yg pasti pati urip melu ganjar pro rakyat yg tak punya masalah yg setuju lek sebanyak banyaknya&#39;,
+  0],
+ [&#39;2023-05-06T01:22:38Z&#39;,
+  &#39;IQBAL&#39;,
+  &#39;Kami mendukung penuh pak ganjar.... Semoga succes.&#39;,
+  2],
+ [&#39;2023-05-06T01:15:47Z&#39;, &#39;Fahrur Rozi&#39;, &#39;Kok Sik manis smkin mnrun😂😂😂&#39;, 0],
+ [&#39;2023-05-06T01:13:35Z&#39;,
+  &#39;Uun Nurhayati&#39;,
+  &#39;Jangan memaksakan diri, hanya buang uang rakyat, tolong pangeran dunia detik ini cuma 1👍💯🙏 please lihat medsos please...&#39;,
+  0],
+ [&#39;2023-05-06T01:12:18Z&#39;,
+  &#39;Uun Nurhayati&#39;,
+  &#39;Udah jangan pura2 buta, dan bodo semua orang baik anak-anak kecil dan dewasa serta orang tua tinggal lihat medsos, please jangan bodoh atau pura2 buta liat medsos sekarang please...mks&#39;,
+  0],
+ [&#39;2023-05-06T01:10:50Z&#39;,
+  &#39;Uun Nurhayati&#39;,
+  &#39;Lihat medsos, jangan memaksakan diri, pangeran dunia detik ini 1 tidak banyak, tolong ngapain cuma buang waktu dan uang pemerintah daerah dan pusat tolong lihat medsos please...mks&#39;,
+  0],
+ [&#39;2023-05-06T00:56:49Z&#39;, &#39;Rafanda 2018&#39;, &#39;ora milih ganjar&#39;, 3],
+ [&#39;2023-05-06T00:54:07Z&#39;,
+  &#39;Abdul Chanel&#39;,
+  &#39;5,7 % sampai 8,7 % 2024 ganjar yes&#39;,
+  1],
+ [&#39;2023-05-06T00:51:43Z&#39;,
+  &#39;Nazfudin Zaky&#39;,
+  &#39;JARJI ganjar siji ganjar kabeh ❤&#39;,
+  6],
+ [&#39;2023-05-06T01:53:14Z&#39;,
+  &#39;Pangat Bador&#39;,
+  &#39;Siaaaaap....Ganjar Pranowo Notonegoro...👍👍&#39;,
+  1],
+ [&#39;2023-05-06T00:58:51Z&#39;, &#39;Rafanda 2018&#39;, &#39;ora&#39;, 0],
+ [&#39;2023-05-06T00:43:12Z&#39;,
+  &#39;Shafa Phone&#39;,
+  &#39;Anis mundur aja dr pada nanti malu.&#39;,
+  0],
+ [&#39;2023-05-06T00:40:25Z&#39;, &#39;Manan Sidikk&#39;, &#39;Hoax gx nih...wkwkwk&#39;, 1],
+ [&#39;2023-05-06T00:32:16Z&#39;,
+  &#39;Embahfreedom&#39;,
+  &#39;Sejarah mencatat presiden tetap  dari jawa ini fakta bukan Hoax&lt;br&gt;Suku apa saja dari nusantara bisa jadi presiden asal ada gerbongnya ada dukunganya pasti bisa jadi presiden  NKRI.&#39;,
+  0],
+ [&#39;2023-05-06T00:22:23Z&#39;, &#39;Dapur IJT tv&#39;, &#39;Ha ha sorve Abal Abal&#39;, 1],
+ [&#39;2023-05-06T00:21:55Z&#39;, &#39;Dapur IJT tv&#39;, &#39;Prabowo yessss 2024&#39;, 0],
+ [&#39;2023-05-06T00:18:52Z&#39;,
+  &#39;Boy Andiek&#39;,
+  &#39;Head To Head Ganjar Pasti Keok 😀😂&lt;br&gt;Di pilpres Kali Ini Saya Akui,Prabowo Yang Di untungkan.karena Dia Diposisi Tengah. Biar Cebong &amp;amp; Kampret Gak Terbelah trs, slalu Narasi Kebencian Mulu.&#39;,
+  1],
+ [&#39;2023-05-06T00:14:56Z&#39;,
+  &#39;moh giri&#39;,
+  &#39;Servei bohong ... emange rakyat bodoh kalian bhongi.&#39;,
+  1],
+ [&#39;2023-05-06T00:09:12Z&#39;, &#39;merkurius band&#39;, &#39;Ganjar 🔥🔥🔥🔥&#39;, 2],
+ [&#39;2023-05-06T00:06:13Z&#39;, &#39;Farianus Bereck&#39;, &#39;Ganjar Pranowo RI 1&#39;, 0],
+ [&#39;2023-05-06T00:05:18Z&#39;,
+  &#39;Siganteng Kalem&#39;,
+  &#39;Siaapa yg disurpeynya bos...dari dulu yg disurpeynya orang itu itu juga...hasilnya ya pasti sama ..dasar surpey abal abal&#39;,
+  1],
+ [&#39;2023-05-06T00:00:06Z&#39;, &#39;Lehon Abhid&#39;, &#39;ganjar RI 1&#39;, 1],
+ [&#39;2023-05-05T23:57:21Z&#39;, &#39;Agus Salim&#39;, &#39;Survei abal abal tuh&#39;, 1],
+ [&#39;2023-05-05T23:56:22Z&#39;,
+  &#39;Mahmudin Mahmudin&#39;,
+  &#39;Alhamdulillah anies semoga konsisten sampai selesai pemilu diposisi buncit.&#39;,
+  0],
+ [&#39;2023-05-05T23:51:54Z&#39;,
+  &#39;adel&#39;,
+  &#39;Waspada jangan berpuas diri dulu, tetap kita berusaha semaksimal mungkin meninggalkan jauh Prabowo dan Anies.. diprediksi pilpres dilakukan 2 putaran , ingat pengalaman Pilgub dulu di Jakarta dimana BTP dikalahkan saat putaran kedua digelar.....!!?&#39;,
+  2],
+ [&#39;2023-05-06T00:21:24Z&#39;,
+  &#39;adel&#39;,
+  &#39;Ingat pengalaman Pilgub Jakarta , dimana BTP cs dikalahkan Anies cs pada putaran kedua dgn politik identitas nya , waspadalah , jangan berpuas hati , tetap berusaha ...!!!&#39;,
+  1],
+ [&#39;2023-05-05T23:59:21Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Doa dr RAKYAT INDONESIA Smg ALLAH mengirimkan  pak GANJAR jadi presiden RI....&lt;br&gt;AMIN...🤲🤲&lt;br&gt;ALLAH maha kuasa....&lt;br&gt;ALLAH mh adil....&lt;br&gt;Klo ALLAH sdh berkenhendak pak GANJAR jadi Presiden siapa yg bisa menghalangi....??&lt;br&gt;Mamusia manapun  gak bisa menghalangi...!!&lt;br&gt;Paham km....!!&lt;br&gt;☝️☝️💥💥&#39;,
+  1],
+ [&#39;2023-05-05T23:46:53Z&#39;, &#39;Ked Mulyana&#39;, &#39;Ganjar selalu memimpin&#39;, 2],
+ [&#39;2023-05-05T23:45:37Z&#39;,
+  &#39;Tirta Aruem&#39;,
+  &#39;Puji Tuhan mga yg jdi no 1 terus pak Ganjar Pranowo yg jdi presiden 2024 Amiin3&#39;,
+  1],
+ [&#39;2023-05-05T23:44:49Z&#39;,
+  &#39;Erwin Santoso&#39;,
+  &#39;Maaf saya tidak yakin dan ragu dng survei2 itu.....coba adakan survei atau polling live terbuka jadi semua orang bisa ikut survei.....&#39;,
+  0],
+ [&#39;2023-05-05T23:44:28Z&#39;, &#39;engelhart bental&#39;, &#39;Gp presiden 2024&#39;, 0],
+ [&#39;2023-05-05T23:32:58Z&#39;,
+  &#39;Heru Budi&#39;,
+  &#39;alhamdulillah, inshaAllah di 2024 pilih Pak Ganjar.&#39;,
+  14],
+ [&#39;2023-05-08T11:39:01Z&#39;,
+  &#39;Aqil Kurniawan&#39;,
+  &#39;Alhamdulillah ganjar di atas 😍👍 sudah jelas karena biaya kampanye nya lebih besar ✊❤️❤️❤️&#39;,
+  1],
+ [&#39;2023-05-07T02:21:27Z&#39;, &#39;Mocci Occ&#39;, &#39;Nonton bokep bersama&#39;, 0],
+ [&#39;2023-05-05T23:32:05Z&#39;,
+  &#39;sulastri lastrii&#39;,
+  &#39;Alhamdulilah pa Ganjar &lt;br&gt;Pasti persiden 👍&#39;,
+  0],
+ [&#39;2023-05-05T23:31:46Z&#39;,
+  &#39;Zainal Wahid&#39;,
+  &#39;Selalu teratas karna titipan dan dibayar&#39;,
+  1],
+ [&#39;2023-05-05T23:27:12Z&#39;,
+  &#39;偉大的中國&#39;,
+  &#39;Prabowo ataupun Ganjar, yg penting bukan Capres pungutan impor..&#39;,
+  0],
+ [&#39;2023-05-06T05:41:14Z&#39;, &#39;backbone&#39;, &#39;Ganjar aje ah&#39;, 0],
+ [&#39;2023-05-05T23:24:01Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Alhamdulillah pak GANJAR sll unggul survaynya....!! 🙏🙏 Ya....ALLAH 🤲🤲 tolonglah rakyat INDONESIA ini kirimkanlah pemimpin yg benar2 iklas &amp;amp; tulus untuk memimimpin &amp;amp; melayani RAKYAT Indonesia....ya ALLAH.....🤲🤲&lt;br&gt;Pak GANJAR ....☝️☝️👍👍yg sll di tunggu2 Rakyat Indonesia smg engkau kirimkan ya ALLAH.....!!&lt;br&gt;AMIN....🤲🤲&#39;,
+  2],
+ [&#39;2023-05-06T23:00:25Z&#39;,
+  &#39;Mocci Occ&#39;,
+  &#39;Yg dukung adalah para pecinta film bokep&#39;,
+  0],
+ [&#39;2023-05-05T23:16:12Z&#39;, &#39;Nelson Nelson&#39;, &#39;Ganjar P&#39;, 1],
+ [&#39;2023-05-05T23:11:52Z&#39;, &#39;Tarsan Auo&#39;, &#39;Prabowo menang 2024&#39;, 0],
+ [&#39;2023-05-05T23:11:13Z&#39;,
+  &#39;Naim Sheva&#39;,
+  &#39;Salam metal bos Ganjar&lt;br&gt;..kembali reborn.&#39;,
+  0],
+ [&#39;2023-05-05T23:09:38Z&#39;, &#39;Bang Baron&#39;, &#39;Kadrun pasti klojotan&#39;, 0],
+ [&#39;2023-05-05T23:03:53Z&#39;,
+  &#39;Adi Eff&#39;,
+  &#39;Ganjar penerus program jokowi. Ayo rapatkan barisan dukung ganjar❤&#39;,
+  1],
+ [&#39;2023-05-06T10:28:46Z&#39;, &#39;Adi Eff&#39;, &#39;@Rafanda 2018 bukit barisan 😁&#39;, 0],
+ [&#39;2023-05-06T01:05:17Z&#39;, &#39;Rafanda 2018&#39;, &#39;barisan apa&#39;, 0],
+ [&#39;2023-05-05T22:57:32Z&#39;, &#39;Khairil Anwar&#39;, &#39;Non sen ganjar selalu diatas&#39;, 0],
+ [&#39;2023-05-05T22:56:30Z&#39;,
+  &#39;M rifaldy alanda&#39;,
+  &#39;Lawan berat pak ganjar prabowo kalo anis sekelas pilgub aja masih bisa menang&#39;,
+  0],
+ [&#39;2023-05-05T22:33:18Z&#39;, &#39;KiddzChnl&#39;, &#39;Taek PDI RA BAKAL MENANG&#39;, 0],
+ [&#39;2023-05-05T22:32:53Z&#39;,
+  &#39;DOT ID&#39;,
+  &#39;AH...ITU POLITIK KAMPANYE.&lt;br&gt;👇&lt;br&gt;BAYAR LEMBAGA SURVEY UNTUK NAIKAN JUMLAH SURVEY.&lt;br&gt;&lt;br&gt;RASUAH ITU SUDAH MAKANAN PARPOL.&#39;,
+  2],
+ [&#39;2023-05-05T22:26:34Z&#39;,
+  &#39;Amel Delifa&#39;,
+  &#39;KALAU KATA GURU-GURU ,&lt;br&gt;Biar anak bahagia , nilai nya 9 pun , tetap harus di sebut Nilai 1😂, &lt;br&gt;soalnya nanti anak takut ngamuk-ngamuk....😅😅😅&#39;,
+  12],
+ [&#39;2023-05-06T12:13:49Z&#39;, &#39;Nur Wati&#39;, &#39;Survey abal-abal 😅😅😅😅😅&#39;, 0],
+ [&#39;2023-05-06T11:59:15Z&#39;,
+  &#39;Ardi Aja&#39;,
+  &#39;Jijik milih org yg suka nonton bokef&#39;,
+  0],
+ [&#39;2023-05-06T10:15:17Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakks&#39;,
+  1],
+ [&#39;2023-05-05T22:22:20Z&#39;, &#39;Jajat S&#39;, &#39;Semoga yohanes anus nyungsep&#39;, 0],
+ [&#39;2023-05-05T22:20:27Z&#39;,
+  &#39;Karyandi&#39;,
+  &#39;Yang penting, asal bukan Anies.. &lt;br&gt;😆😆😆&#39;,
+  0],
+ [&#39;2023-05-05T22:18:38Z&#39;,
+  &#39;Sabilul Rosyid&#39;,
+  &#39;Bismillah Pak prabowo  Ri 1Aamin&#39;,
+  1],
+ [&#39;2023-05-05T22:15:31Z&#39;,
+  &#39;Iskandar Cowok&#39;,
+  &#39;Dia ambel suara y dri mna&lt;br&gt;Ku GK merasa meleh&#39;,
+  0],
+ [&#39;2023-05-05T22:10:06Z&#39;,
+  &#39;wagiyo dini&#39;,
+  &#39;Saya. Keluarga besar saya dan mahasiswa saya juga pilih Ganjar karena ganjar satu2nya calon pribumi, dia yang mewakili kita.&#39;,
+  4],
+ [&#39;2023-05-07T02:22:56Z&#39;, &#39;Mocci Occ&#39;, &#39;Nonton bokep bareng disenayan&#39;, 0],
+ [&#39;2023-05-05T22:07:54Z&#39;,
+  &#39;Jajang Zakaria&#39;,
+  &#39;Hebat petugas partai survei nya tinggi&#39;,
+  2],
+ [&#39;2023-05-05T22:04:42Z&#39;, &#39;Alber Ratung&#39;, &#39;Ganjar yes💪&#39;, 2],
+ [&#39;2023-05-05T22:03:35Z&#39;,
+  &#39;anto Manuntung&#39;,
+  &#39;Hny pk Ganjar yg mampuu terusknn perjugan pk Jokowi&#39;,
+  2],
+ [&#39;2023-05-05T21:52:56Z&#39;, &#39;Joko Warung&#39;, &#39;Aku tetap GP&#39;, 0],
+ [&#39;2023-05-05T21:52:50Z&#39;,
+  &#39;Yazid Mahfudz&#39;,
+  &#39;Yg penting Anis tdk turun ke peringkat 4&#39;,
+  0],
+ [&#39;2023-05-05T21:48:32Z&#39;,
+  &#39;wulandari tari&#39;,
+  &#39;Insya&amp;#39;allah tuhan\r&lt;br&gt;Masih mencintai negeri ini.\r&lt;br&gt;&lt;b&gt;Ganjar Prabowo&lt;/b&gt; akan menjadi presiden 2024&lt;br&gt;❤❤🤟🤟💋💋&#39;,
+  1],
+ [&#39;2023-05-06T12:45:15Z&#39;, &#39;Heri Alfaridzi&#39;, &#39;Ribet dah klonpetugas partai&#39;, 0],
+ [&#39;2023-05-06T00:15:42Z&#39;,
+  &#39;adel&#39;,
+  &#39;Jangan dulu berpuas diri, kontestan lain masih dapat mengalahkan Ganjar dan pasangan nya pada putaran kedua , belajar dari pengalaman Pilgub Jakarta dulu ( Anies dgn politik identitas nya ) ....&#39;,
+  2],
+ [&#39;2023-05-05T23:26:56Z&#39;, &#39;Mawar Merah&#39;, &#39;AMIN.....ya ALLAH.&lt;br&gt;🤲🤲&#39;, 1],
+ [&#39;2023-05-05T21:45:55Z&#39;,
+  &#39;Pemirsa Budiman&#39;,
+  &#39;Biasaaa.. jagoan kalah duluan.. semoga Anies yg menang agar Indonesia jadi lebih baik&#39;,
+  1],
+ [&#39;2023-05-05T21:41:34Z&#39;,
+  &#39;Teddy April&#39;,
+  &#39;Arteria Dahlan pernah keceplosan,dan kalian masih percaya lembaga survei 😆&#39;,
+  2],
+ [&#39;2023-05-05T21:34:06Z&#39;, &#39;Andi Brebes&#39;, &#39;Mantaappp 👍👍&#39;, 2],
+ [&#39;2023-05-05T21:26:59Z&#39;,
+  &#39;WAF ID&#39;,
+  &#39;GANJAR DAN BU GANJAR YG CANTIK .. PRESIDEN AMIN ❤&#39;,
+  1],
+ [&#39;2023-05-05T21:21:55Z&#39;,
+  &#39;DIKA98&#39;,
+  &#39;Alhamdulillah semoga pak ganjar jadi presiden ri di 2024.&#39;,
+  1],
+ [&#39;2023-05-05T20:50:16Z&#39;, &#39;RIKI ANTONIA&#39;, &#39;Ganjar Pranowo terbaik ❤️&#39;, 8],
+ [&#39;2023-05-06T20:22:52Z&#39;, &#39;RIKI ANTONIA&#39;, &#39;@Sofyan Wijaya TAI WKWKWK&#39;, 0],
+ [&#39;2023-05-06T12:40:39Z&#39;,
+  &#39;Sofyan Wijaya&#39;,
+  &#39;Terbaik nya dmn ? &lt;br&gt;Siap2 2024 untuk kehancuran banteng&lt;br&gt;Kalian udah bikin negara hancur&#39;,
+  0],
+ [&#39;2023-05-05T20:40:58Z&#39;, &#39;Widayat Ir&#39;, &#39;Alhamdulillah,aamiin YRA.&#39;, 5],
+ [&#39;2023-05-05T20:34:59Z&#39;,
+  &#39;Hadi Salim&#39;,
+  &#39;great news, yg penting asal bukan yaman ayat mayat.&#39;,
+  0],
+ [&#39;2023-05-05T20:22:54Z&#39;,
+  &#39;Murwani Dewi&#39;,
+  &#39;pendukung p ganjar lebih banyak yg tidak bersosmed...jadi survey yg dimenangkan p prab...??????&#39;,
+  0],
+ [&#39;2023-05-05T20:03:36Z&#39;, &#39;Jack W&#39;, &#39;PAK GANJAR !!!!!!!!!!!&#39;, 1],
+ [&#39;2023-05-05T19:59:46Z&#39;,
+  &#39;Apriyandi Kelana&#39;,
+  &#39;Ganjar Pranowo.                &amp;quot;Topmarkotop-lah&amp;quot;!!&#39;,
+  2],
+ [&#39;2023-05-05T19:59:18Z&#39;,
+  &#39;Dapur Vanna&#39;,
+  &#39;Coba kalian mampir ke TV sebelah malah survey gini.. ngakak, bengek saya baca komentar mereka yg disebelah..&#39;,
+  0],
+ [&#39;2023-05-05T19:52:10Z&#39;,
+  &#39;Eight Ape&#39;,
+  &#39;InsyaAllah Pak prabowo next president 2024,,, kemungkinan Akan Ada putaran 2 ,,,Dan survey membuktikan Pak prabowo pemenangnya✌️✌️✌️&#39;,
+  0],
+ [&#39;2023-05-05T19:51:23Z&#39;, &#39;ahmad khoirudin&#39;, &#39;Ganjar the best&#39;, 1],
+ [&#39;2023-05-05T19:49:15Z&#39;, &#39;Nano Romansyah&#39;, &#39;Prabowo&#39;, 0],
+ [&#39;2023-05-05T19:47:03Z&#39;, &#39;Ubay Call&#39;, &#39;Prabowo presiden top 2024&#39;, 0],
+ [&#39;2023-05-05T19:43:56Z&#39;,
+  &#39;muhammad baihaqi&#39;,
+  &#39;Garis tangan presiden yaaa ganjar. &lt;br&gt;Prabowo realistis laaah. &lt;br&gt;Yohanis ahlinya gali sumur&#39;,
+  0],
+ [&#39;2023-05-05T19:31:09Z&#39;, &#39;Fajar Dwiono&#39;, &#39;ganjar presiden.&#39;, 2],
+ [&#39;2023-05-05T19:27:59Z&#39;,
+  &#39;Doko Wahyono&#39;,
+  &#39;Asumsi analisa saya cawapres Ganjar adalah mbak puan sebab yg menentukan cawapres Ganjar yaitu BU Mega,bila dari orang dekat p Jokowi asumsi saya p Erik Thohir lihatnya orang kepercayaan pak Jokowi di berbagai even penting❤❤&#39;,
+  3],
+ [&#39;2023-05-06T03:45:39Z&#39;,
+  &#39;Doko Wahyono&#39;,
+  &#39;Asumsi kok ngawur terus dg siapa cawapres ganjar&#39;,
+  0],
+ [&#39;2023-05-06T03:34:49Z&#39;,
+  &#39;Den Mas&#39;,
+  &#39;Asumsi ngawur,tapi ya sah2 saja itu asumsimu sendiri😂.Variable penentu cawapres itu lebih kompleks&#39;,
+  0],
+ [&#39;2023-05-06T00:00:01Z&#39;,
+  &#39;adel&#39;,
+  &#39;Jika Puan yg jadi cawapresnya , diprediksi elektabilitas Ganjar bakalan merosot , sejak awal Puan telah mengucapkan ketidak senangan nya terhadap Ganjar sbg pesaing, sehingga hubungan nya dipastikan tidak harmonis ....!!!&#39;,
+  2],
+ [&#39;2023-05-05T19:25:09Z&#39;, &#39;Syefrudin Lemos&#39;, &#39;Pilihanku ganjar&#39;, 1],
+ [&#39;2023-05-05T19:24:11Z&#39;, &#39;Reza Demak&#39;, &#39;jos gandos pk ganjar&#39;, 3],
+ [&#39;2023-05-05T19:11:15Z&#39;,
+  &#39;sunartokades bulurejo&#39;,
+  &#39;Mantap p Ganjar rakyat cerdas pilih p ganjar&#39;,
+  0],
+ [&#39;2023-05-05T19:20:42Z&#39;,
+  &#39;Ubai Dillah&#39;,
+  &#39;Orang jujur dan cerdas pasti pilih pak anis&#39;,
+  0],
+ [&#39;2023-05-05T19:10:47Z&#39;,
+  &#39;Si ganteng Ganteng&#39;,
+  &#39;Prabowo sajaaah  .....  Ga mau petugas partai&#39;,
+  0],
+ [&#39;2023-05-05T18:47:17Z&#39;,
+  &#39;The Jemadu&#39;,
+  &#39;Amin Smg Allah restui Ganjar Ri 1 2024...kita dukug org baik jujur bersahaja peduli rakyat...Ganjar sahabat rakyat.&#39;,
+  1],
+ [&#39;2023-05-05T18:27:30Z&#39;,
+  &#39;ucup chanel(mie ayam deso)&#39;,
+  &#39;Ganjar pranowo sak jos e&#39;,
+  1],
+ [&#39;2023-05-05T18:23:27Z&#39;,
+  &#39;Suhaedi Eddi&#39;,
+  &#39;Alhamdulillah... Semoga BPK Ganjar Pranowo Presiden 2024..😍🤲&#39;,
+  2],
+ [&#39;2023-05-05T23:47:11Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;\u200b\u200b@Ubai Dillah &lt;br&gt;Doamu jelek smg kembali pd dirimu yg mendoakan....!!.&lt;br&gt;AMIN....🤲🤲&lt;br&gt;ALLAH mh adil....!!&#39;,
+  1],
+ [&#39;2023-05-05T19:02:50Z&#39;,
+  &#39;Ubai Dillah&#39;,
+  &#39;Semoga ganjar tdk jadi presiden brroo&#39;,
+  0],
+ [&#39;2023-05-05T18:22:16Z&#39;, &#39;Rey&#39;, &#39;Jokowi di hati GP di nanti  ♥️🇮🇩&#39;, 2],
+ [&#39;2023-05-05T18:15:26Z&#39;,
+  &#39;Moh Rojikan&#39;,
+  &#39;Saya 6 orang semuanya pilih &lt;br&gt;Pak ganjar pranowo presiden&#39;,
+  0],
+ [&#39;2023-05-05T19:10:07Z&#39;,
+  &#39;Ubai Dillah&#39;,
+  &#39;Dan saya juga 10 org pilih pak Anis&#39;,
+  1],
+ [&#39;2023-05-05T18:13:26Z&#39;,
+  &#39;Al fatih&#39;,
+  &#39;Jika 2 putaran ganjardrun bakal nyungsep,krn suara anis beralih ke prabowo,krn tdk mgkin suara anis ke ke ganjar.&#39;,
+  1],
+ [&#39;2023-05-05T23:51:37Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Doa dr RAKYAT Idonesia untuk pak GANJAR bisa terpilih jadi presiden smg diijabah ALLAH....☝️☝️🇮🇩🇮🇩👍👍&lt;br&gt;AMIN...🤲🤲&lt;br&gt;ALLAH mh kuasa segalanya klo ALLAH sdh berkehendak siapa yg bisa melawan....??&lt;br&gt;☝️☝️☝️💥💥💥&#39;,
+  1],
+ [&#39;2023-05-05T18:08:54Z&#39;,
+  &#39;Veri penjara&#39;,
+  &#39;Kami tak percaya survei karna survei pakai uang&#39;,
+  2],
+ [&#39;2023-05-05T17:56:34Z&#39;, &#39;Garuda Api&#39;, &#39;GAMA 👉GANJAR 🇮🇩 MAHFUD 🇮🇩❤&#39;, 12],
+ [&#39;2023-05-08T11:39:37Z&#39;, &#39;Aqil Kurniawan&#39;, &#39;Sama PDIP ❤&#39;, 0],
+ [&#39;2023-05-06T00:54:29Z&#39;,
+  &#39;ANDI IBROHIM&#39;,
+  &#39;\u200b@Amel Delifa anis- novel😮&#39;,
+  1],
+ [&#39;2023-05-05T22:29:31Z&#39;,
+  &#39;Amel Delifa&#39;,
+  &#39;lebih cocok , ganjar puan , atau ganjar jokowi , COCOK👍&#39;,
+  0],
+ [&#39;2023-05-05T17:55:45Z&#39;,
+  &#39;Simon Jallu&#39;,
+  &#39;ANDAI YOHANNES ANIS RASHID BASWEDAN GAGAL NYAPRES DI INDONESIA GAK TERLALU MASALAH MASIH ADA HARAPAN IKUT PILPRES DI YAMAN&#39;,
+  0],
+ [&#39;2023-05-05T17:52:35Z&#39;,
+  &#39;David Siregar&#39;,
+  &#39;Ganjar Pranowo Pancen Oye. Mantap Tenan 👍&#39;,
+  4],
+ [&#39;2023-05-05T17:48:33Z&#39;, &#39;Faried Elino&#39;, &#39;Joss pak Ganjar🔥&#39;, 7],
+ [&#39;2023-05-05T17:45:31Z&#39;,
+  &#39;Johari Ami&#39;,
+  &#39;Semuga Alloh swt&lt;br&gt;Meridhoi pak GANJAR PRANOWO menjadi RI 1&lt;br&gt;AAMIIN AAMIIN AAMIIN YA ROBBAL AALAMIIN&#39;,
+  1],
+ [&#39;2023-05-05T17:44:58Z&#39;,
+  &#39;Masa Depan&#39;,
+  &#39;Jangan terobsesi dg lembaga survey bayaran oligarki, ingat 2004 buk mega selalu unggul survei tapi kok pak SBY yg menang, 2014 pak Prabowo unggul 6 lembaga survey nyatanya pak Jokowi yg menang, di dki pak ahok selalu unggul survei tapi kok mas anis yg menang, sampai disini kau masih percaya lembaga survey bayaran oligarki??? Sekarang fakta nya rakyat butuh perubahan bukan pencitraan&#39;,
+  2],
+ [&#39;2023-05-05T17:44:04Z&#39;,
+  &#39;NG Slanker&#39;,
+  &#39;Prabowo-Mahfud MD 2024 pasti saya COBLOSSS.&#39;,
+  0],
+ [&#39;2023-05-05T17:43:15Z&#39;, &#39;Ayu Pertiwi&#39;, &#39;Tetep PK Anis baswedan&#39;, 2],
+ [&#39;2023-05-05T17:35:34Z&#39;,
+  &#39;Ran Mouri&#39;,
+  &#39;Sepertinya ada yg akan kembali ke habitat menjadi oposisi sejati 🤭&#39;,
+  0],
+ [&#39;2023-05-05T17:32:18Z&#39;,
+  &#39;Kepler Bintang&#39;,
+  &#39;Udh 7 bulan si Anis ini deklarasi tapi rating nya gk naik2 dan tetap urutan buncit pdahal udh keliling Indonesia,gimna mau menang&#39;,
+  0],
+ [&#39;2023-05-05T17:31:37Z&#39;,
+  &#39;Supri Adi&#39;,
+  &#39;Dulu dikampung saya setelah deklarasi Jokowi banyak warga yang antusias membuat posko tapi sekarang setelah deklarasi Ganjar sepi tidak ada respon, karena aura pamor dan wibawanya ganjar tidak SEISTIMEWA JOKOWI&#39;,
+  0],
+ [&#39;2023-05-05T17:26:44Z&#39;, &#39;Pariman Cs&#39;, &#39;In sya alloh ganjar&#39;, 2],
+ [&#39;2023-05-05T17:24:52Z&#39;,
+  &#39;Edi Sugiyanto&#39;,
+  &#39;Pak Ganjar calon presiden terbaik 2024, pendeng gepeng pilih pak ganjar, Insya Alloh&#39;,
+  3],
+ [&#39;2023-05-05T17:21:27Z&#39;,
+  &#39;Kuswandi&#39;,
+  &#39;Semoga capres yg lain tetap sehat dan turut berdo&amp;#39; a, biar Pak Ganjar saja yg jadi PRESIDEN!&lt;br&gt;😂😂😂😂😂😂😂😂😂😂😂😂😂Hareudang....hareudang....hareudaaangngng.....nanas...nanas...nanaaassss......&#39;,
+  0],
+ [&#39;2023-05-05T17:21:18Z&#39;,
+  &#39;RFA CHANNEL&#39;,
+  &#39;Pembodohan dan pembohongan publik survey ARB selalu kalah karena membela yang bayar padahal di lapangan ARB selalu di tunggu tunggu rakyat..&#39;,
+  1],
+ [&#39;2023-05-05T17:20:47Z&#39;,
+  &#39;Sang Pengelana&#39;,
+  &#39;Ganjar Pranowo ternyata menerima anu Mega proyek E-KTP 😮😮&#39;,
+  1],
+ [&#39;2023-05-06T13:12:17Z&#39;,
+  &#39;Sang Pengelana&#39;,
+  &#39;@Mawar Merah bukan fitnah tapi nyata,, Nazaruddin jujur pa adanya krna posisi di tersangka bohong tiada gunanya,, mungkin Ganjar dilindungi petinggi partai yang saat itu sedang berkuasa 😂&#39;,
+  0],
+ [&#39;2023-05-05T23:40:26Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Mulai menebar HOAK &amp;amp; FITNAH....☝️☝️💥💥&lt;br&gt;Smg ALLAH segera  memberikan ganjaran &amp;amp; keadilan pd org2 yg sirik &amp;amp; suka menyebar Fitnahan ini....&lt;br&gt;AMIN....🤲🤲&#39;,
+  1],
+ [&#39;2023-05-05T17:20:15Z&#39;,
+  &#39;Aimar Adistyo&#39;,
+  &#39;Petugas partai ...no petugas Rakyat ...ok...Anies masa depan perubahan dan persatuan no nurut sama oligargi&#39;,
+  0],
+ [&#39;2023-05-06T05:57:59Z&#39;,
+  &#39;backbone&#39;,
+  &#39;nies juga petugas  partai dr nasdem&#39;,
+  0],
+ [&#39;2023-05-05T17:16:06Z&#39;,
+  &#39;Aimar Adistyo&#39;,
+  &#39;Survei ....pesanan sudah di setting bro , ....&#39;,
+  1],
+ [&#39;2023-05-05T17:15:10Z&#39;, &#39;Tomi Kartomi&#39;, &#39;Preed&#39;, 0],
+ [&#39;2023-05-05T17:15:08Z&#39;,
+  &#39;Rais Rosadi&#39;,
+  &#39;Percaya sama survai..&lt;br&gt;Bukti rakyat menginginkan pak Anis&#39;,
+  1],
+ [&#39;2023-05-05T17:13:35Z&#39;,
+  &#39;Didik kuswandi&#39;,
+  &#39;Bagi yg tidak suka pasti bilang survei bisa dibeliiiii ...&#39;,
+  2],
+ [&#39;2023-05-05T17:09:40Z&#39;, &#39;yayan alfian&#39;, &#39;Ganjar puan for presiden 2024&#39;, 0],
+ [&#39;2023-05-05T17:08:14Z&#39;,
+  &#39;Reza Pahlevi&#39;,
+  &#39;Dari 2019 semua org udah tau.. semua media di kuasai&#39;,
+  1],
+ [&#39;2023-05-05T17:02:51Z&#39;,
+  &#39;Ahmad Holian&#39;,
+  &#39;prabowo lah org nya tulus dan iklas&#39;,
+  0],
+ [&#39;2023-05-06T05:46:31Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Prabowo orang yg otoriter,berbahaya buat kelangsungan sistem demokrasi di indonesia&#39;,
+  0],
+ [&#39;2023-05-05T17:00:41Z&#39;,
+  &#39;Rudy H Worotikan&#39;,
+  &#39;Prabowo Subianto petugas rakyat bukan petugas partai &amp;amp; Prabowo Subianto Presiden RI 2024, Amin 🙏&#39;,
+  1],
+ [&#39;2023-05-05T17:00:26Z&#39;,
+  &#39;HARRY NOTOPROJO&#39;,
+  &#39;Ganjar pranowo capres pilihan terbaik&#39;,
+  2],
+ [&#39;2023-05-05T16:58:45Z&#39;, &#39;Chairul B&#39;, &#39;Pak Ganjar 🤲🏻&#39;, 8],
+ [&#39;2023-05-05T16:57:51Z&#39;,
+  &#39;Nyoman Susanto&#39;,
+  &#39;Ayo bersama Ganjar Pranowo RI1&#39;,
+  4],
+ [&#39;2023-05-05T16:55:57Z&#39;,
+  &#39;pecinta alam Sumatra 99&#39;,
+  &#39;Namany lah surve 😂😂😂 penghargaan aja dadakan ,setelah di calonkn tiba&amp;quot; jateng di sebut terbaik ,,,padhal belum lama trimedia katakan jateng masuk 17 provinsi termiskn ,puan juga mengatakan di jateng jarang mandi ,,,kan sesuatu yg aneh kok tiba&amp;quot; terbaik ,,,,hanya orang bodoh yg bisa di bodohi pecitraan&#39;,
+  2],
+ [&#39;2023-05-05T16:55:09Z&#39;,
+  &#39;Suyanto Barkah&#39;,
+  &#39;apapun suku dn golongan nya gp lah persiden nya&#39;,
+  0],
+ [&#39;2023-05-05T16:54:29Z&#39;,
+  &#39;Ira Ari&#39;,
+  &#39;Alhamdulillah Ganjar selalu naik!❤🤟👍&#39;,
+  30],
+ [&#39;2023-05-06T04:39:50Z&#39;,
+  &#39;Surya Taufik&#39;,
+  &#39;Naikkan angka kemiskinan dipropinsinya&#39;,
+  1],
+ [&#39;2023-05-06T01:58:42Z&#39;, &quot;La&#39; Viory&quot;, &#39;Aamiin YRA&#39;, 0],
+ [&#39;2023-05-06T00:06:09Z&#39;,
+  &#39;Gibernau 27&#39;,
+  &#39;Putaran ke 2 suara anies di berikan kpd prabowo😅😅😅&#39;,
+  1],
+ [&#39;2023-05-05T23:18:18Z&#39;,
+  &#39;Sidik Komaruddin&#39;,
+  &#39;alhamdulillah anies selalu turun.&#39;,
+  1],
+ [&#39;2023-05-05T16:54:08Z&#39;,
+  &#39;Nyonya Arzu Emiroglu&#39;,
+  &#39;Alhamdulillah elektabilitas Pak Ganjar masih teratas semoga sehat selalu dan terus naik 📈💪🥰🇮🇩🙏🤟&#39;,
+  30],
+ [&#39;2023-05-07T22:30:36Z&#39;,
+  &#39;N Meci&#39;,
+  &#39;Jadi ingat pilgub dki. Hasil survey anies ditempatkan di urutan buncit tapi akhirnya jadi pemenang😂😂&#39;,
+  0],
+ [&#39;2023-05-07T06:34:53Z&#39;, &#39;אַבְרָהָם&#39;, &#39;Preeet😂😂🤣🤣&#39;, 0],
+ [&#39;2023-05-06T01:51:51Z&#39;, &#39;Petrus Petrus&#39;, &#39;@H Sujak sakit hati ya&#39;, 2],
+ [&#39;2023-05-06T01:51:21Z&#39;, &#39;Petrus Petrus&#39;, &#39;@Ubai Dillah sakit hati ya&#39;, 2],
+ [&#39;2023-05-06T00:51:43Z&#39;,
+  &#39;ANDI IBROHIM&#39;,
+  &#39;\u200b@Ubai Dillah daripada meluk istri orang bukan muhrimnya😊😅😮😢😂&#39;,
+  1],
+ [&#39;2023-05-05T16:51:45Z&#39;, &#39;Dodi Sahputra&#39;, &#39;Ganjar Pranowo&#39;, 2],
+ [&#39;2023-05-05T16:50:43Z&#39;,
+  &#39;BAKA DEPAI&#39;,
+  &#39;2 x gak milih pak Prabowo, kali ini saya pastikan dan yakin memilih pak Prabowo.&lt;br&gt;2024 PRABOWO R1 🙏&#39;,
+  0],
+ [&#39;2023-05-06T05:47:29Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Mengapa??pdhal keliatan se x orangnya emosional sehingga cenderung bersikap otoriter&#39;,
+  0],
+ [&#39;2023-05-05T16:49:16Z&#39;,
+  &#39;Amel Amel&#39;,
+  &#39;Saya tinggal di Aceh...saya dukung Pak Ganjar..&#39;,
+  2],
+ [&#39;2023-05-06T05:55:18Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Saya tinggal dijakarta dan lahir dijakarta maka gak akan pilih pemimpin yang suka membual seprtti anies karena sudah mengecewakan dalam menjanjikan rumah dp 0 Rp dan prgram oke oce serta reklamasi yg brrjalan lg setlah dulu.wktu kampanye ditolaknya,lalu banyak.lagi kinerja yg mengecewakannya&#39;,
+  0],
+ [&#39;2023-05-05T19:15:52Z&#39;,
+  &#39;Ubai Dillah&#39;,
+  &#39;Dan saya juga tinggal di Banten saya dukung pak Anis&#39;,
+  1],
+ [&#39;2023-05-05T16:55:43Z&#39;,
+  &#39;Alma Muhamad&#39;,
+  &#39;Saya tinggal di Banten siap dukung Bapsk ANIES RADYID BASWEDAN&#39;,
+  1],
+ [&#39;2023-05-05T16:48:43Z&#39;, &#39;TONI DS SUHARTONO&#39;, &#39;BoooHiiiRRRR 👏👍🏾&#39;, 0],
+ [&#39;2023-05-05T16:48:25Z&#39;, &#39;Dema Rahmah&#39;, &#39;tetap pak ganjar RI 1 2024 ❤️🇲🇨&#39;, 2],
+ [&#39;2023-05-05T16:47:33Z&#39;,
+  &#39;Tar Sono&#39;,
+  &#39;Ooh gitu ya... komennya pada lucu dan imut 😆😆😆😆😆&#39;,
+  0],
+ [&#39;2023-05-05T16:42:35Z&#39;, &#39;Ms&#39;, &#39;Hahahaha&#39;, 0],
+ [&#39;2023-05-05T16:42:34Z&#39;, &#39;supardi pardi&#39;, &#39;sekali Ganjar tetep Jos&#39;, 24],
+ [&#39;2023-05-06T12:19:33Z&#39;,
+  &#39;cintai musik indo&#39;,
+  &#39;@Olun Setrum kadrun apalagi bisa jadi gurun pasir indonesia jangan pilih anis dan partai2 kadrun&#39;,
+  0],
+ [&#39;2023-05-06T12:10:40Z&#39;,
+  &#39;Olun Setrum&#39;,
+  &#39;Siapapun presiden nya jgn pilih banteng&#39;,
+  0],
+ [&#39;2023-05-06T04:55:09Z&#39;,
+  &#39;Darmawan M&#39;,
+  &#39;\u200b@Ubai Dillahy...bakalan keok lg di 2024&#39;,
+  0],
+ [&#39;2023-05-06T04:19:17Z&#39;,
+  &#39;cintai musik indo&#39;,
+  &#39;@deAthoo_Channel itu survey sebelum 21 april dodol wktu upaya si nurdin kualisi besar koar2 wkwkwkwk mana nurdin sekarang ngumpet dia&#39;,
+  0],
+ [&#39;2023-05-06T04:11:48Z&#39;,
+  &#39;deAthoo_Channel&#39;,
+  &#39;Ganjar kalah head to head lwn prabowo 49% vs 40%&#39;,
+  1],
+ [&#39;2023-05-05T16:41:42Z&#39;, &#39;Irwan Kertajaya&#39;, &#39;Wkwkwk&#39;, 0],
+ [&#39;2023-05-05T16:40:29Z&#39;,
+  &#39;xpander 89&#39;,
+  &#39;JANGAN  JADI PATOKAN SURVAI  KARNA SURFAINYA SUDAH HAMIL DULUAN   NANTI KALAU LAHIRNYA HASIL DI LUAR NIKAH HASILNYA BUDEQ  POLONGAK PLONGOK KAYAK AYAM DI KEBIRI   MAKA DARI ITU  JAWABANYA  ANESLAH ORANG YANG PANTAS  R1        1&#39;,
+  2],
+ [&#39;2023-05-05T16:38:27Z&#39;,
+  &#39;Emma Emma&#39;,
+  &#39;GANJAR PILIHAN JOKOWI...KEMAMPUAN PRESTASI DAN WAWASANNYA JAUH MELEBIHI ANIS DAN PRABOWO...GANJAR RI 1 SI 2024....&#39;,
+  0],
+ [&#39;2023-05-05T16:37:45Z&#39;,
+  &#39;KEDUNG AVO PATI&#39;,
+  &#39;Ijin tanya,diantara tiga calon presiden tersebut yg bukan petugas partai yg mana ya??? Terimakasih...&#39;,
+  1],
+ [&#39;2023-05-06T05:45:31Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Yg namanya petugas partai itu emang salah?? Pdhal partai berbeda beda ideologis dan gaya berpolitiknya.....seperti pdi perjuangan yg menerapkan idealisme dalam berpolitik sedangkan partai partai lainnya malah ada yang berpolitik pragmatisme&#39;,
+  0],
+ [&#39;2023-05-05T16:35:54Z&#39;,
+  &#39;binetf&#39;,
+  &#39;biarlah yang satu out dari jokowi, mungkin sedang beli gorengan yang masih butuh minyak goreng&#39;,
+  0],
+ [&#39;2023-05-05T16:32:49Z&#39;,
+  &#39;Uslan Noor Saidi&#39;,
+  &#39;Hasil survei tinggi namun tidak pede,  seperti takut dengan Anies Baswedan&#39;,
+  3],
+ [&#39;2023-05-06T10:55:17Z&#39;,
+  &#39;Tulus Wijanarko&#39;,
+  &#39;Apa yg di takuti dr Anies,,, kl kalah jgn bikin huru hara ya,,, jgn menyalahkan Tuhan,,&#39;,
+  0],
+ [&#39;2023-05-05T16:32:42Z&#39;,
+  &#39;Sudarmadji -&#39;,
+  &#39;&lt;b&gt;GANJAR 55, 7 PERSEN, GANJAR SEMAKIN TAK TERTANDINGI❤❤❤&lt;/b&gt;&#39;,
+  57],
+ [&#39;2023-05-08T10:06:50Z&#39;,
+  &#39;Indar Jaya&#39;,
+  &#39;@Iswantoro Yudi kalau saya pilihan yg paling tepat adalah.ade Armando atau giring capres&lt;br&gt;Cawapres nya abu janda atau Guntur Romli dan Eko Kuntadi atau Denny Siregar.&#39;,
+  0],
+ [&#39;2023-05-08T10:05:09Z&#39;,
+  &#39;Iswantoro Yudi&#39;,
+  &#39;@Cipto Parmono ini jujur ya...prabowo mmng jago dibidang pertahanan n keamanan...tapi sayangnya kalah dibidang  ekonomi,pembangunan,n tata pemerintahan...&#39;,
+  0],
+ [&#39;2023-05-08T10:01:24Z&#39;,
+  &#39;Iswantoro Yudi&#39;,
+  &#39;@Indar Jaya tapi mmng ada benernya juga...kbanyakan di kotaku ganjar semua...😂😂😂&#39;,
+  0],
+ [&#39;2023-05-07T12:42:51Z&#39;,
+  &#39;Rdn Nids&#39;,
+  &#39;@Indar Jaya &lt;br&gt;Haduh, benar2 kebodohan lu sangat natural...istilah survey aja ga faham...&lt;br&gt;Parah lu drun....!!!&#39;,
+  0],
+ [&#39;2023-05-06T12:47:06Z&#39;,
+  &#39;Indar Jaya&#39;,
+  &#39;@Moch Mahrus Mahrus kalau memang betul hasil nya lembaga surve ngapain masarakat yg nyoblos. Lembaga surve aja yg pilih presiden.&#39;,
+  0],
+ [&#39;2023-05-05T16:29:43Z&#39;,
+  &#39;Ya yuk&#39;,
+  &#39;Alhamdulillah Pak Ganjar sll unggul.. 👍👍 muda mudahan bisa menjadi Presiden RI 1 💪🇮🇩&#39;,
+  7],
+ [&#39;2023-05-06T00:17:45Z&#39;,
+  &#39;adel&#39;,
+  &#39;Jangan dulu berpuas diri, Ganjar cs masih bisa dikalahkan pada putaran kedua berlangsung .!!!&#39;,
+  1],
+ [&#39;2023-05-05T21:37:28Z&#39;, &#39;Prabu Kiansantang&#39;, &#39;Amiin YRA🤲&#39;, 0],
+ [&#39;2023-05-05T16:28:50Z&#39;, &#39;Radi Lasgab&#39;, &#39;Liat aja masarakat pilih aneis&#39;, 3],
+ [&#39;2023-05-05T16:28:43Z&#39;,
+  &#39;Desa chanel Official&#39;,
+  &#39;GANJAR PRANOWO YESSS...&#39;,
+  3],
+ [&#39;2023-05-05T16:27:20Z&#39;,
+  &#39;Deni rahman&#39;,
+  &#39;Mantap mas ganjar walau di kepung calon lain masih tertinggi kerja terus biar hasilnya memuaskan semoga menang&#39;,
+  20],
+ [&#39;2023-05-06T04:15:35Z&#39;,
+  &#39;deAthoo_Channel&#39;,
+  &#39;Ganjar kalah head to head lwn prabowo 49% vs 40%😂😂&#39;,
+  1],
+ [&#39;2023-05-05T23:35:04Z&#39;, &#39;Prabu Kiansantang&#39;, &#39;@Mawar Merah amiin🤲🙏&#39;, 0],
+ [&#39;2023-05-05T23:25:38Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;\u200b@Prabu Kiansantang Amin....ya robbil alamin....🤲🤲&lt;br&gt;Smg doa kita semua di ijabah ALLAH....🙏🙏&#39;,
+  2],
+ [&#39;2023-05-05T21:35:26Z&#39;, &#39;Prabu Kiansantang&#39;, &#39;Amiin🤲&#39;, 0],
+ [&#39;2023-05-05T16:27:11Z&#39;, &#39;Kanjeng Syech&#39;, &#39;Mantab ❤❤ ganjarrr&#39;, 4],
+ [&#39;2023-05-05T16:24:51Z&#39;,
+  &#39;Indro Pramudianto&#39;,
+  &#39;Aku pilih yg muda dan pekerja keras melebihi BP Joko Widodo dalam meneruskan apa 2 yg sekarang dah dirintis Presiden kita&#39;,
+  0],
+ [&#39;2023-05-05T16:23:11Z&#39;,
+  &#39;Suyamto Zone&#39;,
+  &#39;Prestasi ganjar jauh di banding prabowo... Tetap prabowo presiden&#39;,
+  0],
+ [&#39;2023-05-05T16:23:09Z&#39;,
+  &#39;Achmad Mudjajin&#39;,
+  &#39;ahok unggul disemua survey....kok anies menang mutlak, jangan2 surpa surpee ini hasilnya akan copas dki....Anies the next, cebi2 dilarang baper!&#39;,
+  2],
+ [&#39;2023-05-05T16:22:38Z&#39;,
+  &#39;ISLAM RAHMATAN LIL ALAMIN&#39;,
+  &#39;survei nya beda2 yah&#39;,
+  1],
+ [&#39;2023-05-05T16:22:15Z&#39;,
+  &#39;kami Indonesia tulen🇮🇩&#39;,
+  &#39;Ganjar pancen oyyee....&lt;br&gt;Saya yakin Indonesia 100 tahun mendatang akan selalu di pimpin suku Jawa (🙏🏻)&lt;br&gt;Walaupun saya marga bancin ☺️😁&#39;,
+  29],
+ [&#39;2023-05-08T12:32:12Z&#39;,
+  &#39;bikin video&#39;,
+  &#39;@SMR CHANNEL kita orang non Jawa cuma suku terjajah aja abangda cuma di peras saja tanah kita. Indonesia sama aja dengan Belanda cuma ganti penjajah aja dulu penjajahnya Belanda sekarang penjajah kita orang jawa&#39;,
+  0],
+ [&#39;2023-05-08T12:30:57Z&#39;,
+  &#39;bikin video&#39;,
+  &#39;@SMR CHANNEL iya begitulah abangda kadang sedih liat tanah sumatera kita cuma dirusak gitu aja. Hutan kita di babat jadi kebun kelapa sawit buat memenuhi kebutuhan pulau Jawa. Alam kita hancur karna pertambangan batubara dll untuk ambisi pemerintah pusat membangun pulau Jawa. Sementara kita orang asli sumatera jalan rusak dimana2, mati lampu terus. Kapan ada tokoh Batak, Melayu atau Minang jadi presiden aaah tapi ga mungkin Indonesia ini adalah tanah jajahan Jawa orang Jawa penjajah ya kita yang terjajah&#39;,
+  0],
+ [&#39;2023-05-08T12:12:50Z&#39;,
+  &#39;kami Indonesia tulen🇮🇩&#39;,
+  &#39;@bikin video sabar sabar..&lt;br&gt;10 tahun terakhir bukan lagi jawa sentris pembangunan nasional, tapi sudah ke Indonesia sentris!!&#39;,
+  0],
+ [&#39;2023-05-08T12:10:20Z&#39;,
+  &#39;kami Indonesia tulen🇮🇩&#39;,
+  &#39;@SMR CHANNEL biasa aja 😂😂😂&#39;,
+  0],
+ [&#39;2023-05-08T09:57:25Z&#39;,
+  &#39;Iswantoro Yudi&#39;,
+  &#39;@SMR CHANNEL sekarang kita gk perlu saling debat sesama saudara...yg jelas sama pemerintah yg sekarang ini luar jawa gk pernah di anak tirikan ... pemerintah bpk jokowi selalu turun sendiri guna memperbaiki semuanya termasuk jalan2 yg sangat diutamakan...n itu berlaku merata di seluruh indonesia bukan hanya di jawa saja...itu makanya kita semua berdoa agar nanti apa yg kita mau n apa yg kita inhinkan bisa terwujud ...&#39;,
+  0],
+ [&#39;2023-05-05T16:22:03Z&#39;, &#39;Suyamto Zone&#39;, &#39;Prabowo presiden...&#39;, 0],
+ [&#39;2023-05-05T16:21:56Z&#39;,
+  &#39;Juhairiyanto Ajha&#39;,
+  &#39;1Juli...MERAHKAN INDONESIA  ...GANJAR PRANOWO...JOZZZZ👍👍👍😄&#39;,
+  6],
+ [&#39;2023-05-05T16:21:56Z&#39;,
+  &#39;Suswanto 99&#39;,
+  &#39;Indramayu hadir Ganjar semakin di depan salam banteng 🤟&#39;,
+  8],
+ [&#39;2023-05-08T05:01:24Z&#39;, &#39;bray&#39;, &#39;Gada kapoknya pilih banteng&#39;, 0],
+ [&#39;2023-05-05T16:20:04Z&#39;,
+  &#39;Muhamad Husein&#39;,
+  &#39;Jangan  pilih  Kadrun , wkkwkkw&#39;,
+  1],
+ [&#39;2023-05-05T16:19:03Z&#39;,
+  &#39;Ontho Hoed Chanel official&#39;,
+  &#39;Si uban Ganjar cocoknya jadi duta film Jepang 😁😁😁&#39;,
+  6],
+ [&#39;2023-05-05T16:18:05Z&#39;,
+  &#39;Anwar Bey&#39;,
+  &#39;Survey bayaran itu hanya utk menggiring opini publik, faktanya nanti akan kita buktikan 14 feb 2024...Insyaallah ANIES yg menjadi PRESIDEN sejatinya saat ini elektabilitas ANIES sdh sulit utk dikejar.&#39;,
+  0],
+ [&#39;2023-05-05T16:17:59Z&#39;,
+  &#39;Rohima Tina&#39;,
+  &#39;Saya pilih pk Anies Baswedan for RI 1 👍&#39;,
+  2],
+ [&#39;2023-05-05T16:17:44Z&#39;, &#39;Mlatikudus 5a&#39;, &#39;Tetep ganjar&#39;, 3],
+ [&#39;2023-05-05T16:17:23Z&#39;,
+  &#39;Ahmad Khoiruddin&#39;,
+  &#39;Pokoknya RI1 no cendana no cikeas👊👊👊❗️❗️❗️❗️&#39;,
+  6],
+ [&#39;2023-05-06T03:03:39Z&#39;,
+  &#39;Zaky Zaky&#39;,
+  &#39;\u200b@Mawar Merah S7 no kadrun Yohanes basedan&#39;,
+  1],
+ [&#39;2023-05-05T23:33:44Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Betul skl....&amp;amp; sangat se 7 skl....👍👍🇮🇩🇮🇩&lt;br&gt;Pak GANJAR sll di nanti di 2024....&lt;br&gt;Untuk memimpin NKRI....!! 🇮🇩🇮🇩👍👍&lt;br&gt;AMIN...🤲🤲&#39;,
+  1],
+ [&#39;2023-05-05T16:17:20Z&#39;,
+  &#39;Mlatikudus 5a&#39;,
+  &#39;Walaaupun 1000  survey mmenangkan  ganjar xan bkal di hujat para kadrun&#39;,
+  3],
+ [&#39;2023-05-06T09:30:50Z&#39;,
+  &#39;Mlatikudus 5a&#39;,
+  &#39;@Ubai Dillah pki kadrun 11 12 bedanya pki dah lenyap di telan bumi kl kadrun msih mengais2 mncari makan&#39;,
+  0],
+ [&#39;2023-05-06T03:07:34Z&#39;, &#39;Zaky Zaky&#39;, &#39;Kadrun sok keras 😂😅&#39;, 0],
+ [&#39;2023-05-05T19:04:42Z&#39;,
+  &#39;Ubai Dillah&#39;,
+  &#39;Sebentar lg banyak yg jadi kadrun dadakan..saya suka di bilang kadrun dari pada pki penghianat bangsa broo&#39;,
+  0],
+ [&#39;2023-05-05T16:17:10Z&#39;,
+  &#39;Ahmad Khoiruddin&#39;,
+  &#39;prabowo no, apalagi anis keturunan kadrun bodoh itu , POKONYA NO👊❗️❗️❗️ , pokonya  Harus pribumi asli dan itu hanya ada pada pakde Ganjar👍👍👍&#39;,
+  0],
+ [&#39;2023-05-05T16:17:03Z&#39;, &#39;Jamal Udin&#39;, &#39;Hanya bisa ketawa aja...hahHHaa&#39;, 1],
+ [&#39;2023-05-05T16:16:55Z&#39;,
+  &#39;Ahmad Khoiruddin&#39;,
+  &#39;Mosok presiden kok duda (nggak punya istri, nggak ada ibu negara berarti😅), udah mbah2 lagi, nggak lucu😅&lt;br&gt;&lt;br&gt;Apa nggak malu kalau mbah wowo kalah EMPAT KALI🤭 ...&#39;,
+  0],
+ [&#39;2023-05-05T16:16:38Z&#39;,
+  &#39;Zaidan Revi&#39;,
+  &#39;Inssa Allah pak ANIS pasti jadi persiden kita&#39;,
+  1],
+ [&#39;2023-05-05T16:16:16Z&#39;,
+  &#39;AHMAD HS  GP RI 1 2024&#39;,
+  &#39;Siap berjuang untuk Kemenangan Ganjar Pranowo untuk menjadi Presiden tahun 2024&#39;,
+  21],
+ [&#39;2023-05-06T12:38:10Z&#39;, &quot;La&#39; Viory&quot;, &#39;Siappp&#39;, 0],
+ [&#39;2023-05-06T00:57:27Z&#39;, &#39;Rafanda 2018&#39;, &#39;ora milih&#39;, 0],
+ [&#39;2023-05-05T22:32:14Z&#39;,
+  &#39;Amel Delifa&#39;,
+  &#39;GAK MAU AH... &lt;br&gt;Takut seperti jokowi , rumah-rumah warga dilibas jadi jalan tol , yang merugi terliunan itu ,&#39;,
+  0],
+ [&#39;2023-05-05T21:36:15Z&#39;, &#39;Prabu Kiansantang&#39;, &#39;Siap gaskeuuun lurr💪💪&#39;, 0],
+ [&#39;2023-05-05T16:16:07Z&#39;, &#39;Atmopawiro&#39;, &#39;Ganjar 👍&#39;, 10],
+ [&#39;2023-05-05T16:15:48Z&#39;,
+  &#39;Ahmad Khoiruddin&#39;,
+  &#39;In syaa Allah Bung ganjar akan semakin naik👍👍👍&lt;br&gt;&lt;br&gt;Pokoke gas poll💪&#39;,
+  39],
+ [&#39;2023-05-06T22:59:27Z&#39;, &#39;Mocci Occ&#39;, &#39;Presiden bokep&#39;, 0],
+ [&#39;2023-05-06T07:28:29Z&#39;, &#39;Suradi Suradi&#39;, &#39;\u200b@Ubai DillahAAMIIN&#39;, 1],
+ [&#39;2023-05-06T01:57:07Z&#39;, &quot;La&#39; Viory&quot;, &#39;Aamiin YRA&#39;, 1],
+ [&#39;2023-05-05T18:46:58Z&#39;,
+  &#39;Ubai Dillah&#39;,
+  &#39;Semoga ganjar hanya menang di lembaga survai aja..dan insya allah pak anis presiden 2024 saya tulus ikhlas dukung pak Anis.&#39;,
+  3],
+ [&#39;2023-05-05T16:15:16Z&#39;,
+  &#39;Zaidan Revi&#39;,
+  &#39;INI TUKANG SURPAI ABAL ABAL JANGAN DI PERCAYA&#39;,
+  1],
+ [&#39;2023-05-05T16:14:14Z&#39;,
+  &#39;natanael&#39;,
+  &#39;Suara Pak Ganjar akan kembali sebelum blunder U20, krn ana salah satu yg sadar. Pilihan hanya GANJAR wae😆&#39;,
+  6],
+ [&#39;2023-05-06T02:49:37Z&#39;, &#39;putri&#39;, &#39;Akan terus di ingat rakyat indonesia&#39;, 0],
+ [&#39;2023-05-05T18:43:00Z&#39;,
+  &#39;Bapa Rohim&#39;,
+  &#39;Betul saudaraku setanah Air &lt;br&gt;Jgn pilih keturunan yaman&#39;,
+  1],
+ [&#39;2023-05-05T16:24:18Z&#39;,
+  &#39;Rahmat Kartolo&#39;,
+  &#39;Gua juga begitu, hati ga bisa diboongin.&lt;br&gt;GP RI 1&#39;,
+  1],
+ [&#39;2023-05-05T16:13:54Z&#39;,
+  &#39;Zaidan Revi&#39;,
+  &#39;Ok pak ANIS raykyat Indonesia mendukungmu&#39;,
+  1],
+ [&#39;2023-05-05T16:13:48Z&#39;,
+  &#39;Nadhifa Ramadani&#39;,
+  &#39;Pastinya unggul sudah dibayar sorveynya&#39;,
+  0],
+ [&#39;2023-05-05T16:13:12Z&#39;,
+  &#39;putripanda&#39;,
+  &#39;biismillah barrakalloh pak ganjar terbaik&#39;,
+  6],
+ [&#39;2023-05-05T16:13:06Z&#39;,
+  &#39;Luna Lavgood&#39;,
+  &#39;Buktikan tidak hanya Gub DKI yang bisa jadi batu loncatan utk jadi Presiden. Ayo para Gubernur, berkinerja dg baik sehingga layak jadi RI 1&#39;,
+  2],
+ [&#39;2023-05-05T18:16:16Z&#39;,
+  &#39;Al fatih&#39;,
+  &#39;Apa kinerja ganjar,pendukung ganjar itu org2 gak punya otak,kalian memilih dia cuma krn,kalian org jawa,kalian org kafir yg benci anis,coba apa kelebihan si rambut putih itu ??&#39;,
+  0],
+ [&#39;2023-05-05T16:13:05Z&#39;,
+  &#39;karikatur digital&#39;,
+  &#39;KADRUN ga akan percaya survei selama junjungannya berada dipaling bawah .. jangankan SURVEI , hasil PEMILU pun mereka ga percaya , tp anehnya mereka masih mau ikut  PEMILU , ibarat BOCIL yg lagi maen PS tau joystik nya rusak tp tetap maksa maen dgn alasan nanti kl kalah ya joystik nya rusak , jadi kl kalah survey atau pemilu pasti di bilang CURANG&#39;,
+  8],
+ [&#39;2023-05-06T04:07:43Z&#39;, &#39;Lilly Ayunah&#39;, &#39;Kadrun kebanyakan bodoh&#39;, 0],
+ [&#39;2023-05-05T18:41:51Z&#39;,
+  &#39;Bapa Rohim&#39;,
+  &#39;Kadron itu salah juga masih dibilang benar &lt;br&gt;Antitesis😂😂😂&#39;,
+  0],
+ [&#39;2023-05-05T16:25:11Z&#39;, &#39;Rahmat Kartolo&#39;, &#39;😂😂😂😂 bener juga&#39;, 0],
+ [&#39;2023-05-05T16:12:37Z&#39;, &#39;Zaidan Revi&#39;, &#39;Pak ANIS  yeees&#39;, 2],
+ [&#39;2023-05-05T16:12:34Z&#39;,
+  &#39;Dunia Print&#39;,
+  &#39;ANIES 15% DITAMBAH KEKUATAN DAHSAT DARI PARA KYAI, ULAMA DAN SANTRI...ITU FAKTA DI LAPANGAN.&#39;,
+  1],
+ [&#39;2023-05-05T16:12:19Z&#39;,
+  &#39;ch ndeso&#39;,
+  &#39;Kesedihan dengan akan berakhirnya jabatan pak jokowi gini terobati dengan di calonknnya pak ganjar 🤟&#39;,
+  10],
+ [&#39;2023-05-05T16:12:17Z&#39;,
+  &#39;Zaidan Revi&#39;,
+  &#39;Bisssmilahhirhomannirohim pilih pk ANIS aja yang jadi persiden Indonesia raya&#39;,
+  0],
+ [&#39;2023-05-05T16:12:14Z&#39;,
+  &#39;Budi Arman&#39;,
+  &#39;Tidak bisa pedoman survei bisa di pesan&#39;,
+  1],
+ [&#39;2023-05-05T16:11:32Z&#39;, &#39;Bunga Adi&#39;, &#39;Ganjar - Mahfud MD&#39;, 0],
+ [&#39;2023-05-05T16:10:56Z&#39;,
+  &#39;Anita Ananda&#39;,
+  &#39;Kalau melihat situasi Dunia yg gonjang ganjing dampak dari Perang di Eropa, di perlukan kepemimpinan Nasonal yg kuat.dan itu hanya ada pada Prabowo S.&#39;,
+  0],
+ [&#39;2023-05-07T04:04:31Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Pidato jokowi dulu jelas bahwa ada bawahan bahwannya yg menginginkannya untukbjd presiden lagi di tahun 2024 namun langsung jokowi tolak koq malah menginstruksikan pak menkopolhukam buat pastikan jadwal pemilu 2024 yang udah direncanakan klo gak salah pd tgl 14 februari 2024. Jadi yg menginginkan jokowi 3 periode itu bukan jokowi namun orang orang yg ada disekitarnya yg punya kepentingan sendiri/golongan buat cuman menyarankan kepada jokowi begitu.&lt;br&gt;&lt;br&gt;Justru saya meyakini kalo presidennya sekarang prabowo maka bisa jadi prabowo akan menyetujuinya, gue yakin itu. Karena gue dan anda lihat sendiri tayangan video wawancara jurnalis senior dari amerika yang diwawancarai oleh jurnalis metro tv itu bahwa prabowo tidak setuju konsep politik demokrasi melainkan fasisme karena demokrasi bertolak belakang dengan totoriterian alias otoriter. &lt;br&gt;Karna ada bukti nya itu video wawancara jurnalis asing yg pernah interview prabowo pada tahun 2001 lalu maka ini bukanlah asumsi&#39;,
+  0],
+ [&#39;2023-05-07T03:13:06Z&#39;,
+  &#39;Anita Ananda&#39;,
+  &#39;@backbone mudah2an bukan bermaksud menyindir orang yg merasa memiliki otoritas lalu berpikir otoriter dg mewacanakan perpanjangan jabatan Presiden, belum lama ini.&#39;,
+  0],
+ [&#39;2023-05-07T02:59:58Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Secara singkat, negara demokrasi berarti memberikan kekuasaan tertinggi kepada rakyatnya. Berbeda dengan negara otoriter yang berarti sistem pemerintahan politiknya berpusat pada seorang pemimpin.&lt;br&gt;&lt;br&gt;Biasanya, pemimpin otoriter tidak dibatasi dengan aturan hukum dan membuat kebijaan negaranya sesuai kehendak pribadi.&#39;,
+  0],
+ [&#39;2023-05-07T02:55:51Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Otoritas itu wewenang yg diberikan dengan mengadakan musyawarah terlebih dahulu namun klo otoriter itu kekuasaan yang sewenang wenang karena emang gak diharuskan untuk melakukan musyawarah dahulu&#39;,
+  0],
+ [&#39;2023-05-06T15:50:21Z&#39;,
+  &#39;Anita Ananda&#39;,
+  &#39;@backbone Otoriter terjadi karena adanya otoritas,dan itu  bisa terjadi dlm bidang apapun, sekala tinggi atau rendah, besar atau kecil.&#39;,
+  0],
+ [&#39;2023-05-05T16:10:22Z&#39;,
+  &#39;ANTO KOPI&#39;,
+  &#39;Kita cari penerus Jokowi, bukan pengganti,&#39;,
+  6],
+ [&#39;2023-05-06T01:06:20Z&#39;, &#39;neng adit&#39;, &#39;btul&#39;, 0],
+ [&#39;2023-05-05T16:10:08Z&#39;,
+  &#39;Sabar Pku&#39;,
+  &#39;pileng saya mas Ganjar Pranowo menang di 2024&#39;,
+  3],
+ [&#39;2023-05-05T16:09:48Z&#39;,
+  &#39;agus setyawan&#39;,
+  &#39;Mas Ganjar untuk presiden 2024... tetep putih nggak beralih&#39;,
+  7],
+ [&#39;2023-05-06T03:23:50Z&#39;, &quot;La&#39; Viory&quot;, &#39;Pastinya yg ubanan&#39;, 0],
+ [&#39;2023-05-05T16:09:25Z&#39;,
+  &#39;Wahyu Umi&#39;,
+  &#39;Survenya itu dari mana yaaa.... kalo bisa survenya itu dari desa.....&#39;,
+  1],
+ [&#39;2023-05-05T16:08:51Z&#39;, &#39;zharah 008&#39;, &#39;Gsnjsr tetap menang&#39;, 0],
+ [&#39;2023-05-05T16:07:06Z&#39;,
+  &#39;aaaa&#39;,
+  &#39;Anis presiden terbaik&lt;br&gt;Ganjar 2 periode Jawa tengah propinsi termiskin,,cari presiden bukan petugas partai tapi petugas rakyat&#39;,
+  2],
+ [&#39;2023-05-06T05:51:21Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Gak semua partai itu memntingkan partainya saja.melainkan kepentingan nasional&#39;,
+  0],
+ [&#39;2023-05-05T16:06:59Z&#39;,
+  &#39;Iskandard Kahard&#39;,
+  &#39;Apapun hasil surveinya. Bagiku dan keluarga tdk akan pernah memilih partai dan capresnya yg ikut andil dalam kegagalan piala dunia U-20.&#39;,
+  1],
+ [&#39;2023-05-05T16:06:49Z&#39;, &#39;Eksan Difinubun&#39;, &#39;Omong kosong surveinya&#39;, 2],
+ [&#39;2023-05-05T16:06:38Z&#39;, &#39;Meliana Virginia&#39;, &#39;GANJAR MAHFUD ❤❤&#39;, 2],
+ [&#39;2023-05-05T18:52:48Z&#39;,
+  &#39;Bapa Rohim&#39;,
+  &#39;Siapapun wapresnya &lt;br&gt;Yg penting asli nkri&#39;,
+  0],
+ [&#39;2023-05-05T16:34:53Z&#39;,
+  &#39;Indro Pramudianto&#39;,
+  &#39;Semoga wapres nya nanti beliau sangat setuju&#39;,
+  0],
+ [&#39;2023-05-05T16:06:05Z&#39;,
+  &#39;OGAN official&#39;,
+  &#39;YG MENJADI ANEH,,,,,, ANIES SELALU DI BAWAH SURVEYNYA TP MASIH AJA DI RAYU PARTAI2 NYA SUPAYA ANIES GAGAL NYAPRES,,,,,, ANEH,,,,KL ANIES SELALU DI BAWAH BIARKAN DIA NYAPRES TO PASTI KALAH KL SURVEY NYA AJA RENDAH,,,,,,,,,,?????????????????&#39;,
+  0],
+ [&#39;2023-05-05T16:05:37Z&#39;,
+  &#39;Saodah&#39;,
+  &#39;merasa lucu kalau memilih ganjar gara2 viral..tapi kalau di tanya apa kesuksesan ganjar yang di raih pada plonga plongo😂😂😂&lt;br&gt;&lt;br&gt;kuharap indonesia lebih cerdas bukan karena viral..&#39;,
+  2],
+ [&#39;2023-05-05T23:38:17Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;@Saodah plin plan walaupun kenyataannya baik🤣 tapi kemungkinan besar pak Ganjar jugabyg bakalan jadi🤣🤭✌️&#39;,
+  0],
+ [&#39;2023-05-05T23:31:08Z&#39;,
+  &#39;Saodah&#39;,
+  &#39;@Roni Gunawan yang lain siapa meragukan..???aq mlhn penasaran ramalan gusdur tentang prabowo&#39;,
+  0],
+ [&#39;2023-05-05T16:12:33Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;😅2 periode jadi gubernur sdh cukup modal😅ketimbang yg lain masih diragukan🤣🤭&#39;,
+  0],
+ [&#39;2023-05-05T16:04:38Z&#39;, &#39;Muhamim&#39;, &#39;Jossss...&lt;br&gt;Pokoke.....p..gp&#39;, 2],
+ [&#39;2023-05-05T16:04:25Z&#39;, &#39;Amel Ayu&#39;, &#39;Anis makin nyungsep...&#39;, 0],
+ [&#39;2023-05-05T16:04:16Z&#39;,
+  &#39;swarnabhumi&#39;,
+  &#39;Sudah jelas Johanes Anies Baswedan Capres Zimbabwe. 2024. 😆😆😆&#39;,
+  0],
+ [&#39;2023-05-05T16:03:55Z&#39;, &#39;ar joni&#39;, &#39;Survey kacang x...&#39;, 1],
+ [&#39;2023-05-05T16:03:53Z&#39;, &#39;Muhamim&#39;, &#39;Mantulllllll.p..gp...ol&#39;, 1],
+ [&#39;2023-05-05T16:03:50Z&#39;, &#39;Dylan Ismail TV&#39;, &#39;Survey bohong berbayar&#39;, 2],
+ [&#39;2023-05-06T05:56:56Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Lembaga survey itu sdh trdaftar resmi di KPU sudah sangat lama dan hasil surveynya gaj jauh berbeda dgn real qount Dari KPU&#39;,
+  0],
+ [&#39;2023-05-05T16:03:27Z&#39;, &#39;Muhamim&#39;, &#39;Josssss.pokoke..p&lt;br&gt;.gp&#39;, 7],
+ [&#39;2023-05-05T16:03:22Z&#39;,
+  &#39;ds1110op&#39;,
+  &#39;PDIP katanya gak butuh suara umat islam, krn hanya pdip yg punya suara yg bisa nyalonkan capres.... Mending sekalian capres n wapres nya dari PDIP..... Itu baru ksatria... Katanya pdip partai x wong cuiiiliiik, jd pdip bisa . nyalonkan dr kader sendiri&#39;,
+  0],
+ [&#39;2023-05-05T16:03:06Z&#39;,
+  &#39;Harianto Yan Adri&#39;,
+  &#39;Ayo satukan barisan semua ttap solid bersama Pk Jokowidodo 😘👍GP yess&#39;,
+  33],
+ [&#39;2023-05-06T02:32:59Z&#39;,
+  &#39;Sabaruddin Kiantar&#39;,
+  &#39;Prabowo lebih pasti kenegarawannya. Jauh dari isu Radikalisme dan Komunis.&#39;,
+  0],
+ [&#39;2023-05-06T02:32:05Z&#39;, &#39;Sabaruddin Kiantar&#39;, &#39;@Boy Andiek betul itu&#39;, 0],
+ [&#39;2023-05-06T01:58:19Z&#39;, &quot;La&#39; Viory&quot;, &#39;Siappp dukung GP&#39;, 0],
+ [&#39;2023-05-06T00:25:40Z&#39;,
+  &#39;Boy Andiek&#39;,
+  &#39;Bersatu Gmn ?&lt;br&gt;Pendukung Jokowi,udah pd sadar Semua ..😀 Gak Mau Di Adu Domba..yg slalu Narasi Kebencian.cebong &amp;amp; Kadrun...biar Hangus di bumi pertiwi ini &lt;br&gt;sebagian pendukung jokowi udah pada lari Ke pak Prabowo Yang Di Untungkan di posisi tengah...&#39;,
+  1],
+ [&#39;2023-05-05T23:49:31Z&#39;,
+  &#39;Sabaruddin Kiantar&#39;,
+  &#39;Tunggu putaran kedua. Kami pasti gabung ma kubuh Anies. Sy dulu relawan Jokowi. Skerang Prabowo&#39;,
+  1],
+ [&#39;2023-05-05T16:02:45Z&#39;,
+  &#39;Andik Kurniawan Santoso&#39;,
+  &#39;&lt;a href=&quot;https://www.youtube.com/watch?v=ox1WDX7MHKQ&amp;amp;t=1m14s&quot;&gt;1:14&lt;/a&gt; datanya salah 28.9% semua&#39;,
+  0],
+ [&#39;2023-05-05T16:02:12Z&#39;,
+  &#39;Maubere Lutador&#39;,
+  &#39;Prabowo presiden presiden 2024&#39;,
+  0],
+ [&#39;2023-05-05T16:02:03Z&#39;,
+  &#39;Bitter Channel Pratama&#39;,
+  &#39;Ganjar rapatkan barisan, pilih sesuai hati kalian, tak.perlu menjelekkan ...&#39;,
+  8],
+ [&#39;2023-05-06T10:38:56Z&#39;,
+  &#39;Bitter Channel Pratama&#39;,
+  &#39;@Ubai Dillah oke , berdemokrasi yg riang ya.. smngt...&#39;,
+  0],
+ [&#39;2023-05-05T19:11:37Z&#39;,
+  &#39;Ubai Dillah&#39;,
+  &#39;Insya Allah pendukung pak Anis tdk menjelekan siapapun ok broo&#39;,
+  1],
+ [&#39;2023-05-05T18:49:38Z&#39;, &#39;Bapa Rohim&#39;, &#39;OK&#39;, 1],
+ [&#39;2023-05-05T16:34:40Z&#39;, &#39;Ya yuk&#39;, &#39;@Indro Pramudianto Aamiin 🤲&#39;, 1],
+ [&#39;2023-05-05T16:27:09Z&#39;,
+  &#39;Indro Pramudianto&#39;,
+  &#39;Setuju konsen buat cak Ganjar Pranowo gak usah urus capres lain hayo bergandeng tangan dan doa seluruh Indonesia yg dalam maupun yg bekerja diluar negri biar Cak Ganjar jadi RI 1 yg Amanah nanti nya&#39;,
+  2],
+ [&#39;2023-05-05T16:01:55Z&#39;, &#39;BG. YANN&#39;, &#39;👏👏👏👏👏👏👏👏&#39;, 0],
+ [&#39;2023-05-05T16:01:38Z&#39;,
+  &#39;Widodo Wahyunugroho&#39;,
+  &#39;Kalau rekayasa bisa juga Ganjar no 1 tapi kalau tdk rekayasa urutan ke 3 8% aja janganlah membodohi org sdh tau sering nonton bokep masih juga reking 1 terlalu&#39;,
+  2],
+ [&#39;2023-05-05T16:01:35Z&#39;, &#39;Taufik aziz Aziz boon&#39;, &#39;😂&#39;, 1],
+ [&#39;2023-05-05T16:01:32Z&#39;,
+  &#39;Hadi Noor&#39;,
+  &#39;Hari gini msh percaya suvei bayaran? &lt;br&gt;Duit e-ktp yg di buat bayar survei, selebrasi kemenangan palsu 😂😂😂&#39;,
+  1],
+ [&#39;2023-05-05T16:01:18Z&#39;,
+  &#39;Candra Yana&#39;,
+  &#39;LEMBAGA SURVEI WANI PIRO&lt;br&gt;        &amp;quot; REZIM AKAL2AN &amp;quot;&lt;br&gt;JANGAN MAU DIBODOHIN GEROMBOLAN MAFIA&lt;br&gt;&lt;br&gt;( nyesel milih Jokowi )&lt;br&gt;INDONESIA JADI PECAH BERANTAKAN&#39;,
+  2],
+ [&#39;2023-05-05T16:01:04Z&#39;,
+  &#39;Jago Jalu&#39;,
+  &#39;Pasti kadrun bilang..ini pesanan...😅😅😅😅&#39;,
+  1],
+ [&#39;2023-05-05T16:00:39Z&#39;, &#39;Tiwan Karokaro&#39;, &#39;tidak valit&#39;, 1],
+ [&#39;2023-05-05T16:00:34Z&#39;,
+  &#39;Avika65&#39;,
+  &#39;Saingan terberat ganjar bukan anis, tapi prabowo,, jika pilpres 1 putaran ganjar menanh, jika 2 putaran prabowo menang&#39;,
+  0],
+ [&#39;2023-05-05T16:00:28Z&#39;,
+  &#39;Nur Setiawan&#39;,
+  &#39;Ganjar Pranowo capres pribumi Indonesia asli 💯 tulen sejati menang 🎉🎉🎉🎉&#39;,
+  3],
+ [&#39;2023-05-05T18:40:26Z&#39;,
+  &#39;Bapa Rohim&#39;,
+  &#39;Betul asli jawa &lt;br&gt;Kalo anis itu &lt;br&gt;Keturan yaman&#39;,
+  0],
+ [&#39;2023-05-05T16:16:48Z&#39;, &#39;Petrus Petrus&#39;, &#39;Betul Ganjar pribumi asli...&#39;, 1],
+ [&#39;2023-05-05T15:59:50Z&#39;,
+  &#39;kalengrombenk chanel&#39;,
+  &#39;Ini kalo yg survei kadrun..Anis bisa 120 persen😜&#39;,
+  3],
+ [&#39;2023-05-05T15:59:34Z&#39;, &#39;Hamzah Heru&#39;, &#39;Ganjar RI 1...☝️☝️☝️&#39;, 14],
+ [&#39;2023-05-05T15:58:55Z&#39;, &#39;ABD Rasyid&#39;, &#39;Yng surpay dajal sm iblis&#39;, 0],
+ [&#39;2023-05-05T15:58:52Z&#39;,
+  &#39;Kage Dean&#39;,
+  &#39;Ga sekalian ganjar 150% lol&lt;br&gt;&lt;br&gt;Nanti saat kampanye diadu prestasinya aja&#39;,
+  3],
+ [&#39;2023-05-05T16:39:40Z&#39;,
+  &#39;Rahmat Kartolo&#39;,
+  &#39;@Kage Dean baru survey lu udah kejang2. Penyakir iri, dengki emang susah diobati&#39;,
+  0],
+ [&#39;2023-05-05T16:35:17Z&#39;,
+  &#39;Kage Dean&#39;,
+  &#39;@Rahmat Kartolo lol… ngaku pinter tp dibegoin lembaga surpe bayaran bangga bgt&#39;,
+  0],
+ [&#39;2023-05-05T16:30:10Z&#39;,
+  &#39;Rahmat Kartolo&#39;,
+  &#39;Klo yg survey gerombolanmu itu bisa, anis 750%&#39;,
+  0],
+ [&#39;2023-05-05T15:58:11Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Ikuti apa instruksi dari pak jokowi, pak jokowi tidak mau melepaskan negri ini ke Sembarang orang, ikuti komando pak jokowi, apa yg di endorse pak jokowi adalah orang yg mampu meneruskan cita cita pak jokowi, buat para pendukung jokowi Dan rakyat yg puas dgn kinerja jokowi selama ini, ayo kita rapatkan barisan untuk 1 komando bersama pak jokowi, lupakan pildun, saatnya kita bergerak untuk selamatkan negri ini dari kadrun2 yaman.. Takbirrrr....&#39;,
+  8],
+ [&#39;2023-05-05T18:50:48Z&#39;, &#39;Bapa Rohim&#39;, &#39;Yg penting nkri tulen&#39;, 0],
+ [&#39;2023-05-05T16:14:08Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;@OGAN official jokowi tidak akan meng endorse airlangga. Jokowi hanya meng endorse ganjar sebagai capres dan prabowo sebagai cawapres..&#39;,
+  2],
+ [&#39;2023-05-05T16:10:57Z&#39;,
+  &#39;OGAN official&#39;,
+  &#39;Pak jokowi  endorse ganjar jokowi endorse prabowo,,,, sebentar lagi jokowi endorse airlangga,,,,!!!!! &lt;br&gt;Silahkan bagi bagi aja yg di endorse jokowi,,,,,!!!!!&#39;,
+  1],
+ [&#39;2023-05-05T15:58:00Z&#39;, &#39;Sidhin Ode&#39;, &#39;Yg survey kodok sekolam&#39;, 3],
+ [&#39;2023-05-05T15:57:54Z&#39;,
+  &#39;Tiwan Karokaro&#39;,
+  &#39;kami orag awam. kami gk perduli klo hsil survei itu tdk balik.krna semuanya itu di byr..apa lg klo cuma ptgas partai. waaaadduuuh. prabowo presiden&#39;,
+  2],
+ [&#39;2023-05-05T16:09:36Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;Bilang bgtu karna pilihannya kalah🤣🤭coba klo menang psti diem2 aja seneng🤭&#39;,
+  0],
+ [&#39;2023-05-05T15:57:50Z&#39;, &#39;j@rmhp&#39;, &#39;Ganjar yes&#39;, 3],
+ [&#39;2023-05-05T15:57:42Z&#39;, &#39;Mohammad Gustaf&#39;, &#39;Survei bayaran&#39;, 2],
+ [&#39;2023-05-05T15:57:38Z&#39;, &#39;kus&#39;, &#39;Wassalam kadruner...kuatkanlah hatimu😅&#39;, 4],
+ [&#39;2023-05-05T15:57:16Z&#39;, &#39;sebut_saja daeng&#39;, &#39;Survey abal abal😅&#39;, 2],
+ [&#39;2023-05-06T03:11:56Z&#39;,
+  &#39;Zaky Zaky&#39;,
+  &#39;\u200b@Rahmat Kartolo nyungsep ke sumur resapan wan abud 😂😅&#39;,
+  0],
+ [&#39;2023-05-05T16:33:01Z&#39;,
+  &#39;Rahmat Kartolo&#39;,
+  &#39;Baru survey aja lu udah kejang2, apalagi nanti klo capres lu nyungsep&#39;,
+  0],
+ [&#39;2023-05-05T15:57:09Z&#39;,
+  &#39;susilo murti&#39;,
+  &#39;Sayapun bisa membuat survey untuk menaikkan atau mendowngrade CAPRES,  misal responden untuk ANIS diambilkan dari NTT atau BALI pasti jeblok, toh pihak lembaga survey gak perlu jelasin respondenya dari mana,  sekarang rakyat percaya POLLING.&#39;,
+  1],
+ [&#39;2023-05-06T12:08:53Z&#39;,
+  &#39;susilo murti&#39;,
+  &#39;@Roni Gunawan monggo kalau anda punya anggapan seperti itu, karena semua orang punya perspektif masing masing, karena saya berdasarkan fakta, contoh POLITIK IDENTITAS klik ARNITA RODELINA TURNIP mahasiswi cerdas yg dihentikan beasiswanya oleh BUPATI  karena .......,  BUPATI adalah jabatan politik ( semua jabatan hasil pilihan rakyat  ).&#39;,
+  0],
+ [&#39;2023-05-06T09:46:49Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;@susilo murti klo nte pencari kebenaran &amp;amp; netral pastinya tau awal mulanya🤣😅silahkan renungkan .&#39;,
+  0],
+ [&#39;2023-05-06T09:40:17Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;@susilo murti 🤣berati ada terlalu sepihak🤣langsg ditelan mentah2 berita &amp;amp; framingan🤭semua psti ada sebabnya 🤣&#39;,
+  0],
+ [&#39;2023-05-06T09:19:50Z&#39;,
+  &#39;susilo murti&#39;,
+  &#39;@Roni Gunawan itu kata kata normatif, bagi saya itu tidak cukup,  harus ada keberpihakan dg yg benar dengan ukuran dan standard yg bisa dipertanggungjawabkan misal  ANIS intoleran, tapi gak bisa nunjukin kapan dan dimana aktifitas itu dilakukan, ada yg bilang ada spanduk JANGAN SHOLATI dsb, pertanyaan apa yg buat ANIS ? mari kita merenung tentang SEBAB AKIBAT, seandainya AHOK gak bilang KAMU DIBOHONGI AL MAIDAH pasti gak ada spanduk itu.&#39;,
+  0],
+ [&#39;2023-05-06T08:56:09Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;@susilo murti 🤣kn udh dibilang mw dikit ato banyak akan hancur lebur dengan sendirinya,biarkan mereka yg mendapatkan balasannya🤣&#39;,
+  0],
+ [&#39;2023-05-05T15:56:42Z&#39;,
+  &#39;B.M.S.channel&#39;,
+  &#39;aku orang jateng tapi tidak tertarik dengan Gsnjar pranowo😂.&#39;,
+  5],
+ [&#39;2023-05-06T05:43:13Z&#39;, &#39;backbone&#39;, &#39;Munafik&#39;, 0],
+ [&#39;2023-05-06T00:02:26Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Sak karepmu kang....!!&lt;br&gt;Nanti klo pak GANJAR menang km jgn tinggal di Jawa Tengah malu nt klo ada bantuan km ikut makan....!!&lt;br&gt;☝️☝️☝️🙈🙈🙈🤣🤣🤣&#39;,
+  1],
+ [&#39;2023-05-05T15:56:35Z&#39;,
+  &#39;suratno 63&#39;,
+  &#39;hasil survey hoax...lembaga survey yh tdk.bisa dipercaya ..pembohong..&#39;,
+  2],
+ [&#39;2023-05-05T15:56:31Z&#39;,
+  &#39;Farel Alviano&#39;,
+  &#39;TUKANG SURVE  DINAMA  SURVENYA DI ATAS LAGIT APA DI KEBON KOSONG&#39;,
+  3],
+ [&#39;2023-05-05T15:56:29Z&#39;,
+  &#39;ds1110op&#39;,
+  &#39;Apa gak ditambah yg disurvey. No. 4 Megawati Sukarno putri, no. 5 , Puan mahari no. 6 Abu janda. No 7.deni siregar no. 8.ade armando. 9.giring ganesha, 10.grace natali, 11. Napi Romi.. Hasil simulasi gimana  ? Orang waras akan milh abu jandan n wapresx giring&#39;,
+  2],
+ [&#39;2023-05-05T15:56:11Z&#39;,
+  &#39;HOT_Man Jr&#39;,
+  &#39;Makan tu survey ...realnya nanti pada nga nga&#39;,
+  3],
+ [&#39;2023-05-05T15:56:10Z&#39;,
+  &#39;M Panjidinihari&#39;,
+  &#39;Coba bahas hasil folling yg respondennya ratusan ribu..&#39;,
+  1],
+ [&#39;2023-05-05T15:55:41Z&#39;,
+  &#39;Roby wuarlela&#39;,
+  &#39;Pak Ganjar...presiden RI....🇲🇨🙏&#39;,
+  11],
+ [&#39;2023-05-05T18:44:15Z&#39;,
+  &#39;Bapa Rohim&#39;,
+  &#39;Nyata &lt;br&gt;Wong survenya &lt;br&gt;Paling OK&#39;,
+  0],
+ [&#39;2023-05-05T16:03:00Z&#39;, &#39;Dawin Rotto&#39;, &#39;Mimpi di siang bolong...&#39;, 0],
+ [&#39;2023-05-05T15:55:38Z&#39;, &#39;Supar Dijana&#39;, &#39;GANJAR PRAHORO NOL PRESTASI&#39;, 1],
+ [&#39;2023-05-05T15:55:25Z&#39;,
+  &quot;Ma&#39;mun Rizal&quot;,
+  &#39;Ter atas malu nya .... mak aku aja mas anis&#39;,
+  2],
+ [&#39;2023-05-05T15:54:18Z&#39;,
+  &#39;ilham gg&#39;,
+  &#39;yohanes 15% nyolong suara dr kampret 🤣🤣🤣&#39;,
+  0],
+ [&#39;2023-05-05T15:54:13Z&#39;, &#39;D J&#39;, &#39;gue Ganjar!!&#39;, 6],
+ [&#39;2023-05-06T06:02:36Z&#39;, &#39;D J&#39;, &#39;@Rafanda 2018 egp&#39;, 0],
+ [&#39;2023-05-06T01:05:58Z&#39;, &#39;Rafanda 2018&#39;, &#39;aku ora&#39;, 0],
+ [&#39;2023-05-05T15:53:26Z&#39;, &#39;Wajun Sadi Uhang&#39;, &#39;PRABOWO RI.1 YESS&#39;, 2],
+ [&#39;2023-05-05T15:53:16Z&#39;, &#39;eka STM45&#39;, &#39;Survei palsu&#39;, 0],
+ [&#39;2023-05-05T15:53:06Z&#39;,
+  &#39;Yem Arsyad&#39;,
+  &#39;Saya mendukung ganjar tapi saya tdk percaya semua lembaga survei di indonesia ....katanya semua abal abal&#39;,
+  0],
+ [&#39;2023-05-06T05:42:01Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Hidup itu gak boleh dipukul rata bro, krn selain ada yang gak bener pasti ada juga yg bner&#39;,
+  0],
+ [&#39;2023-05-05T15:53:03Z&#39;,
+  &#39;Blasius Loba Channel&#39;,
+  &#39;Tetangga sblh psti sakit hati melihat ini.&#39;,
+  4],
+ [&#39;2023-05-05T15:52:56Z&#39;,
+  &#39;Lianto Lianto&#39;,
+  &#39;LSI Paling Terpercaya&lt;br&gt;&lt;br&gt;   Selain LSI Saya Cuma Tersenyum Alias ???&#39;,
+  0],
+ [&#39;2023-05-05T15:53:53Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  0],
+ [&#39;2023-05-05T15:52:52Z&#39;, &#39;Terang dunia&#39;, &#39;Om ganjar.. NTT SIAP DUKUNG&#39;, 11],
+ [&#39;2023-05-05T15:52:47Z&#39;, &#39;Heri Doank&#39;, &#39;TAPI BOONG&#39;, 0],
+ [&#39;2023-05-05T15:54:21Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  0],
+ [&#39;2023-05-05T15:52:23Z&#39;, &#39;Rizardi Karnas&#39;, &#39;survei abal abal&#39;, 3],
+ [&#39;2023-05-05T16:04:47Z&#39;,
+  &#39;Rizardi Karnas&#39;,
+  &#39;@Badawi Al Khatiri nanti K A L A U.....Menang.......= P A S T I ....Kalah.&#39;,
+  0],
+ [&#39;2023-05-05T15:54:35Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  0],
+ [&#39;2023-05-05T15:51:50Z&#39;,
+  &#39;Ree Curties&#39;,
+  &#39;&lt;b&gt;BISMILLAH GANJAR 2024 !!!&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;YANG SATUNYA POLITIK IDENTITAS&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;YANG SATUNYA LAGI UDAH KETUAAN MASUK USIA 73 TAHUN DI 2024&lt;/b&gt;&#39;,
+  1],
+ [&#39;2023-05-05T15:57:01Z&#39;,
+  &#39;Hadi Noor&#39;,
+  &#39;Jgn pakai kata basmalah klo nonton bokep, bs dobel dosanya 😅😅😅&#39;,
+  1],
+ [&#39;2023-05-05T15:56:09Z&#39;, &#39;Wajun Sadi Uhang&#39;, &#39;&lt;b&gt;Prabowo RI.1&lt;/b&gt; ❤&#39;, 1],
+ [&#39;2023-05-05T15:51:37Z&#39;,
+  &#39;ANDREAS NOSTAL KRISTIAN HALAWA&#39;,
+  &#39;yang dukung pak jokowi, tolong satukan hati dukung ganjar dong&#39;,
+  13],
+ [&#39;2023-05-05T18:37:54Z&#39;,
+  &#39;Bapa Rohim&#39;,
+  &#39;Gak apa &amp;quot; &lt;br&gt;Silahkan pilih yg disuka &lt;br&gt;Tapi jgn Main hoax&#39;,
+  1],
+ [&#39;2023-05-05T16:20:46Z&#39;,
+  &#39;Rohima Tina&#39;,
+  &#39;Dulu pilih Jokowi,skrg saya sekeluarga pilih Anies&#39;,
+  2],
+ [&#39;2023-05-05T15:51:37Z&#39;,
+  &#39;Korib Krui&#39;,
+  &#39;Tetap Anis,lembaga survey cuma Utak Atik angka,tergatung yang bayar yang dimenangkan.&#39;,
+  7],
+ [&#39;2023-05-06T11:41:21Z&#39;, &#39;mamanyatyan Busry&#39;, &#39;Yg sabar yaaaa&#39;, 0],
+ [&#39;2023-05-06T07:14:34Z&#39;, &#39;Suradi Suradi&#39;, &#39;Betuuul&#39;, 0],
+ [&#39;2023-05-05T15:51:24Z&#39;, &#39;Jarmad Cilok&#39;, &#39;❤❤❤❤❤ Ganjar Pranowo 👍🤟&#39;, 43],
+ [&#39;2023-05-05T15:51:22Z&#39;, &#39;JAYA SATRIA&#39;, &#39;Pak Ganjar keok&#39;, 3],
+ [&#39;2023-05-05T15:59:18Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  0],
+ [&#39;2023-05-05T15:50:34Z&#39;, &#39;Android Android&#39;, &#39;mantap  pak ganjar&#39;, 7],
+ [&#39;2023-05-05T15:50:22Z&#39;,
+  &#39;Saas Juju&#39;,
+  &#39;Yok bisa yok Ganjar Pranowo penerus legesi Pakde Jokowi.&#39;,
+  48],
+ [&#39;2023-05-07T14:59:30Z&#39;,
+  &#39;Karmidi Corp&#39;,
+  &#39;nambah hutang, dan kejebak hutang CHINA lagi dong&#39;,
+  0],
+ [&#39;2023-05-07T12:33:36Z&#39;,
+  &#39;Rdn Nids&#39;,
+  &#39;@Olun Setrum &lt;br&gt;Petugas partai selalu terbukti MENANG 😂&#39;,
+  0],
+ [&#39;2023-05-07T12:15:37Z&#39;,
+  &#39;Solder Bengkong&#39;,
+  &#39;Ntar kita disuruh bermusuhan dgn israel.. Kita damai tenang jadi gk tenang dan damai&#39;,
+  0],
+ [&#39;2023-05-06T12:08:18Z&#39;, &#39;Olun Setrum&#39;, &#39;Petugas partai jd boneka&#39;, 0],
+ [&#39;2023-05-06T09:21:06Z&#39;, &#39;𝘼𝙨𝙡𝙞 𝙣𝙙𝙚𝙨𝙤&#39;, &#39;𝘈𝘺𝘰𝘬 𝘨𝘢𝘴𝘴 𝘱𝘰𝘭𝘭 𝘎𝘢𝘯𝘫𝘢𝘳 𝘫𝘢𝘥𝘪 𝘙𝘐 1&#39;, 0],
+ [&#39;2023-05-05T15:50:01Z&#39;, &#39;Lianto Lianto&#39;, &#39;Yg Bener Cuma Survai LSI&#39;, 0],
+ [&#39;2023-05-05T15:59:28Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  0],
+ [&#39;2023-05-05T15:49:01Z&#39;,
+  &#39;Juna Edi&#39;,
+  &#39;Beda beda hasil survei jd tidak bisa di percaya&#39;,
+  3],
+ [&#39;2023-05-05T16:11:07Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;Dari dulu pak Ganjar slalu teratas😅sempet merosot karna blunder pildun🤣kalo ngaku2 survey tertinggi sudah psti dihujat🤭&#39;,
+  1],
+ [&#39;2023-05-05T15:48:58Z&#39;, &#39;Muhdi Arto&#39;, &#39;Bravo P G&#39;, 2],
+ [&#39;2023-05-05T15:48:58Z&#39;,
+  &#39;AL-FATICH CHANNEL&#39;,
+  &#39;Saya Bukan Orang Partai dan Bukan Politikus dan juga tidak punya harapan apapun dari Capres. Tapi aku lebih Memilih Pak Anies Rasyid Baswedan. Sebagai PRESIDEN 2024 . Sebab Aku ingat Kata2 Mak Banteng . Partainya tidak butuh Suara Dari Umat islam.&#39;,
+  3],
+ [&#39;2023-05-05T15:59:43Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  0],
+ [&#39;2023-05-05T15:48:42Z&#39;,
+  &#39;ABU   JADUL&#39;,
+  &#39;LO  SURPEINYA  KEBANYAKAN  MENELAN  UANG  HARAM    IBLIS  LAKNATULLOH      SEGERA  DI   TELAN  AJAB   YANG MAHA DAHSYAT  AAMIIN&#39;,
+  0],
+ [&#39;2023-05-05T15:59:55Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  0],
+ [&#39;2023-05-05T15:48:29Z&#39;, &#39;Muhana 2002&#39;, &#39;Survey abal abal, bayaran&#39;, 3],
+ [&#39;2023-05-05T16:00:05Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  0],
+ [&#39;2023-05-05T15:47:14Z&#39;, &#39;Imam Khudori&#39;, &#39;Surpai bayaran,&#39;, 3],
+ [&#39;2023-05-05T15:46:50Z&#39;,
+  &#39;ABU   JADUL&#39;,
+  &#39;KECURANGAN   YANG  SUPREI  INI  SEGERA  DITELAN  AJAB  BENCANA  YANG  MAHA  DAHSYAT&#39;,
+  5],
+ [&#39;2023-05-06T07:07:24Z&#39;,
+  &#39;ABU   JADUL&#39;,
+  &#39;@戴小姐 &lt;br&gt;INI  MUBAHALAH  SELURUH  RAKYAT  INDONESIA   UNTUK  SEMUA  KOMPLOTAN   REZIM  JOKOWI  LUHUT  AHOK  PN  JAKPUS  KPU  BAWASLOU  DPR  MPR  SRIMULYANI  DENI SIREGAR  ADE ARMANDO ABU JANDA  NGABALIN   YOQUT  MAHFUD MD  HAKIM  JAKSA  JUGA YANG TERLIBAT KM 50 .  KALIAN  SEMUA PEJABAT2 CEBONG  RONGSOKAN  SEMOGA SEGERA DI TELAN AJAB  DI LAKNAT ALLOH SWT  DI HANCURKAN  SEHANCUR  HANCURNYA    DITELAN AJAB DUNIA AKHIRAT  KUN FAYAKUUN  AAMIIN&#39;,
+  0],
+ [&#39;2023-05-05T16:04:52Z&#39;,
+  &#39;ABU   JADUL&#39;,
+  &#39;@戴小姐 &lt;br&gt;SEMOGA  SEMUA CEBONG DAN  KOMPLOTAN NYA  YANG  SELALU  MENELAN  UANG HARAM  BAYARAN  SOGOKAN  HASIL  GARONG RAJA  HUTANG   SEGERA  DIHANCURKAN  ALLOH SWT  DISERANG  PENYAKIT ANEH  7  PETURUNAN NYA  DI MUSNAHKAN  ALLOH SWT  SEHANCUR  HANCURNYA  AAMIIN&#39;,
+  0],
+ [&#39;2023-05-05T16:00:19Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  1],
+ [&#39;2023-05-05T15:59:38Z&#39;,
+  &#39;戴小姐&#39;,
+  &#39;😂😂😂😂ati ati kl bencana itu yg akan menelan mu dunnn.&#39;,
+  0],
+ [&#39;2023-05-05T15:59:36Z&#39;,
+  &#39;Cahyo Cahyo&#39;,
+  &#39;Kadrun kepanasan  si anis nyungsep&#39;,
+  0],
+ [&#39;2023-05-05T15:46:34Z&#39;, &#39;Imam Al gazali&#39;, &#39;Mantap GANJAR&#39;, 6],
+ [&#39;2023-05-05T15:46:22Z&#39;,
+  &#39;Thomas Jefferson Tarigan&#39;,
+  &#39;Kok surveinya tiap hari beda2..  hebat ya kakek Sugiono..&#39;,
+  6],
+ [&#39;2023-05-06T12:45:47Z&#39;, &#39;Heri Alfaridzi&#39;, &#39;Bohong terus&#39;, 0],
+ [&#39;2023-05-06T02:19:02Z&#39;,
+  &#39;Yuliana 15&#39;,
+  &#39;\u200b@Ubai Dillah jongosnya Anies Yaman ini menangis drun Kadrun 😅😅&#39;,
+  0],
+ [&#39;2023-05-05T22:09:55Z&#39;,
+  &#39;Sawo Matang&#39;,
+  &#39;\u200b@Ubai Dillah😂😂😂😂😂 bener bro aku pun katawa... tapi kenapa ya klu Anis wan abut kadal gurun tidak kuat mesan ya.knp ya ada apa dgn kelebihan byar....&#39;,
+  1],
+ [&#39;2023-05-05T19:00:31Z&#39;,
+  &#39;Ubai Dillah&#39;,
+  &#39;Survainya tergantung yg bayar dan pesanan 😢&#39;,
+  2],
+ [&#39;2023-05-05T18:36:14Z&#39;,
+  &#39;Bapa Rohim&#39;,
+  &#39;Yg survenya yg konsisten &lt;br&gt;Capres dr yaman &lt;br&gt;Konsisten gak naik &amp;quot;&#39;,
+  2],
+ [&#39;2023-05-05T15:45:51Z&#39;, &#39;Imam Al gazali&#39;, &#39;MANTAP&#39;, 3],
+ [&#39;2023-05-05T15:45:11Z&#39;,
+  &#39;Dawin Rotto&#39;,
+  &#39;Di survei ganjar selalu tinggi, tp klo blusukan ganjar dicuekin warga&#39;,
+  7],
+ [&#39;2023-05-06T03:51:35Z&#39;,
+  &#39;Dawin Rotto&#39;,
+  &#39;@Zaky Zaky modal cengar cengir pencitraan kiri kanan mau jadi presiden...ya ampun mimpi di siang bolong&#39;,
+  0],
+ [&#39;2023-05-06T03:50:01Z&#39;, &#39;Dawin Rotto&#39;, &#39;@Zaky Zaky itu fakta...&#39;, 0],
+ [&#39;2023-05-06T03:09:15Z&#39;,
+  &#39;Zaky Zaky&#39;,
+  &#39;\u200b\u200b@Dawin Rotto Iri bilang drunn modal ngibul ingin jdi presiden,ya ampun🥵🥵&#39;,
+  1],
+ [&#39;2023-05-05T23:53:19Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Yg dicuwekin ke Pasar kemarin bukannya ANUS....?? ☝️☝️🙈🙈&lt;br&gt;Malah jangkrik2 yg menyabut....!!&lt;br&gt;☝️☝️☝️🤣🤣🤣&#39;,
+  1],
+ [&#39;2023-05-05T16:20:11Z&#39;,
+  &#39;Luna Queen&#39;,
+  &#39;Wkekwkek.....jadi ingat pas wan abud bin sumur resapan dtang k surabaya...sok sokan berjalan d gang...ehhh...warga pda gk gubris 🤣🤣🤣&#39;,
+  3],
+ [&#39;2023-05-05T15:45:04Z&#39;, &#39;DREAM Football&#39;, &#39;Suvei taek&#39;, 0],
+ [&#39;2023-05-05T16:00:56Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  0],
+ [&#39;2023-05-05T15:44:50Z&#39;, &#39;Bapak Exel&#39;, &#39;Aminn ganjarku 2024 presidenku&#39;, 0],
+ [&#39;2023-05-05T15:44:45Z&#39;,
+  &#39;Aries Tampubolon&#39;,
+  &#39;Ganjar akan kalah jika pak Jokowi masih bermain abu²...&#39;,
+  1],
+ [&#39;2023-05-05T16:01:07Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  1],
+ [&#39;2023-05-05T15:44:07Z&#39;,
+  &#39;Arya Bima&#39;,
+  &#39;Di kampung ku gak ada calon kepala desa cocok buat yg  nmr 3...&#39;,
+  3],
+ [&#39;2023-05-05T15:43:59Z&#39;,
+  &#39;Rangga Gupita&#39;,
+  &#39;Sudahlah. Rakyat sdh paham apa di balik survey ini&#39;,
+  3],
+ [&#39;2023-05-05T16:01:17Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  0],
+ [&#39;2023-05-05T15:57:37Z&#39;, &#39;Mahmad Mahmad&#39;, &#39;Survey kgak bener niee&#39;, 0],
+ [&#39;2023-05-05T15:43:58Z&#39;,
+  &#39;xnhplfrwmsqbdytg&#39;,
+  &#39;Ow charta politica yg dulu di survey pilgub dki jkt selalu mengunggulkan ahok.. dan anies selalu di posisi ketiga.. ternyata duaarr survey nya salah total😂😂&#39;,
+  4],
+ [&#39;2023-05-09T09:33:56Z&#39;,
+  &#39;Gendis kinasih&#39;,
+  &#39;karena ahok kena masalah besar dan bukan muslim sehingga bisa jadi senjadi pendukung anies untuk menyalip, lah sekarang mau apa sama2 muslim semua😄&#39;,
+  0],
+ [&#39;2023-05-05T16:19:29Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;@xnhplfrwmsqbdytg itu jawaban buat anda🤣🤭mw digembok mw diiket😅tapi menang 2x kn?🤣🤣🤣🤭&#39;,
+  0],
+ [&#39;2023-05-05T16:04:41Z&#39;,
+  &#39;xnhplfrwmsqbdytg&#39;,
+  &#39;@Badawi Al Khatiri yg penting menang tanpa kardus digembok.. 🤣🤣🤦🤦&#39;,
+  0],
+ [&#39;2023-05-05T16:04:25Z&#39;,
+  &#39;xnhplfrwmsqbdytg&#39;,
+  &#39;@Roni Gunawan tapi menang kan??&#39;,
+  0],
+ [&#39;2023-05-05T16:04:11Z&#39;,
+  &#39;xnhplfrwmsqbdytg&#39;,
+  &#39;@Duta Satu yg penting menang.. daripada kemenangan dari kardus digembok??🤣🤣&#39;,
+  0],
+ [&#39;2023-05-05T15:43:51Z&#39;,
+  &#39;Fauzan Ramon&#39;,
+  &#39;Wong jateng sdri ganjar kalah,surve slalu di atas Aneh ,,  apalagi jatim,jabar justru saya prediksi Anis menang     surve opo ae iku ,,,!!&#39;,
+  4],
+ [&#39;2023-05-05T16:05:27Z&#39;,
+  &#39;Uswatun Khasanah&#39;,
+  &#39;Ngertimu opo to dul dul... madang sik ben waras...😃&#39;,
+  0],
+ [&#39;2023-05-05T16:01:50Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Nanti kalau ganjar menang dan pdip hatrick lagi, dituduh curang lagi, fitnah dan hoax lagi, berkata dan berdoa buruk lagi, nyalahin Tuhan lagi, gak percaya takdir Allah SWT lagi, sampe kiamat gitu aja terus kadrun yaman kelakuannya gak tobat2.. Wkwkwkwk... Cuakkss&#39;,
+  1],
+ [&#39;2023-05-05T15:43:28Z&#39;,
+  &#39;Ikbal maulidin Ikbal&#39;,
+  &#39;Lah waktu di SCTV menayangkan hasil survei Prabowo paling Kokok kenapa sekarang jadi kebalik ya😂&#39;,
+  2],
+ [&#39;2023-05-06T07:30:56Z&#39;, &#39;Roni Gunawan&#39;, &#39;@Ikbal maulidin Ikbal kadrun🤣&#39;, 0],
+ [&#39;2023-05-06T05:56:43Z&#39;,
+  &#39;Ikbal maulidin Ikbal&#39;,
+  &#39;@Roni Gunawan bibit kadrun mulai muncul🤣&#39;,
+  0],
+ [&#39;2023-05-06T05:53:06Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Itu khan survey gak lama setelah ganjar diekspos menolak pildun u20 namun setelah ganjar mengklarifikasi dan sudah dicalonkan jd presiden dr pdi perjuangan maka awal bulan ini adalah itu hasilnya yg disurvey&#39;,
+  0],
+ [&#39;2023-05-06T03:04:46Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;@Ikbal maulidin Ikbal 🤣🤣ya jelas kalah🤭 tapi lawan pak Jokowi ga pernah menang🤣🤭tau kan arah dukungan para pendukung pak Jokowi kmn😅🤭&#39;,
+  0],
+ [&#39;2023-05-06T01:46:39Z&#39;,
+  &#39;Ikbal maulidin Ikbal&#39;,
+  &#39;@Roni Gunawan head to head ganjar tetap kalah karena pak Prabowo jauh berpengalaman di bidang politik&#39;,
+  0],
+ [&#39;2023-05-05T15:43:28Z&#39;,
+  &#39;Cah Ijen&#39;,
+  &#39;GANJAR Insya Allah ditakdirkan jd presiden 2024.&#39;,
+  24],
+ [&#39;2023-05-06T04:37:32Z&#39;,
+  &#39;Surya Taufik&#39;,
+  &#39;@Tomy sampah NKRI. Bukannya grombolan koruptor buzerp pengadu domba.&#39;,
+  0],
+ [&#39;2023-05-06T04:27:29Z&#39;,
+  &#39;Tomy&#39;,
+  &#39;@Surya Taufik bukan hanya benci&lt;br&gt;Sampah NKRI wajib untuk di perangi&lt;br&gt;Sekali lagi WAJIB&#39;,
+  0],
+ [&#39;2023-05-06T01:23:50Z&#39;,
+  &#39;Surya Taufik&#39;,
+  &#39;@Tomy hanya org kuffur yg benci Fron persatuan islam&#39;,
+  0],
+ [&#39;2023-05-05T23:31:55Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Pak GANJAR tetap capres terbaik....👍👍Pilihan RAKYAT Indonesia yg CERDAS.....!!&lt;br&gt;Insya ALLAH menang &amp;amp; diridhoi ALLAH.&lt;br&gt;AMIN....🤲🤲&#39;,
+  2],
+ [&#39;2023-05-05T22:12:44Z&#39;,
+  &#39;Sawo Matang&#39;,
+  &#39;\u200b@Surya Taufiksyukurlah grombolanmu hancur 2x...&#39;,
+  0],
+ [&#39;2023-05-05T15:43:13Z&#39;, &#39;Irfan Pratama&#39;, &#39;Ganjar,,josss&#39;, 7],
+ [&#39;2023-05-05T15:43:07Z&#39;, &#39;Surya Taufik&#39;, &#39;Abal abal&#39;, 3],
+ [&#39;2023-05-05T15:42:49Z&#39;, &#39;Umar Oyoot&#39;, &#39;Tetep Prabowo&#39;, 3],
+ [&#39;2023-05-05T15:42:05Z&#39;, &#39;Eki Wahyudi&#39;, &#39;Pak Anies Is the best&#39;, 13],
+ [&#39;2023-05-05T15:41:39Z&#39;,
+  &#39;Syafaruddin Rasyid&#39;,
+  &#39;saya tetap pilih Ganjar P,yg sempurna dari calon2 yg lain&#39;,
+  14],
+ [&#39;2023-05-06T01:59:38Z&#39;,
+  &quot;La&#39; Viory&quot;,
+  &#39;Ga mau yg lain tetap bpk Ganjar Pranowo&#39;,
+  0],
+ [&#39;2023-05-06T01:02:28Z&#39;, &#39;Rafanda 2018&#39;, &#39;ora milih&#39;, 0],
+ [&#39;2023-05-05T23:29:29Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Pak GANJAR tetap Capres terbaik....👍👍&lt;br&gt;Pilihan RAKYAT Indonesia yg cerdas....&lt;br&gt;AMIN....🤲🤲&#39;,
+  1],
+ [&#39;2023-05-05T18:58:34Z&#39;,
+  &#39;Ubai Dillah&#39;,
+  &#39;Sempurna dari segi apa tuh ganjar&lt;br&gt;Kikikik yg lebih layak jd presiden 2024 pak Anis baswedan Aamiin&#39;,
+  3],
+ [&#39;2023-05-05T15:40:30Z&#39;,
+  &#39;Heppy. Santosa&#39;,
+  &#39;Ayo kita dukung ganjar broo,dan semoga prabowo  jadi  wakilnya  ganjar mas brooo.&#39;,
+  2],
+ [&#39;2023-05-05T23:45:19Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Prabowo itu gengsi jadi wakilnya pak GANJAR....!! ☝️☝️&lt;br&gt;Smg nt dpt wakil yg  lain yg bisa mendongkrak suara lagi smp 51 % lebih buat pak GANJAR spy 1x putaran PEMILU cpt slesai....&lt;br&gt;AMIN....🤲🤲&#39;,
+  1],
+ [&#39;2023-05-05T15:40:08Z&#39;,
+  &#39;Dharma Hasibuanb&#39;,
+  &#39;makin kaya..juragan survei&lt;br&gt;😂😂😂😂😂😂😂😂😂😂&#39;,
+  3],
+ [&#39;2023-05-05T16:14:53Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;😅terima kenyataan walpn pahit🤣🤭&#39;,
+  1],
+ [&#39;2023-05-05T15:39:28Z&#39;,
+  &#39;Sutarjo Geneng&#39;,
+  &#39;Alhamdulillah, mantap. Sikap istiqomah dan tidak tergoyahkan, tetap memilih Anies Baswedan. Karena, rakyat ingin kemajuan, rakyat ingin perubahan, perubahan yang lebih baik. Dan Insya Alloh.... yang memilih Anies adalah orang orang pandai, cerdas dan berhati mulia. Salam, akal sehat........ dan perubahan. Semoga, perubahan membawa barokah, untuk kita semua. Aamiin. Terima kasih.&#39;,
+  16],
+ [&#39;2023-05-06T06:39:58Z&#39;,
+  &#39;Pak Warjo&#39;,
+  &#39;Anis itu ibarat merantau jadi merasa enak jadi ketagihan&#39;,
+  0],
+ [&#39;2023-05-06T06:23:14Z&#39;,
+  &#39;Karsiono 005&#39;,
+  &#39;Sengdirubah nama jalan rumah dakit penggusuran  halte  dll nya janji manis ternya tidak sesuwai  yang diharapkan  warga DKI. buat kecewa aja ,😂😂😂😂😂😂😂&#39;,
+  1],
+ [&#39;2023-05-06T03:24:49Z&#39;, &quot;La&#39; Viory&quot;, &#39;@Pangat Bador sama&#39;, 1],
+ [&#39;2023-05-06T02:44:31Z&#39;,
+  &#39;Pak Warjo&#39;,
+  &#39;Ini hajat bangsa Indonesia yg merasa keturunan Yaman minggir dulu ya&#39;,
+  0],
+ [&#39;2023-05-06T02:39:10Z&#39;,
+  &#39;Pak Warjo&#39;,
+  &#39;Entar klw kalah bilang dicurangi mending dari awal persiapkan diri untuk kalah biar nggak kaget&#39;,
+  0],
+ [&#39;2023-05-05T15:39:13Z&#39;,
+  &#39;agus sumarsono&#39;,
+  &#39;Semoga pak ganjar semakin melesat. Aamiin&#39;,
+  15],
+ [&#39;2023-05-09T11:41:02Z&#39;,
+  &#39;R. Endeh Rukmini&#39;,
+  &#39;Yaya lah orang mikir mah bakal tau kalu menang nya seperti apa.coba jurdil.ayo buktikan.&#39;,
+  0],
+ [&#39;2023-05-09T11:39:03Z&#39;,
+  &#39;R. Endeh Rukmini&#39;,
+  &#39;Heran apa nya yg dilihat.prestasi nya mana kinerja nya apa.ini mah dr rezim.prett.&#39;,
+  0],
+ [&#39;2023-05-07T22:30:24Z&#39;,
+  &#39;N Meci&#39;,
+  &#39;Jadi ingat pilgub dki. Hasil survey anies ditempatkan di urutan buncit tapi akhirnya jadi pemenang😂😂&#39;,
+  0],
+ [&#39;2023-05-06T01:04:07Z&#39;, &#39;Rafanda 2018&#39;, &#39;melesat kemana tuh&#39;, 1],
+ [&#39;2023-05-05T23:37:06Z&#39;,
+  &#39;Mawar Merah&#39;,
+  &#39;Pak sll dihati &amp;amp; sll dinanti di 2024 RAKYAT INDONESIA....smg sukses menuju RI.1....🇮🇩🇮🇩👍👍&lt;br&gt;AMIN....🤲🤲&#39;,
+  1],
+ [&#39;2023-05-05T15:39:02Z&#39;,
+  &#39;hadi suwarno&#39;,
+  &#39;Hadir aku orang solo dukung pak prabowo jadi presiden RI&#39;,
+  3],
+ [&#39;2023-05-06T05:42:55Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Lahh basis.pdip koq bukan pilih ganjar?&#39;,
+  0],
+ [&#39;2023-05-05T15:38:05Z&#39;,
+  &#39;Rini Hermawati,SH&#39;,
+  &#39;Terserah mau nampilin dan bilang apalah, sing penting 2024 Presiden nya Prabowo...Merdekaaa&#39;,
+  0],
+ [&#39;2023-05-06T05:59:51Z&#39;,
+  &#39;backbone&#39;,
+  &#39;Karakter prabowo keliatan emosional sehingga klo sdh jd pemimpim akan.mnjdi pemimpin yang otoriter&#39;,
+  0],
+ [&#39;2023-05-05T15:35:18Z&#39;, &#39;Herman Sasak&#39;, &#39;Ganjar no, anis no&#39;, 1],
+ [&#39;2023-05-05T15:34:44Z&#39;, &#39;Vhiki Dismas&#39;, &#39;Mantap pak ganjar.&#39;, 19],
+ [&#39;2023-05-05T15:34:15Z&#39;, &#39;Sulistyo Ridho&#39;, &#39;Ganjar 2024&#39;, 16],
+ [&#39;2023-05-05T15:34:08Z&#39;, &#39;Ahmad Hazairin&#39;, &#39;Mark up  !&#39;, 1],
+ [&#39;2023-05-05T15:29:35Z&#39;,
+  &#39;Yeti Lusiana&#39;,
+  &#39;Gamjar Yes. Prabowo no, Anis buang kelaut&#39;,
+  5],
+ [&#39;2023-05-06T12:01:59Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;@Rizardi Karnas 🤣FPI PKI HTI ormas bajing*n terlarang🤣arogan perbudakan🤣&#39;,
+  0],
+ [&#39;2023-05-06T10:42:28Z&#39;,
+  &#39;Rizardi Karnas&#39;,
+  &#39;@Roni Gunawan nte masih penasaran di mana PKI....?....lu kan pegonggong PKI pasti tau dong.....&#39;,
+  0],
+ [&#39;2023-05-06T09:12:47Z&#39;, &#39;Rizardi Karnas&#39;, &#39;@Roni Gunawan PKI&#39;, 0],
+ [&#39;2023-05-06T08:52:26Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;@Rizardi Karnas nte masih penasaran ya walpn sering kalah🤣pilihan nte jg bakalan kalah lg sepertinya🤭&#39;,
+  0],
+ [&#39;2023-05-06T08:35:57Z&#39;, &#39;Rizardi Karnas&#39;, &#39;@Roni Gunawan PKI&#39;, 0],
+ [&#39;2023-05-05T15:27:40Z&#39;,
+  &#39;Agus Wahyudi&#39;,
+  &#39;Jaman gini kok masih percaya survey..&lt;br&gt;Klo benar kenapa kualisi besar takut sama anis..&#39;,
+  7],
+ [&#39;2023-05-05T16:04:35Z&#39;,
+  &#39;Badawi Al Khatiri&#39;,
+  &#39;Bukan takut, tapi lagi bikin skenario agar ganjar dan prabowo lawan kotak kosong,alias bakal auto menang mutlak gada lawan nya.siap2 aja lu kadrun yaman bakal dapat kejutan dari nasdem di akhir iniury time nanti... Wkwkwkwk&#39;,
+  1],
+ [&#39;2023-05-05T15:46:04Z&#39;,
+  &#39;Tutty Fruity&#39;,
+  &#39;Anis bs appah selain menata kata🤔&#39;,
+  0],
+ [&#39;2023-05-05T15:44:44Z&#39;,
+  &#39;Cah Ijen&#39;,
+  &#39;Kalo Anis menang survey baru percaya 😛😛&#39;,
+  0],
+ [&#39;2023-05-05T15:41:08Z&#39;,
+  &#39;agus sumarsono&#39;,
+  &#39;Kampungan sekali jaman modern gini&#39;,
+  0],
+ [&#39;2023-05-05T15:27:32Z&#39;,
+  &#39;Yosida Ktalo3&#39;,
+  &#39;Bergabung bersama pemimpin bangsa yang visioner dan berkarakter. Pemimpin yang bisa mencerdaskan kehidupan bangsa dan ikut melaksanakan ketertiban dunia. Mampu dan sudah teruji. Salam Indonesia Raya bermartabat dan mampu berkarya sesuai dengan karakter bangsa menuju Indonesia Emas 2045. Selamat beraktivitas pak Menhan&#39;,
+  3],
+ [&#39;2023-05-05T15:26:04Z&#39;, &#39;BENY BARBAY.&#39;, &#39;gaspol pk ganjar..salam 🤟&#39;, 20],
+ [&#39;2023-05-06T03:05:44Z&#39;,
+  &#39;Zaky Zaky&#39;,
+  &#39;\u200b@Umar Oyoot wan abud nangisssssss 😂😂😂😂😂&#39;,
+  1],
+ [&#39;2023-05-05T18:49:01Z&#39;,
+  &#39;Bapa Rohim&#39;,
+  &#39;Ya jgn berkecil hati &lt;br&gt;Walau survemya konsisten &lt;br&gt;Gak naik&amp;quot;&lt;br&gt;Diururutam paling bwh &lt;br&gt;Ttp semangat&#39;,
+  1],
+ [&#39;2023-05-05T16:13:30Z&#39;,
+  &#39;Luna Queen&#39;,
+  &#39;@Umar Oyoot yg sabar ya bosss...meski wan abud bin sumur resapan selalu terbawah...sya harap tetap semangat....jangan menyerah...siapa tahu kedepannya suaranya makin NYUNGSEP 👍👍👍&#39;,
+  1],
+ [&#39;2023-05-05T16:06:21Z&#39;,
+  &#39;fab Bin&#39;,
+  &#39;@Umar Oyoot 2 periode PDIP menang bersama Jokowi nih bos🤭 selanjutnya diteruskan Pak Ganjar🔥 barisan sakit hati iri dan nyinyir selalu🤭&#39;,
+  2],
+ [&#39;2023-05-05T16:05:44Z&#39;,
+  &#39;Roni Gunawan&#39;,
+  &#39;\u200b@Umar Oyoot hampir semua partai ada koruptornya😅🤭&#39;,
+  2]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>#4. Ubah Hasil Crawling ke Dataframe</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">comments</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;publishedAt&#39;</span><span class="p">,</span> <span class="s1">&#39;authorDisplayName&#39;</span><span class="p">,</span> <span class="s1">&#39;textDisplay&#39;</span><span class="p">,</span> <span class="s1">&#39;likeCount&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-1433413c-a630-4caf-9dc7-9bccf164d7e3">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>publishedAt</th>
+      <th>authorDisplayName</th>
+      <th>textDisplay</th>
+      <th>likeCount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2023-05-09T13:06:38Z</td>
+      <td>Tiyan #54</td>
+      <td>Madiun jatim Tetep prabowo</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2023-05-09T11:59:02Z</td>
+      <td>Abah Tea</td>
+      <td>Itu ls.ngimpi x ye dari mana Ganjar bisa no 1&lt;...</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2023-05-09T11:41:53Z</td>
+      <td>petualang chanel😱</td>
+      <td>Ya Ganjar Prabowo lah Anis mh byk bohong</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2023-05-09T11:37:41Z</td>
+      <td>R. Endeh Rukmini</td>
+      <td>Enggk percaya .masa p Anies dimana tinggi simp...</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2023-05-09T11:27:57Z</td>
+      <td>Jaguar Jaguar</td>
+      <td>Pak ganjar the nex president, anis minggir aja😆😆</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>846</th>
+      <td>2023-05-06T03:05:44Z</td>
+      <td>Zaky Zaky</td>
+      <td>​@Umar Oyoot wan abud nangisssssss 😂😂😂😂😂</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>847</th>
+      <td>2023-05-05T18:49:01Z</td>
+      <td>Bapa Rohim</td>
+      <td>Ya jgn berkecil hati &lt;br&gt;Walau survemya konsis...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>848</th>
+      <td>2023-05-05T16:13:30Z</td>
+      <td>Luna Queen</td>
+      <td>@Umar Oyoot yg sabar ya bosss...meski wan abud...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>849</th>
+      <td>2023-05-05T16:06:21Z</td>
+      <td>fab Bin</td>
+      <td>@Umar Oyoot 2 periode PDIP menang bersama Joko...</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>850</th>
+      <td>2023-05-05T16:05:44Z</td>
+      <td>Roni Gunawan</td>
+      <td>​@Umar Oyoot hampir semua partai ada koruptorn...</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<p>851 rows × 4 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1433413c-a630-4caf-9dc7-9bccf164d7e3')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-1433413c-a630-4caf-9dc7-9bccf164d7e3 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-1433413c-a630-4caf-9dc7-9bccf164d7e3');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<p>#5. Simpan Hasil Crawling ke file CSV</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-5-d5df0069828e&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="k">def</span> <span class="nf">mount</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">,</span> <span class="n">force_remount</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout_ms</span><span class="o">=</span><span class="mi">120000</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span><span class="w">   </span><span class="sd">&quot;&quot;&quot;Mount your Google Drive at the specified mountpoint path.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">103</span>   <span class="k">return</span> <span class="n">_mount</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>       <span class="n">mountpoint</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span>   <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">132</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span>     <span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">175</span>   <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">176</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">94</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">96</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>     <span class="k">if</span> <span class="p">(</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/drive/MyDrive/prosaindata/tugas
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/prosaindata/tugas
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;youtube-comments.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nuskhatul Haqqi 200411100034
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
